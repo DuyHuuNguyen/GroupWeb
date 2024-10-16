@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Guide</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #88A07B;
+            color: white;
+        }
+
+        header {
+            background-color: #50694B;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        nav button {
+            background-color: #7BB17E;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        nav button.active {
+            background-color: #3C523B;
+        }
+
+        section {
+            display: none;
+            padding: 20px;
+            background-color: #6E8D6E;
+            border-radius: 10px;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        .upload-container {
+            margin-top: 20px;
+            border: 2px dashed #ccc;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .upload-container input[type="file"] {
+            display: none;
+        }
+
+        .upload-container label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #7BB17E;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .uploaded-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .delete-button {
+            color: red;
+            cursor: pointer;
+            margin-left: 10px;
+            display: none;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+
+        .layout-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .layout-item {
+            background-color: #4C635E;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .color-circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .image-sizes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .image-size {
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .image-size img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>STYLE GUIDE</h1>
+    <p>Home/Style Guide</p>
+</header>
+
+<nav>
+    <button id="typoBtn" onclick="showSection('typography')">Typography</button>
+    <button id="dirBtn" onclick="showSection('directory')">Directory</button>
+    <button id="layoutBtn" onclick="showSection('layout')">Layout</button>
+    <button id="colorBtn" onclick="showSection('color')">Color</button>
+    <button id="imageBtn" onclick="showSection('image')">Image</button>
+</nav>
+
+<section id="typography">
+    <h2>Typography</h2>
+    <p>1. Heading</p>
+    <p>H2 - 32px</p>
+    <p>H3 - 28px</p>
+    <p>H4 - 24px</p>
+    <p>H5 - 20px</p>
+    <p>H6 - 16px</p>
+    <p>2. Font</p>
+    <p>Font family: Open Sans, Raleway, Poppins</p>
+    <p>Font style: Normal</p>
+</section>
+
+<section id="directory">
+    <h2>Directory</h2>
+    <p>1. Directory Structure of Group Web</p>
+    <div class="upload-container" ondragover="event.preventDefault()" ondrop="dropImage(event, 'directoryImg', 'directoryImgInput', 'directoryDelete')">
+        <input type="file" accept="image/*" id="directoryImgInput" onchange="loadImage(event, 'directoryImg', 'directoryImgInput')">
+        <label for="directoryImgInput">Add Image</label>
+        <img id="directoryImg" class="uploaded-image" alt="Directory Structure Image">
+        <span id="directoryDelete" class="delete-button" onclick="deleteImage('directoryImg', 'directoryImgInput', 'directoryDelete')">&times;</span>
+        <p id="directoryError" class="error-message"></p>
+    </div>
+</section>
+
+<section id="layout">
+    <h2>Layout</h2>
+    <div class="layout-container">
+        <div class="layout-item">
+            <h3>Home</h3>
+            <div class="upload-container" ondragover="event.preventDefault()" ondrop="dropImage(event, 'homeLayoutImg', 'homeLayoutImgInput', 'homeLayoutDelete')">
+                <input type="file" accept="image/*" id="homeLayoutImgInput" onchange="loadImage(event, 'homeLayoutImg', 'homeLayoutImgInput')">
+                <label for="homeLayoutImgInput">Add Image</label>
+                <img id="homeLayoutImg" class="uploaded-image" alt="Home Layout Image">
+                <span id="homeLayoutDelete" class="delete-button" onclick="deleteImage('homeLayoutImg', 'homeLayoutImgInput', 'homeLayoutDelete')">&times;</span>
+                <p id="homeLayoutError" class="error-message"></p>
+            </div>
+        </div>
+        
+        <div class="layout-item">
+            <h3>About</h3>
+            <div class="upload-container" ondragover="event.preventDefault()" ondrop="dropImage(event, 'aboutLayoutImg', 'aboutLayoutImgInput', 'aboutLayoutDelete')">
+                <input type="file" accept="image/*" id="aboutLayoutImgInput" onchange="loadImage(event, 'aboutLayoutImg', 'aboutLayoutImgInput')">
+                <label for="aboutLayoutImgInput">Add Image</label>
+                <img id="aboutLayoutImg" class="uploaded-image" alt="About Layout Image">
+                <span id="aboutLayoutDelete" class="delete-button" onclick="deleteImage('aboutLayoutImg', 'aboutLayoutImgInput', 'aboutLayoutDelete')">&times;</span>
+                <p id="aboutLayoutError" class="error-message"></p>
+            </div>
+        </div>
+
+        <div class="layout-item">
+            <h3>Group Diary</h3>
+            <div class="upload-container" ondragover="event.preventDefault()" ondrop="dropImage(event, 'diaryLayoutImg', 'diaryLayoutImgInput', 'diaryLayoutDelete')">
+                <input type="file" accept="image/*" id="diaryLayoutImgInput" onchange="loadImage(event, 'diaryLayoutImg', 'diaryLayoutImgInput')">
+                <label for="diaryLayoutImgInput">Add Image</label>
+                <img id="diaryLayoutImg" class="uploaded-image" alt="Group Diary Layout Image">
+                <span id="diaryLayoutDelete" class="delete-button" onclick="deleteImage('diaryLayoutImg', 'diaryLayoutImgInput', 'diaryLayoutDelete')">&times;</span>
+                <p id="diaryLayoutError" class="error-message"></p>
+            </div>
+        </div>
+
+        <div class="layout-item">
+            <h3>Project</h3>
+            <div class="upload-container" ondragover="event.preventDefault()" ondrop="dropImage(event, 'projectLayoutImg', 'projectLayoutImgInput', 'projectLayoutDelete')">
+                <input type="file" accept="image/*" id="projectLayoutImgInput" onchange="loadImage(event, 'projectLayoutImg', 'projectLayoutImgInput')">
+                <label for="projectLayoutImgInput">Add Image</label>
+                <img id="projectLayoutImg" class="uploaded-image" alt="Project Layout Image">
+                <span id="projectLayoutDelete" class="delete-button" onclick="deleteImage('projectLayoutImg', 'projectLayoutImgInput', 'projectLayoutDelete')">&times;</span>
+                <p id="projectLayoutError" class="error-message"></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="color">
+    <h2>Colors Used</h2>
+    <div>
+        <div class="color-circle" style="background-color: #88A07B;"></div> #88A07B
+        <div class="color-circle" style="background-color: #50694B;"></div> #50694B
+        <div class="color-circle" style="background-color: #7BB17E;"></div> #7BB17E
+    </div>
+</section>
+
+<section id="image">
+    <h2>Image Sizes</h2>
+    <div class="image-sizes">
+        <div class="image-size">
+            <img src="image-3x4.jpg" alt="3x4 Size">
+        </div>
+        <div class="image-size">
+            <img src="image-16x9.jpg" alt="16x9 Size">
+        </div>
+    </div>
+</section>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('section');
+        const buttons = document.querySelectorAll('nav button');
+
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
+
+        buttons.forEach(button => {
+            button.classList.remove('active');
+        });
+
+        document.getElementById(sectionId).classList.add('active');
+        document.querySelector(`button[onclick="showSection('${sectionId}')"]`).classList.add('active');
+    }
+
+    function loadImage(event, imgId, inputId) {
+        const file = event.target.files[0];
+        const maxSize = 2 * 1024 * 1024; // 2MB
+        const allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
+
+        if (file && allowedTypes.includes(file.type)) {
+            if (file.size <= maxSize) {
+                const reader = new FileReader();
+
+                reader.onload = function () {
+                    const img = document.getElementById(imgId);
+                    img.src = reader.result;
+                    img.style.display = 'block'; // Show image
+                    document.getElementById(inputId).style.display = 'none'; // Hide add button
+                    document.getElementById(imgId + 'Delete').style.display = 'inline'; // Show delete button
+                };
+
+                reader.readAsDataURL(file);
+            } else {
+                document.getElementById(imgId + 'Error').textContent = 'File too large. Max size is 2MB.';
+            }
+        } else {
+            document.getElementById(imgId + 'Error').textContent = 'Invalid file format. Only JPG, PNG, GIF allowed.';
+        }
+    }
+
+    function deleteImage(imgId, inputId, deleteId) {
+        document.getElementById(imgId).src = ''; // Clear image
+        document.getElementById(imgId).style.display = 'none'; // Hide image
+        document.getElementById(inputId).value = ''; // Clear input
+        document.getElementById(inputId).style.display = 'inline'; // Show add button
+        document.getElementById(deleteId).style.display = 'none'; // Hide delete button
+        document.getElementById(imgId + 'Error').textContent = ''; // Clear error message
+    }
+
+    function dropImage(event, imgId, inputId, deleteId) {
+        event.preventDefault();
+        const dataTransfer = event.dataTransfer;
+
+        if (dataTransfer && dataTransfer.files.length) {
+            const file = dataTransfer.files[0];
+            const eventObj = {
+                target: {
+                    files: [file]
+                }
+            };
+            loadImage(eventObj, imgId, inputId);
+        }
+    }
+</script>
+
+</body>
+</html>
