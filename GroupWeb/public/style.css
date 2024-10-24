@@ -238,6 +238,9 @@ nav ul li a:hover {
     height: 22px;
 }
 
+
+
+
 /* --------------------------project page------------------------- */
 .header-prjMenu {
     display: flex;
@@ -426,6 +429,7 @@ th, td {
     text-align: center;
 }
 
+
 /* Footer Styles */
 footer {
     background-color: var(--background-color-dark-blue);
@@ -505,6 +509,8 @@ footer {
 .footer-newsletter button:hover {
     background-color: var(--background-color-light-blue);
 }
+
+
 @media screen and (max-width: 720px) {
     body {
         display: block;
@@ -540,3 +546,84 @@ footer {
         display: block;
     }
 }
+
+/* css table group diray */
+
+.tab-content {
+    padding: 20px;
+}
+li {
+    list-style: none;
+}
+.nav-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    border-bottom: none;
+    gap: 5px;
+    padding: 10px 0;
+}
+.nav-tabs .nav-link {
+    white-space: nowrap;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    margin: 0;
+    color: #6c757d;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+.nav-tabs .nav-link:hover {
+    background-color: #e9ecef;
+    color: #495057;
+}
+.nav-tabs .nav-link.active {
+    background-color: #0d6efd;
+    color: white;
+}
+.table {
+    width: 100%; /* Đảm bảo table chiếm toàn bộ màn hình */
+    border: 2px solid #dee2e6;
+}
+.table th, .table td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+}
+.table thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+    color: #495057;
+}
+.table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+.table tbody tr:hover {
+    background-color: #f2f2f2;
+}
+.progress {
+    height: 24px;
+    border-radius: 12px;
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+}
+.progress-bar {
+    border-radius: 12px;
+    transition: width 0.3s ease;
+    font-weight: 600;
+}
+.container {
+    margin: 0 auto; /* Đảm bảo nội dung căn giữa */
+    max-width: 100%; /* Đặt chiều rộng tối đa cho container */
+}
+
+.table-responsive {
+    width: 93%; /* Chiếm toàn bộ chiều ngang */
+
+    
+}
+
+
+
