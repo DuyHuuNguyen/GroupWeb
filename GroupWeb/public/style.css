@@ -235,6 +235,10 @@ nav ul li a:hover {
     height: 22px;
 }
 
+.profile{
+    text-decoration: none;
+}
+
 /* --------------------------About page------------------------- */
 
 /* Footer Styles */
@@ -316,3 +320,4 @@ footer {
 .footer-newsletter button:hover {
     background-color: var(--background-color-light-blue);
 }
+

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 10 - Human-Computer Interaction</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            background-color: #ddd;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .tab:hover {
+            background-color: #ccc;
+        }
+        .tab.active {
+            background-color: #fff;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        .content.active {
+            display: block;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>GROUP 10</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="group_diary.html">Group Diary</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="technical.html">Technical</a></li>
+                <li><a href="style_guide.html">Style Guide</a></li>
+                <li><a href="result.html">Result</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="project-button">
+            <a href="#" class="btn">Go to project</a>
+        </div>
+    </header>
+
+    <div class="tabs">
+        <button class="tab active" onclick="openTab(event, 'week1')">Tuần 1</button>
+        <button class="tab" onclick="openTab(event, 'week2')">Tuần 2</button>
+        <button class="tab" onclick="openTab(event, 'week3')">Tuần 3</button>
+        <button class="tab" onclick="openTab(event, 'week4')">Tuần 4</button>
+        <button class="tab" onclick="openTab(event, 'week5')">Tuần 5</button>
+        <button class="tab" onclick="openTab(event, 'week6')">Tuần 6</button>
+        <button class="tab" onclick="openTab(event, 'week7')">Tuần 7</button>
+        <button class="tab" onclick="openTab(event, 'week8')">Tuần 8</button>
+        <button class="tab" onclick="openTab(event, 'week9')">Tuần 9</button>
+    </div>
+
+    <div id="week1" class="content active">
+        <h2>Tuần 1</h2>
+        <table>
+            <tr>
+                <th>Công việc</th>
+                <th>Người phụ trách</th>
+                <th>Thời hạn</th>
+            </tr>
+            <tr>
+                <td>Công việc 1</td>
+                <td>Nguyễn Văn A</td>
+                <td>05/11/2024</td>
+            </tr>
+            <tr>
+                <td>Công việc 2</td>
+                <td>Trần Thị B</td>
+                <td>07/11/2024</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="week2" class="content">
+        <h2>Tuần 2</h2>
+        <table>
+            <tr>
+                <th>Công việc</th>
+                <th>Người phụ trách</th>
+                <th>Thời hạn</th>
+            </tr>
+            <tr>
+                <td>Công việc 3</td>
+                <td>Lê Văn C</td>
+                <td>12/11/2024</td>
+            </tr>
+            <tr>
+                <td>Công việc 4</td>
+                <td>Phạm Thị D</td>
+                <td>14/11/2024</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Repeat similar structure for weeks 3-9 -->
+
+    <script>
+        function openTab(evt, weekName) {
+            var i, content, tabs;
+            content = document.getElementsByClassName("content");
+            for (i = 0; i < content.length; i++) {
+                content[i].style.display = "none";
+            }
+            tabs = document.getElementsByClassName("tab");
+            for (i = 0; i < tabs.length; i++) {
+                tabs[i].className = tabs[i].className.replace(" active", "");
+            }
+            document.getElementById(weekName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+   
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-group-info">
+                <h3>GROUP 10</h3>
+                <p>Hồ Chí Minh Nông Lâm University<br>Thủ Đức City, Hồ Chí Minh City, Việt Nam</p>
+                <p>Phone: +89 039 816 722<br>Email: hci2024group10@gmail.com</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="group_diary.html">Group Diary</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="technical.html">Technical</a></li>
+                    <li><a href="style_guide.html">Style Guide</a></li>
+                    <li><a href="result.html">Result</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-members">
+                <h4>Our Members</h4>
+                <ul>
+                    <li><a href="#">Nguyễn Hữu Duy</a></li>
+                    <li><a href="#">Nguyễn Xuân Đại</a></li>
+                    <li><a href="#">Nguyễn Võ Quốc Tuấn</a></li>
+                    <li><a href="#">Lê Ngọc Châu</a></li>
+                    <li><a href="#">Nguyễn Đình Hiếu</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <form>
+                    <input type="email" placeholder="Email is here" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
