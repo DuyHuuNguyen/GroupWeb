@@ -37,9 +37,12 @@ header {
     padding: 20px;
 }
 
+
 header .logo h1 {
     margin-left: 20px;
 }
+
+
 
 nav ul {
     list-style: none;
@@ -235,11 +238,197 @@ nav ul li a:hover {
     height: 22px;
 }
 
-.profile{
+
+
+
+/* --------------------------project page------------------------- */
+.header-prjMenu {
+    display: flex;
+    justify-content: center;
+    object-fit: fill;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 20px;
+    
+}
+.projectBigText {
+    display: flex;
+    justify-content: center;
+    padding: 5vh;
+    background-image: url("/GroupWeb/public/img/dai-hoc-nong-lam-tp-hcm.jpg");
+    background-size: 100%;
+} 
+.projectBigText h1 {
+    color: white;
+}
+.project-button .btn {
+    background-color: var(--background-color-light-blue);
+    color: #fff;
+    padding: 10px 20px;
     text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-right: 20px;
 }
 
-/* --------------------------About page------------------------- */
+.project-button .btn:hover {
+    background-color: var(--background-color-pale-blue);
+}
+.button-list {
+    margin: 20px;
+}
+
+.tab-button {
+    font-size: 40px;
+    width: 300px;
+    height: 50px;
+    border-radius: 3px;
+    background-color: #8AB17D;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.tab-button:hover {
+    background-color: #6C8B5E;
+}
+
+.content-section { 
+    padding: 20px;
+    background-color: #FFF;
+    margin: 20px;
+    border-radius: 8px;
+}
+.content-section h2{
+    display: flex;
+    justify-content: center;
+}
+
+.visited-button {
+    background-color: #3a5335;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    position: relative;
+    transition: top 0.3s ease;
+}
+
+.visited-button:visited {
+    position: relative;
+    top: 5px;
+}
+
+table {
+    margin-left: 50px;
+    margin-right: 50px;
+    /* border-collapse: collapse; */
+}
+th {
+    background-color: #8AB17D;
+    width: 400px;
+}
+td {
+   
+    vertical-align: bottom;
+}
+th, td {
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    padding: 5px;
+   
+}
+
+/*             THIS IS DESIGN PART CSS*/
+
+
+.button-list {
+    width: 80%;
+    margin: 0 auto;
+}
+#small-table {
+    width: 50px;
+}
+.expand-btn {
+    border-radius: 3px;
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0;
+    background-color: #8AB17D;
+    border: 1px solid #6C8B5E;
+    color: white;
+    font-size: 18px;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 2s;
+}
+
+.expand-btn:hover {
+    background-color: #6C8B5E;
+}
+
+.content {
+    display: none;
+    margin-top: 10px;
+    background-color: #F0F0F0;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.content img {
+    margin: 10px;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+.div-right {
+    width: 300px;
+    align-items: start;
+}
+.div-left {
+    width: 300px;
+    align-items: end;
+}
+.left-p {
+  
+    text-align: left;
+    font-size: 25px;
+}
+.block-div {
+    width: 45%;
+}
+.list {
+    display: flex;
+    justify-content: space-between;
+}
+    /*         THIS IS TECHNICAL PART CSS */
+/* .header-technical {
+    padding: 40px;
+    background-color: #3a5335;
+    color: white;
+} */
+.h1-header {
+    font-size: 40px;
+}
+.div-tech {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+.div-tech p {
+    text-align: left;
+    font-size: 16px;
+}
+.div-tech h1 {
+    text-align: center;
+}
+
 
 /* Footer Styles */
 footer {
@@ -320,4 +509,121 @@ footer {
 .footer-newsletter button:hover {
     background-color: var(--background-color-light-blue);
 }
+
+
+@media screen and (max-width: 720px) {
+    body {
+        display: block;
+    }
+    header {
+        margin-top: 2px;
+        white-space: 4px;
+        display: block;
+        width: 100%;
+    }
+    .content-section {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .project-button {
+        margin-top: 8px;
+    }
+    nav {
+        list-style: none;
+        display: block;
+    }
+   nav ul {
+        display: block;
+        align-items: center;
+        margin-top: 2px;
+    }
+    footer {
+        display: block;
+        width: 100%;
+    }
+    .footer-container {
+        display: block;
+    }
+}
+
+/* css table group diray */
+
+.tab-content {
+    padding: 20px;
+}
+li {
+    list-style: none;
+}
+.nav-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    border-bottom: none;
+    gap: 5px;
+    padding: 10px 0;
+}
+.nav-tabs .nav-link {
+    white-space: nowrap;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    margin: 0;
+    color: #6c757d;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+.nav-tabs .nav-link:hover {
+    background-color: #e9ecef;
+    color: #495057;
+}
+.nav-tabs .nav-link.active {
+    background-color: #0d6efd;
+    color: white;
+}
+.table {
+    width: 100%; /* Đảm bảo table chiếm toàn bộ màn hình */
+    border: 2px solid #dee2e6;
+}
+.table th, .table td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+}
+.table thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+    color: #495057;
+}
+.table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+.table tbody tr:hover {
+    background-color: #f2f2f2;
+}
+.progress {
+    height: 24px;
+    border-radius: 12px;
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+}
+.progress-bar {
+    border-radius: 12px;
+    transition: width 0.3s ease;
+    font-weight: 600;
+}
+.container {
+    margin: 0 auto; /* Đảm bảo nội dung căn giữa */
+    max-width: 100%; /* Đặt chiều rộng tối đa cho container */
+}
+
+.table-responsive {
+    width: 93%; /* Chiếm toàn bộ chiều ngang */
+
+    
+}
+
+
 
