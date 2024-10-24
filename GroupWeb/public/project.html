@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Page</title>
+    <link rel="stylesheet" href="/GroupWeb/public/style.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>GROUP 10</h1>
+        </div> 
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="group_diary.html">Group Diary</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="technical.html">Technical</a></li>
+                <li><a href="style_guide.html">Style Guide</a></li>
+                <li><a href="result.html">Result</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="project-button">
+            <a href="#" class="btn">Go to project</a>
+        </div>
+    </header>
+    <div class="projectBigText">
+        <h1>PROJECT</h1>
+    </div>
+    <div class="header-prjMenu">
+      
+       
+        <nav class="buttonList">
+            <button class="tab-button" onclick="showSection('requirement')">Requirement</button>
+            <button class="tab-button" onclick="showSection('design')">Design</button>
+            <button class="tab-button" onclick="showSection('implement')">Implement</button>
+        </nav>
+    </div>
+    
+    <section id="requirement" class="content-section">
+        <h2>Requirement</h2>
+        <table>
+            <tr>
+                <th id="small-table">Number</th>
+                <th>Functional</th>
+                <th>Designer</th>
+                <th>Performer</th>
+                <th>Intend time</th>
+                <th style="width: 600px;">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Home Project</td>
+                <td>Nguyễn Hữu Duy</td>
+                <td>Nguyễn Hữu Duy</td>
+                <td>2 TUẦN</td>
+                <td>Home stay menu, vai trò</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Register</td>
+                <td>Nguyễn Võ Quốc Tuấn</td>
+                <td>Nguyễn Võ Quốc Tuấn</td>
+                <td>2 TUẦN</td>
+                <td>Bản điều khiển, danh sách phòng</td>
+            </tr>
+            
+            <tr>
+                <td>3</td>
+                <td>Login</td>
+                <td>Lê Ngọc Châu</td>
+                <td>Lê Ngọc Châu</td>
+                <td>2 TUẦN</td>
+                <td>Danh mục, quản lý bình luận</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Forgot Password</td>
+                <td>Nguyễn Xuân Đại</td>
+                <td>Nguyễn Xuân Đại</td>
+                <td>2 TUẦN</td>
+                <td>Bài viết địa điểm</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Cart</td>
+                <td>Nguyễn Đình Hiếu</td>
+                <td>Nguyễn Đình Hiếu</td>
+                <td>2 TUẦN</td>
+                <td>Danh sách đặt phòng, người dùng</td>
+            </tr>
+        </table>
+    </section>
+    
+    <section id="design" class="content-section" style="display:none;">
+        <h2>Design</h2>
+        <div class="button-list">
+            <button class="expand-btn" onclick="toggleContent(0)">Home Project</button>
+            <div class="content" id="content-0">
+               <div class="container">
+                <div>
+                    <p class="left-p">Hand Paint</p>
+                    <img src="https://via.placeholder.com/150" alt="Placeholder Image 1">
+                </div>
+               <div>
+                <p class="left-p">Figma</p>
+                <img src="https://via.placeholder.com/150" alt="Placeholder Image 2">
+               </div>  
+               </div>
+            </div>
+            
+            <button class="expand-btn" onclick="toggleContent(1)">Login</button>
+            <div class="content" id="content-1">
+                <div class="container">
+                    <div>
+                        <p class="left-p">Hand Paint</p>
+                        <img src="https://via.placeholder.com/150" alt="Placeholder Image 1">
+                    </div>
+                   <div>
+                    <p class="left-p">Figma</p>
+                    <img src="https://via.placeholder.com/150" alt="Placeholder Image 2">
+                   </div>  
+                   </div>
+            </div>
+            
+            <button class="expand-btn" onclick="toggleContent(2)">Register</button>
+            <div class="content" id="content-2">
+                <div class="container">
+                    <div>
+                        <p class="left-p">Hand Paint</p>
+                        <img src="https://via.placeholder.com/150" alt="Placeholder Image 1">
+                    </div>
+                   <div>
+                    <p class="left-p">Figma</p>
+                    <img src="https://via.placeholder.com/150" alt="Placeholder Image 2">
+                   </div>  
+                   </div>
+            </div>
+            
+            <button class="expand-btn" onclick="toggleContent(3)">Forgot Password</button>
+            <div class="content" id="content-3">
+                <div class="list">
+                    <div>
+                        <p class="left-p">Hand Paint</p>
+                        <img src="https://via.placeholder.com/150" alt="Placeholder Image 1">
+                    </div>
+                   <div>
+                    <p class="left-p">Figma</p>
+                    <img src="https://via.placeholder.com/150" alt="Placeholder Image 2">
+                   </div>  
+                   </div>
+            </div>
+        </div>
+    
+    </section>
+    
+    <section id="implement" class="content-section" style="display:none;">
+        <h2>Implement</h2>
+        <div class="button-list">   
+            <button class="expand-btn" onclick="toggleContent(4)">1.Chức năng ABC</button>
+            <div class="content" id="content-4">
+                    <p>hello world</p>
+            </div>
+            <button class="expand-btn" onclick="toggleContent(5)">2.Chức năng XYZ</button>
+            <div class="content" id="content-5">
+                <p>hello world</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-group-info">
+                <h3>GROUP 10</h3>
+                <p>Hồ Chí Minh Nông Lâm University<br>Thủ Đức City, Hồ Chí Minh City, Việt Nam</p>
+                <p>Phone: +89 039 816 722<br>Email: hci2024group10@gmail.com</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="group_diary.html">Group Diary</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="technical.html">Technical</a></li>
+                    <li><a href="style_guide.html">Style Guide</a></li>
+                    <li><a href="result.html">Result</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-members">
+                <h4>Our Members</h4>
+                <ul>
+                    <li><a href="#">Nguyễn Hữu Duy</a></li>
+                    <li><a href="#">Nguyễn Xuân Đại</a></li>
+                    <li><a href="#">Nguyễn Võ Quốc Tuấn</a></li>
+                    <li><a href="#">Lê Ngọc Châu</a></li>
+                    <li><a href="#">Nguyễn Đình Hiếu</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <form>
+                    <input type="email" placeholder="Email is here" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/GroupWeb/public/script.js"></script>
+</body>
+</html>

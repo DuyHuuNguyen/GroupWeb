@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 10 - Human-Computer Interaction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+        :root {
+            --background-color-dark-blue: #003366;
+            --background-color-light-blue: #5AB9EA;
+            --background-color-pale-blue: #00bfff;
+            --background-color-white: white;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--background-color-dark-blue);
+            color: var(--background-color-white);
+            padding: 20px;
+        }
+
+        header .logo h1 {
+            margin-left: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--background-color-light-blue);
+        }
+
+        .project-button .btn {
+            background-color: var(--background-color-light-blue);
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-right: 20px;
+        }
+
+        .project-button .btn:hover {
+            background-color: var(--background-color-pale-blue);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 10px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            /* background-color: #00bfff; */
+            color: var(--background-color-dark-blue);
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .map-section {
+            margin-bottom: 30px;
+            margin-left: -145px;
+            margin-right: -145px;
+        }
+
+        .map {
+            width: 100%;
+            height: 400px;
+            background-color: #ddd;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 30px;
+        }
+
+        .left, .right {
+            width: 48%;
+        }
+
+        .left {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-left: -110px;
+            margin-right: -50px;
+            border: 1px solid #ccc;
+        }
+
+        .left h2 {
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .left p {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .right form {
+            display: flex;
+            flex-direction: column;
+            margin-left: -150px;
+            margin-right: -110px;
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+        }
+
+        .contact-item i {
+            font-size: 20px;
+            color: #333;
+            margin-right: 10px;
+        }
+
+        .contact-item h3 {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-item p {
+            font-size: 14px;
+            margin-left: 30px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .form-row input {
+            width: calc(50% - 5px);
+        }
+
+        input::placeholder, textarea::placeholder {
+            font-family: Arial, sans-serif;
+        }
+        
+        .right input, .right textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .right textarea {
+            resize: none;
+            height: 150px;
+        }
+
+        .right button {
+            padding: 10px;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            align-self: center;
+        }
+
+        .right button:hover {
+            background-color: #227ead;
+        }
+
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+            }
+
+            .left, .right {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .form-row {
+                flex-direction: column;
+            }
+
+            .form-row input {
+                width: 100%;
+            }
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: var(--background-color-dark-blue);
+            color: #fff;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .footer-group-info,
+        .footer-links,
+        .footer-members,
+        .footer-newsletter {
+            flex: 1;
+            margin: 0 20px;
+        }
+
+        .footer-group-info h3, 
+        .footer-links h4, 
+        .footer-members h4, 
+        .footer-newsletter h4 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .footer-group-info p {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul, 
+        .footer-members ul {
+            list-style: none;
+        }
+
+        .footer-links ul li a, 
+        .footer-members ul li a {
+            color: var(--background-color-light-blue);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-links ul li a:hover, 
+        .footer-members ul li a:hover {
+            color: var(--background-color-white);
+        }
+
+        .footer-newsletter form {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-newsletter input[type="email"] {
+            padding: 10px;
+            border-radius: 20px 0 0 20px;
+            border: none;
+            width: 200px;
+            outline: none;
+        }
+
+        .footer-newsletter button {
+            padding: 10px 20px;
+            background-color: #00b33c;
+            color: var(--background-color-white);
+            border-radius: 0 20px 20px 0;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .footer-newsletter button:hover {
+            background-color: var(--background-color-light-blue);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>GROUP 10</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="group_diary.html">Group Diary</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="technical.html">Technical</a></li>
+                <li><a href="style_guide.html">Style Guide</a></li>
+                <li><a href="result.html">Result</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="project-button">
+            <a href="#" class="btn">Go to project</a>
+        </div>
+    </header>
+
+    
+        <section class="hero">
+            <h1>CONTACT US</h1>
+        </section>
+        
+        <!-- Group Overview Section -->
+        <div class="container">
+            <!-- Map Section -->
+            <div class="map-section">
+                <div class="map" id="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7836.430711283102!2d106.79282385476989!3d10.871218450400553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175276398969f7b%3A0x9672b7efd0893fc4!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBOw7RuZyBMw6JtIFRQLiBI4buTIENow60gTWluaA!5e0!3m2!1svi!2s!4v1728461435776!5m2!1svi!2s"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        
+                <!-- Contact Information and Form Section -->
+                <div class="contact-info">
+                    <!-- Left Section -->
+                    <div class="left">
+                        <h2>Contact Information</h2>
+        
+                        <!-- Location -->
+                        <div class="contact-item">
+                            <h3><i class="fas fa-map-marker-alt"></i>  Location</h3>
+                            <p>Ho Chi Minh Nong Lam University, Thu Đuc City, Ho Chi Minh City, Vietnam</p>
+                        </div>
+        
+                        <!-- Email -->
+                        <div class="contact-item">
+                            <h3><i class="fas fa-envelope"></i> Email</h3>
+                            <p>hci2024group10@gmail.com</p>
+                        </div>
+        
+                        <!-- Call -->
+                        <div class="contact-item">
+                            <h3><i class="fas fa-phone"></i> Call</h3>
+                            <p>+89 039 816 722</p>
+                        </div>
+                    </div>
+        
+                    <!-- Right Section (Contact Form) -->
+                    <div class="right">
+                        <form action="#" method="POST">
+                            <div class="form-row">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                                <input type="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <input type="text" name="subject" placeholder="Subject" required>
+                            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-group-info">
+                <h3>GROUP 10</h3>
+                <p>Hồ Chí Minh Nông Lâm University<br>Thủ Đức City, Hồ Chí Minh City, Việt Nam</p>
+                <p>Phone: +89 039 816 722<br>Email: hci2024group10@gmail.com</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="group_diary.html">Group Diary</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="technical.html">Technical</a></li>
+                    <li><a href="style_guide.html">Style Guide</a></li>
+                    <li><a href="result.html">Result</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-members">
+                <h4>Our Members</h4>
+                <ul>
+                    <li><a href="#">Nguyễn Hữu Duy</a></li>
+                    <li><a href="#">Nguyễn Xuân Đại</a></li>
+                    <li><a href="#">Nguyễn Võ Quốc Tuấn</a></li>
+                    <li><a href="#">Lê Ngọc Châu</a></li>
+                    <li><a href="#">Nguyễn Đình Hiếu</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <form>
+                    <input type="email" placeholder="Email is here" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
