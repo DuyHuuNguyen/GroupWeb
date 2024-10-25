@@ -170,6 +170,10 @@ nav ul li a:hover {
     transition: transform 0.3s ease;
 }
 
+.profile {
+    text-decoration: none;
+}
+
 .member-card:hover {
     transform: translateY(-5px);
 }
