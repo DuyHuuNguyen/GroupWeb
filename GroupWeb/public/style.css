@@ -78,7 +78,7 @@ nav ul li a:hover {
 .hero {
     text-align: center;
     padding: 50px;
-    background-image:url(img/dai-hoc-nong-lam-tp-hcm.jpg);
+    background-image:url(https://jobtestvnn.wordpress.com/wp-content/uploads/2022/09/hoc-phi-dai-hoc-nong-lam-1.jpeg?w=1024);
     background-repeat: no-repeat;
     background-size: 100%;
     /* background-color: #00bfff; */
@@ -97,6 +97,54 @@ nav ul li a:hover {
 
 .hero p {
     font-size: 1.2em;
+}
+/* update fix lỗi trnag index */
+.member-profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Style for each member card */
+.member {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    width: calc(20% - 20px); /* Show all cards in a row on larger screens */
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+/* Style for images inside each card */
+.member img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* Member name and description */
+.member h4 {
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+}
+
+.member p {
+    color: #666;
+    font-size: 0.9em;
+    margin: 0;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .member {
+        width: 100%; /* Full width for each card on smaller screens */
+    }
 }
 
 /* Group Overview Section */
@@ -170,9 +218,15 @@ nav ul li a:hover {
     transition: transform 0.3s ease;
 }
 
+ .profile {
+    text-decoration: none;
+}
+
+
 .profile {
     text-decoration: none;
 }
+
 
 .member-card:hover {
     transform: translateY(-5px);
