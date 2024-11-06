@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Demo Carousel với Hình Ảnh</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    .carousel-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    .carousel {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slide {
+      flex-shrink: 0; /* Ngăn không cho phần tử thu nhỏ */
+      width: 100%; /* Đảm bảo mỗi slide chiếm toàn bộ chiều rộng */
+    }
+    .slide img {
+      width: 100%;
+      height: 80%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều cao và chiều rộng */
+      object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+    }
+    .buttons {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .prev, .next {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    /* Xóa khoảng trắng thừa cho body */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="slide"><img src="img/ThienLy-2 - Photo_ Thiên Hào.jpg" alt="Image 1"></div>
+      <div class="slide"><img src="img/RangDong - Photo_ Thiên Hào.jpg" alt="Image 2"></div>
+      <div class="slide"><img src="img/ThienLy - Photo_ Thiên Hào.jpg" alt="Image 3"></div>
+      <div class="slide"><img src="img/PhuongVy - Photo_ Thiên Hào.jpg" alt="Image 4"></div>
+      <div class="slide"><img src="img/CatTuong - Photo_ Thiên Hào.jpg" alt="Image 5"></div>
+      <div class="slide"><img src="img/CamTu - Photo_ Thiên Hào.jpg" alt="Image 6"></div>
+    </div>
+    <div class="buttons">
+      <button class="prev"><</button>
+      <button class="next">></button>
+    </div>
+  </div>
+
+  <script>
+    const carousel = document.querySelector('.carousel');
+    const slides = document.querySelectorAll('.slide');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    let currentIndex = 0;
+    let interval;
+
+    function updateCarousel() {
+      carousel.style.transform = `translateX(${-currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateCarousel();
+    }
+
+    function startAutoSlide() {
+      interval = setInterval(nextSlide, 3000);
+    }
+
+    function stopAutoSlide() {
+      clearInterval(interval);
+    }
+
+    nextButton.addEventListener('click', () => {
+      stopAutoSlide();
+      nextSlide();
+      startAutoSlide();
+    });
+
+    prevButton.addEventListener('click', () => {
+      stopAutoSlide();
+      prevSlide();
+      startAutoSlide();
+    });
+
+    startAutoSlide();
+  </script>
+</body>
+</html>
