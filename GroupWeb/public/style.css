@@ -264,12 +264,6 @@ nav ul li a:hover {
     margin: 0.2rem 0;
 }
 
-.member-description {
-    text-align: justify;
-    margin-top: 0.4rem;
-    line-height: 1.3;
-}
-
 .social-links {
     display: flex;
     justify-content: center;

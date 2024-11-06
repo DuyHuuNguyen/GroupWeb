@@ -38,140 +38,138 @@
     <!-- Group Overview Section -->
     <section class="group-overview">
         <h1 class="team-title">Our Team</h1>
-            <div id="root"></div>
+        <div id="root"></div>
 
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.22.20/babel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.22.20/babel.min.js"></script>
 
-            <script type="text/babel">
-                // Member Card Component
-                const MemberCard = ({ member }) => {
-                    return (
-                        <div className="member-card">
-                            <a className="profile" href={member.profileUrl} target="_blank">
-                                <img src={member.imageUrl} alt={member.name} className="member-image" />
-                                <h2 className="member-name">{member.name}</h2>
-                                <p className="member-role">{member.role}</p>
-                                <div className="member-details">
-                                    <p>MSSV: {member.studentId}</p>
-                                    <p>Class: {member.class}</p>
-                                    <p className="member-description">
-                                        Description: {member.description}
-                                    </p>
-                                </div>
-                                <div className="social-links">
-                                    <a href={`mailto:${member.email}`} title="Email" className="social-icon">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                                            <polyline points="22,6 12,13 2,6" />
-                                        </svg>
-                                    </a>
-                                    <a href={member.portfolioUrl} target="_blank" title="Portfolio" className="social-icon">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" />
-                                            <polyline points="13 2 13 9 20 9" />
-                                        </svg>
-                                    </a>
-                                    <a href={member.facebookUrl} target="_blank" title="Facebook" className="social-icon">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                                        </svg>
-                                    </a>
-                                    <a href={member.githubUrl} target="_blank" title="GitHub" className="social-icon">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </a>
-                        </div>
-                    );
-                };
+        <script type="text/babel">
+            // Member Card Component
+            const MemberCard = ({ member }) => {
+                return (
+                    <div className="member-card">
+                        <a className="profile" href={member.profileUrl} target="_blank">
+                            <img src={member.imageUrl} alt={member.name} className="member-image" />
+                            <h2 className="member-name">{member.name}</h2>
+                            <p className="member-role">{member.role}</p>
+                            <div className="member-details">
+                                <p>MSSV: {member.studentId}</p>
+                                <p>Class: {member.class}</p>
+                                <p>Hobbies: {member.hobbies}</p>
+                            </div>
+                            <div className="social-links">
+                                <a href={`mailto:${member.email}`} title="Email" className="social-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                        <polyline points="22,6 12,13 2,6" />
+                                    </svg>
+                                </a>
+                                <a href={member.portfolioUrl} target="_blank" title="Portfolio" className="social-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" />
+                                        <polyline points="13 2 13 9 20 9" />
+                                    </svg>
+                                </a>
+                                <a href={member.facebookUrl} target="_blank" title="Facebook" className="social-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                                    </svg>
+                                </a>
+                                <a href={member.githubUrl} target="_blank" title="GitHub" className="social-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </a>
+                    </div>
+                );
+            };
 
-                // App Component with multiple members
-                const App = () => {
-                    const members = [
-                        {
-                            name: "Nguyễn Hữu Duy",
-                            role: "Leader",
-                            studentId: "23130075",
-                            class: "DH23DTC",
-                            description: "A dedicated software developer with expertise in backend technologies. Enjoys solving complex problems and is an avid gamer in his spare time.",
-                            profileUrl: "https://duyhuunguyen.github.io/GTNM/",
-                            imageUrl: "img/duy.jpg",
-                            email: "23130075@hcmuaf.edu.vn",
-                            portfolioUrl: "https://duyhuunguyen.github.io/GTNM/",
-                            facebookUrl: "#facebook-profile",
-                            githubUrl: "#github-profile"
-                        },
-                        {
-                            name: "Nguyễn Xuân Đại",
-                            role: "Member",
-                            studentId: "23130039",
-                            class: "DH23DTB",
-                            description: "A creative content strategist with a knack for storytelling. Committed to crafting engaging narratives that resonate with audiences across various platforms.",
-                            profileUrl: "https://xuni-dizan.github.io/Trang_ca_nhan/index.html",
-                            imageUrl: "img/dai.jpg",
-                            email: "23130039@.hcmuaf.edu.vn",
-                            portfolioUrl: "https://xuni-dizan.github.io/Trang_ca_nhan/index.html",
-                            facebookUrl: "#facebook-profile",
-                            githubUrl: "#github-profile"
-                        },
-                        {
-                            name: "Nguyễn Võ Quốc Tuấn",
-                            role: "Member",
-                            studentId: "23130370",
-                            class: "DH23DTA",
-                            description: "A proactive business analyst with strong organizational skills. Passionate about facilitating team collaboration and delivering data-driven insights to support project success.",
-                            profileUrl: "https://nguyentuan2005.github.io/NguyenVoQuocTuan-23130370-HCI/",
-                            imageUrl: "img/tuan.jpg",
-                            email: "23130370@.hcmuaf.edu.vn",
-                            portfolioUrl: "https://nguyentuan2005.github.io/NguyenVoQuocTuan-23130370-HCI/",
-                            facebookUrl: "https://www.facebook.com/profile.php?id=100040384152520",
-                            githubUrl: "https://github.com/NguyenTuan2005"
-                        },
-                        {
-                            name: "Lê Ngọc Châu",
-                            role: "Member",
-                            studentId: "23130028",
-                            class: "DH23DTA",
-                            description: "An enthusiastic data analyst who thrives on turning data into actionable insights. Enjoys hiking and capturing nature through photography during weekends.",
-                            profileUrl: "https://chaule74.github.io/hci2025/#",
-                            imageUrl: "img/chau.jpg",
-                            email: "23130028@.hcmuaf.edu.vn",
-                            portfolioUrl: "https://chaule74.github.io/hci2025/#",
-                            facebookUrl: "#facebook-profile",
-                            githubUrl: "#github-profile"
-                        },
-                        {
-                            name: "Nguyễn Đình Hiếu",
-                            role: "Member",
-                            studentId: "23130107",
-                            class: "DH23DTC",
-                            description: "A passionate web designer with a flair for creating user-friendly interfaces. Loves collaborating on innovative projects and exploring new design trends.",
-                            profileUrl: "https://hieuquenbt.github.io/hci2425/",
-                            imageUrl: "img/hiu.jpg",
-                            email: "23130107@.hcmuaf.edu.vn",
-                            portfolioUrl: "https://hieuquenbt.github.io/hci2425/",
-                            facebookUrl: "#facebook-profile",
-                            githubUrl: "#github-profile"
-                        }
-                    ];
+            // App Component with multiple members
+            const App = () => {
+                const members = [
+                    {
+                        name: "Nguyễn Hữu Duy",
+                        role: "Leader",
+                        studentId: "23130075",
+                        class: "DH23DTC",
+                        hobbies: "Play batminton, watching movies,...",
+                        profileUrl: "https://duyhuunguyen.github.io/GTNM/",
+                        imageUrl: "img/duy.jpg",
+                        email: "23130075@hcmuaf.edu.vn",
+                        portfolioUrl: "https://duyhuunguyen.github.io/GTNM/",
+                        facebookUrl: "#facebook-profile",
+                        githubUrl: "#github-profile"
+                    },
+                    {
+                        name: "Nguyễn Xuân Đại",
+                        role: "Member",
+                        studentId: "23130039",
+                        class: "DH23DTB",
+                        hobbies: "Play soccer, biking,...",
+                        profileUrl: "https://xuni-dizan.github.io/Trang_ca_nhan/index.html",
+                        imageUrl: "img/dai.jpg",
+                        email: "23130039@.hcmuaf.edu.vn",
+                        portfolioUrl: "https://xuni-dizan.github.io/Trang_ca_nhan/index.html",
+                        facebookUrl: "#facebook-profile",
+                        githubUrl: "#github-profile"
+                    },
+                    {
+                        name: "Nguyễn Võ Quốc Tuấn",
+                        role: "Member",
+                        studentId: "23130370",
+                        class: "DH23DTA",
+                        hobbies: "Swimming, drawing,...",
+                        profileUrl: "https://nguyentuan2005.github.io/NguyenVoQuocTuan-23130370-HCI/",
+                        imageUrl: "img/tuan.jpg",
+                        email: "23130370@.hcmuaf.edu.vn",
+                        portfolioUrl: "https://nguyentuan2005.github.io/NguyenVoQuocTuan-23130370-HCI/",
+                        facebookUrl: "https://www.facebook.com/profile.php?id=100040384152520",
+                        githubUrl: "https://github.com/NguyenTuan2005"
+                    },
+                    {
+                        name: "Lê Ngọc Châu",
+                        role: "Member",
+                        studentId: "23130028",
+                        class: "DH23DTA",
+                        hobbies: "Reading, gardening,...",
+                        profileUrl: "https://chaule74.github.io/hci2025/#",
+                        imageUrl: "img/chau.jpg",
+                        email: "23130028@.hcmuaf.edu.vn",
+                        portfolioUrl: "https://chaule74.github.io/hci2025/#",
+                        facebookUrl: "#facebook-profile",
+                        githubUrl: "#github-profile"
+                    },
+                    {
+                        name: "Nguyễn Đình Hiếu",
+                        role: "Member",
+                        studentId: "23130107",
+                        class: "DH23DTC",
+                        hobbies: "Listening to music, play guitar,...",
+                        profileUrl: "https://hieuquenbt.github.io/hci2425/",
+                        imageUrl: "img/hiu.jpg",
+                        email: "23130107@.hcmuaf.edu.vn",
+                        portfolioUrl: "https://hieuquenbt.github.io/hci2425/",
+                        facebookUrl: "#facebook-profile",
+                        githubUrl: "#github-profile"
+                    }
+                ];
 
-                    return (
-                        <div className="team-grid">
-                            {members.map((member, index) => (
-                                <MemberCard key={index} member={member} />
-                            ))}
-                        </div>
-                    );
-                };
+                return (
+                    <div className="team-grid">
+                        {members.map((member, index) => (
+                            <MemberCard key={index} member={member} />
+                        ))}
+                    </div>
+                );
+            };
 
-                // Render the app
-                const root = ReactDOM.createRoot(document.getElementById('root'));
-                root.render(<App />);
-            </script>
+            // Render the app
+            const root = ReactDOM.createRoot(document.getElementById('root'));
+            root.render(<App />);
+        </script>
     </section>
     <!-- </main> -->
 
@@ -219,4 +217,5 @@
     </footer>
 
 </body>
+
 </html>
