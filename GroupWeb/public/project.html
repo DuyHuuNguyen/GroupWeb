@@ -17,20 +17,35 @@
         .stic {
             position: sticky;
         }
-        .overflow-cls {
-            overflow: hidden;
+        .overflow-cls {   
             overflow-x: scroll;
-            overflow-y: scroll;
         }
         .over::-webkit-scrollbar {
              display: none;
         }
+        table th:nth-child(3), 
+        table td:nth-child(3) {
+            position: sticky;
+            background-color: white;
+            left: 0;
+            z-index: 1;
+        }
+        table thead th:first-child {
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+        table tbody td:last-child {
+            text-wrap: nowrap;
+        }
+
         @media only screen and (max-width: 600px){
             table {
-            table-layout: fixed;
-            /* width: 40px; */
+            table-layout: auto;
+            width: 100%;
+            }
         }
-        }
+        
     </style>
     </head>
     <body>
@@ -82,10 +97,10 @@
         </div>
 
         <section id="requirement" class="content-section ">
-           
             <div class="overflow-cls">
-                <table id="firstTable" class="table">
-                    <tr
+                <table id="secondTable" class="table">
+                    <thead>
+                        <tr
                         style="position: sticky; top: 0; opacity: none; background-color:#D8DBBD;">
                         <th id="small-table">Number</th>
                         <th>Functional</th>
@@ -94,48 +109,50 @@
                         <th>Intend time</th>
                         <th>Status</th>
                     </tr>
-                </table>
-                <table id="secondTable" class="table">
-                    <tr>
-                        <th id="">1</th>
-                        <th>Home Project</th>
-                        <th>Nguyễn Hữu Duy</th>
-                        <th style="position: sticky; top: 0;">Nguyễn Hữu Duy</th>
-                        <th>2 TUẦN</th>
-                        <th>Home stay menu, vai trò</th>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Register</td>
-                        <td>Nguyễn Võ Quốc Tuấn</td>
-                        <td>Nguyễn Võ Quốc Tuấn</td>
-                        <td>2 TUẦN</td>
-                        <td>Bản điều khiển, danh sách phòng</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Login</td>
-                        <td>Lê Ngọc Châu</td>
-                        <td>Lê Ngọc Châu</td>
-                        <td>2 TUẦN</td>
-                        <td>Danh mục, quản lý bình luận</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Forgot Password</td>
-                        <td>Nguyễn Xuân Đại</td>
-                        <td>Nguyễn Xuân Đại</td>
-                        <td>2 TUẦN</td>
-                        <td>Bài viết địa điểm</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Cart</td>
-                        <td>Nguyễn Đình Hiếu</td>
-                        <td>Nguyễn Đình Hiếu</td>
-                        <td>2 TUẦN</td>
-                        <td>Danh sách đặt phòng, người dùng</td>
-                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id>1</td>
+                            <td>Home Project</td>
+                            <td>Nguyễn Hữu Duy</td>
+                            <td><div>Nguyễn Hữu
+                                    Duy</div></td>
+                            <td>2 TUẦN</td>
+                            <td>Home stay menu, vai trò</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Register</td>
+                            <td>Nguyễn Võ Quốc Tuấn</td>
+                            <td>Nguyễn Võ Quốc Tuấn</td>
+                            <td>2 TUẦN</td>
+                            <td>Bản điều khiển, danh sách phòng</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Login</td>
+                            <td>Lê Ngọc Châu</td>
+                            <td>Lê Ngọc Châu</td>
+                            <td>2 TUẦN</td>
+                            <td>Danh mục, quản lý bình luận</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Forgot Password</td>
+                            <td>Nguyễn Xuân Đại</td>
+                            <td>Nguyễn Xuân Đại</td>
+                            <td>2 TUẦN</td>
+                            <td>Bài viết địa điểm</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Cart</td>
+                            <td>Nguyễn Đình Hiếu</td>
+                            <td>Nguyễn Đình Hiếu</td>
+                            <td>2 TUẦN</td>
+                            <td>Danh sách đặt phòng, người dùng</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </section>
@@ -284,28 +301,28 @@
             });
             });
 
-            function matchColumnWidths() {
-                const firstTable = document.getElementById('firstTable');
-                const secondTable = document.getElementById('secondTable');
-                const table = document.getElementsByClassName('table');
+            // function matchColumnWidths() {
+            //     const firstTable = document.getElementById('firstTable');
+            //     const secondTable = document.getElementById('secondTable');
+            //     const table = document.getElementsByClassName('table');
 
-                if (firstTable && secondTable) {
-                    const firstTableCols = firstTable.querySelectorAll('th');
-                    const secondTableCols = secondTable.querySelectorAll('th');
+            //     if (firstTable && secondTable) {
+            //         const firstTableCols = firstTable.querySelectorAll('th');
+            //         const secondTableCols = secondTable.querySelectorAll('th');
 
-                    if (firstTableCols.length === secondTableCols.length) {
-                        secondTableCols.forEach((col, index) => {
-                            const width = col.offsetWidth;
-                            firstTableCols[index].style.width = `${width}px`;
+            //         if (firstTableCols.length === secondTableCols.length) {
+            //             secondTableCols.forEach((col, index) => {
+            //                 const width = col.offsetWidth;
+            //                 firstTableCols[index].style.width = `${width}px`;
                             
-                        });
-                    }
-                }
-            }
+            //             });
+            //         }
+            //     }
+            // }
 
-            // Call the function on window load and resize
-            window.onload = matchColumnWidths;
-            window.onresize = matchColumnWidths;
+            // // Call the function on window load and resize
+            // window.onload = matchColumnWidths;
+            // window.onresize = matchColumnWidths;
         
     </script>
         <script src="script.js"></script>
