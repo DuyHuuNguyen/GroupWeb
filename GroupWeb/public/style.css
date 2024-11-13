@@ -284,89 +284,25 @@ iframe {
     gap: 2rem;
 }
 
-.member-card {
-    background: var(--background-color-white);
-    border-radius: 15px;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
- .profile {
-    text-decoration: none;
-}
-
-
-.profile {
-    text-decoration: none;
-}
-
-
 .member-card:hover {
+    transition: transform 0.3s ease;
     transform: translateY(-5px);
 }
 
-.member-image {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin: 0 auto 1rem;
-    object-fit: cover;
-    border: 3px solid var(--background-color-dark-blue);
-}
-
-.member-name {
-    font-size: 1.2rem;
-    color: var(--background-color-dark-blue);
-    margin-bottom: 0.3rem;
-}
-
-.member-role {
-    color: var(--background-color-dark-blue);
-    font-weight: 500;
-    margin-bottom: 0.3rem;
-}
-
-.member-details {
-    margin: 0.5rem 0;
-    text-align: left;
-    font-size: 0.9rem;
-    color: var(--background-color-dark-blue);
-}
-
-.member-details p {
-    margin: 0.2rem 0;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.2rem;
-    margin-top: 1.5rem;
+.border-theme {
+    border: 3px solid var(--background-color-dark-blue) !important;
 }
 
 .social-links a {
     color: #00b33c;
     text-decoration: none;
     transition: color 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .social-links a:hover {
     color: var(--background-color-pale-blue);
     transform: translateY(-2px);
 }
-
-.social-icon svg {
-    width: 22px;
-    height: 22px;
-}
-
-
-
 
 /* --------------------------project page------------------------- */
 .header-prjMenu {
