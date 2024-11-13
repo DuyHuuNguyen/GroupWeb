@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General body style */
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Hero section for Style Guide */
+        .hero {
+            background-color: #003366;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #ccc;
+        }
+
+        /* Navigation Buttons */
+        nav button {
+            background-color: #5AB9EA;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            padding: 12px 20px; /* Tăng khoảng cách bên trong button */
+            margin-top: 15px; /* Tạo khoảng cách phía trên */
+            margin-bottom: 15px; /* Khoảng cách phía dưới button */ 
+        }
+
+        nav button:hover {
+            background-color: #00bfff;
+        }
+
+        nav button.active {
+            background-color: #003366;
+        }
+
+        /* Content sections */
+        .content-section {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        /* Layout section styling */
+        .layout-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .layout-item {
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .layout-item h3 {
+            margin-bottom: 10px;
+            color: #003366;
+        }
+
+        /* Upload container */
+        .upload-container {
+            border: 2px dashed #ccc;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .upload-container label {
+            background-color: #5AB9EA;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .uploaded-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .uploaded-image-container {
+            position: relative;
+            max-width: 150px;
+        }
+
+        .uploaded-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .delete-button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 5px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+
+        /* Color section */
+        .color-circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        /* Image sizes */
+        .image-sizes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .image-size {
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            max-width: 150px;
+        }
+
+        .image-size img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Typography section */
+        .typography-section p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin-left: 20px;
+            list-style: disc;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>GROUP 10</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="group_diary.html">Group Diary</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="technical.html">Technical</a></li>
+                <li><a href="style_guide.html" class="active">Style Guide</a></li>
+                <li><a href="result.html">Result</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+            <div class="project-button">
+                <a href="#" class="btn">Go to project</a>
+            </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2 style="color: #00bfff;">Style Guide</h2>
+        <p>Home / Style Guide</p>
+    </section>
+
+    <!-- Main Content Sections -->
+    <nav>
+        <button class="btn" id="typoBtn" onclick="showSection('typography')">Typography</button>
+        <button class="btn" id="dirBtn" onclick="showSection('directory')">Directory</button>
+        <button class="btn" id="layoutBtn" onclick="showSection('layout')">Layout</button>
+        <button class="btn" id="colorBtn" onclick="showSection('color')">Color</button>
+        <button class="btn" id="imageBtn" onclick="showSection('image')">Image</button>
+    </nav>
+
+    <!-- Typography Section -->
+    <section id="typography" class="content-section typography-section active">
+        <h2>Typography</h2>
+        <p><strong>Font Family:</strong></p>
+        <p>Use Arial, sans-serif for body text and headers. This ensures readability across various screen sizes.</p>
+
+        <p><strong>Kích thước chữ:</strong></p>
+        <ul>
+            <li>H1: 48px</li>
+            <li>H2: 36px</li>
+            <li>H3: 28px</li>
+            <li>H4: 24px</li>
+            <li>Body Text: 16px</li>
+        </ul>
+
+        <p><strong>Font Weight:</strong></p>
+        <p>Use bold for headings (600-700) and normal (400) for body text.</p>
+
+        <p><strong>Letter Spacing:</strong></p>
+        <p>Adjust to 0.5px for better readability in large blocks of text.</p>
+
+        <p><strong>Line Height:</strong></p>
+        <p>Use a line height of 1.6 for body text to ensure the text is not too cramped.</p>
+
+        <p><strong>Text Color:</strong></p>
+        <p>Use #333 for body text and #003366 for headings.</p>
+
+        <p><strong>Line Length:</strong></p>
+        <p>Max line length should be 75-85 characters for best readability.</p>
+
+        <p><strong>Text Alignment:</strong></p>
+        <p>Left align most text; center-align headings where needed.</p>
+
+        <p><strong>Interactive Typography:</strong></p>
+        <p>Links and buttons change color on hover. Default is #5AB9EA; on hover, change to #00bfff.</p>
+
+        <p><strong>Responsive Typography:</strong></p>
+        <p>Ensure all text adjusts based on screen size, using media queries for font sizes.</p>
+    </section>
+
+    <!-- Directory Section with Multiple Image Upload -->
+    <section id="directory" class="content-section">
+        <h2>Directory</h2>
+        <p><strong>Directory Structure of Group Web</strong></p>
+        <div class="upload-container">
+            <input type="file" accept="image/*" id="directoryImgInput" multiple onchange="loadMultipleImages(event)">
+            <label for="directoryImgInput">Add Images</label>
+        </div>
+        <div class="uploaded-images" id="directoryImages"></div>
+        <p id="directoryError" class="error-message"></p>
+    </section>
+
+    <!-- Layout Section -->
+    <section id="layout" class="content-section">
+        <h2>Layout</h2>
+        <div class="layout-container">
+            <div class="layout-item">
+                <h3>Home</h3>
+                <div class="upload-container">
+                    <input type="file" accept="image/*" id="homeLayoutImgInput" onchange="loadImage(event, 'homeLayoutImg', 'homeLayoutImgInput')">
+                    <label for="homeLayoutImgInput">Add Image</label>
+                    <img id="homeLayoutImg" class="uploaded-image" alt="Home Layout Image">
+                </div>
+            </div>
+            <div class="layout-item">
+                <h3>About</h3>
+                <div class="upload-container">
+                    <input type="file" accept="image/*" id="aboutLayoutImgInput" onchange="loadImage(event, 'aboutLayoutImg', 'aboutLayoutImgInput')">
+                    <label for="aboutLayoutImgInput">Add Image</label>
+                    <img id="aboutLayoutImg" class="uploaded-image" alt="About Layout Image">
+                </div>
+            </div>
+            <div class="layout-item">
+                <h3>Group Diary</h3>
+                <div class="upload-container">
+                    <input type="file" accept="image/*" id="diaryLayoutImgInput" onchange="loadImage(event, 'diaryLayoutImg', 'diaryLayoutImgInput')">
+                    <label for="diaryLayoutImgInput">Add Image</label>
+                    <img id="diaryLayoutImg" class="uploaded-image" alt="Group Diary Layout Image">
+                </div>
+            </div>
+            <div class="layout-item">
+                <h3>Project</h3>
+                <div class="upload-container">
+                    <input type="file" accept="image/*" id="projectLayoutImgInput" onchange="loadImage(event, 'projectLayoutImg', 'projectLayoutImgInput')">
+                    <label for="projectLayoutImgInput">Add Image</label>
+                    <img id="projectLayoutImg" class="uploaded-image" alt="Project Layout Image">
+                </div>
+            </div>
+            <div class="layout-item">
+                <h3>Technical</h3>
+                <div class="upload-container">
+                    <input type="file" accept="image/*" id="technicalLayoutImgInput" onchange="loadImage(event, 'technicalLayoutImg', 'technicalLayoutImgInput')">
+                    <label for="technicalLayoutImgInput">Add Image</label>
+                    <img id="technicalLayoutImg" class="uploaded-image" alt="Technical Layout Image">
+                </div>
+            </div>
+            <div class="layout-item">
+                <h3>Style Guide</h3>
+                <div class="upload-container">
+                    <input type="file" accept="image/*" id="styleGuideLayoutImgInput" onchange="loadImage(event, 'styleGuideLayoutImg', 'styleGuideLayoutImgInput')">
+                    <label for="styleGuideLayoutImgInput">Add Image</label>
+                    <img id="styleGuideLayoutImg" class="uploaded-image" alt="Style Guide Layout Image">
+                </div>
+            </div>
+            <div class="layout-item">
+                <h3>Result</h3>
+                <div class="upload-container">
+                    <input type="file" accept="image/*" id="resultLayoutImgInput" onchange="loadImage(event, 'resultLayoutImg', 'resultLayoutImgInput')">
+                    <label for="resultLayoutImgInput">Add Image</label>
+                    <img id="resultLayoutImg" class="uploaded-image" alt="Result Layout Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Section -->
+    <section id="color" class="content-section">
+        <h2>Colors Used</h2>
+        <div>
+            <div class="color-circle" style="background-color: #003366;"></div> #003366
+            <div class="color-circle" style="background-color: #5AB9EA;"></div> #5AB9EA
+            <div class="color-circle" style="background-color: #00bfff;"></div> #00bfff
+        </div>
+    </section>
+
+    <!-- Image Section -->
+    <section id="image" class="content-section">
+        <h2>Image Sizes</h2>
+        <div class="image-sizes">
+            <div class="image-size">
+                <img src="img/sample1.jpg" alt="3x4 Size">
+            </div>
+            <div class="image-size">
+                <img src="img/sample2.jpg" alt="16x9 Size">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-group-info">
+                <h3>GROUP 10</h3>
+                <p>Hồ Chí Minh Nông Lâm University<br>Thủ Đức City, Hồ Chí Minh City, Việt Nam</p>
+                <p>Phone: +89 039 816 722<br>Email: hci2024group10@gmail.com</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="group_diary.html">Group Diary</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="technical.html">Technical</a></li>
+                    <li><a href="style_guide.html">Style Guide</a></li>
+                    <li><a href="result.html">Result</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Section Toggling and Image Upload -->
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        function loadImage(event, imgId, inputId) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function () {
+                document.getElementById(imgId).src = reader.result;
+                document.getElementById(imgId).style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function loadMultipleImages(event) {
+            const files = event.target.files;
+            const imagesContainer = document.getElementById('directoryImages');
+            imagesContainer.innerHTML = ''; // Clear previous images
+            Array.from(files).forEach((file, index) => {
+                const reader = new FileReader();
+                reader.onload = function () {
+                    const imageContainer = document.createElement('div');
+                    imageContainer.classList.add('uploaded-image-container');
+
+                    const img = document.createElement('img');
+                    img.src = reader.result;
+                    img.classList.add('uploaded-image');
+
+                    const deleteBtn = document.createElement('button');
+                    deleteBtn.innerHTML = '&times;';
+                    deleteBtn.classList.add('delete-button');
+                    deleteBtn.onclick = function () {
+                        imagesContainer.removeChild(imageContainer);
+                    };
+
+                    imageContainer.appendChild(img);
+                    imageContainer.appendChild(deleteBtn);
+                    imagesContainer.appendChild(imageContainer);
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+
+        // Function to update typography dynamically
+        document.getElementById('fontSizeInput').addEventListener('input', function () {
+            document.body.style.fontSize = this.value + 'px';
+        });
+
+        document.getElementById('textColorInput').addEventListener('input', function () {
+            document.body.style.color = this.value;
+        });
+
+        document.getElementById('lineHeightInput').addEventListener('input', function () {
+            document.body.style.lineHeight = this.value;
+        });
+    </script>
+
+</body>
+</html>
+
+
+
