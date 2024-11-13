@@ -78,14 +78,7 @@
         }
 
         .container {
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        .map-section {
-            margin-bottom: 30px;
-            margin-left: -145px;
-            margin-right: -145px;
+            width: 100%;
         }
 
         .map {
@@ -97,19 +90,18 @@
         .contact-info {
             display: flex;
             justify-content: space-between;
-            padding-bottom: 30px;
+            padding: 20px 30px;
+            flex-wrap: wrap;
         }
 
         .left, .right {
-            width: 48%;
+            width: 49%;
         }
 
         .left {
             background-color: #ffffff;
             padding: 20px;
             border-radius: 8px;
-            margin-left: -110px;
-            margin-right: -50px;
             border: 1px solid #ccc;
         }
 
@@ -126,8 +118,6 @@
         .right form {
             display: flex;
             flex-direction: column;
-            margin-left: -150px;
-            margin-right: -110px;
         }
 
         .contact-item {
@@ -290,6 +280,15 @@
 
         .footer-newsletter button:hover {
             background-color: var(--background-color-light-blue);
+        }
+        @media screen and (max-width: 720px) {
+            footer {
+                display: block;
+                width: 100%;
+            }
+            .footer-container {
+                display: block;
+            }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">

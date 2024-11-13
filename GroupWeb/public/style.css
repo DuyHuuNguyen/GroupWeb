@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* overflow-x: hidden; */
 }
 
 :root {
@@ -26,6 +27,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
+    
 }
 
 header {
@@ -67,7 +69,7 @@ nav ul li a:hover {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    /* transition: background-color 0.3s ease; */
     margin-right: 20px;
 }
 
@@ -78,12 +80,24 @@ nav ul li a:hover {
 .hero {
     text-align: center;
     padding: 50px;
-    background-image:url(img/dai-hoc-nong-lam-tp-hcm.jpg);
+    /* background-image:url(https://jobtestvnn.wordpress.com/wp-content/uploads/2022/09/hoc-phi-dai-hoc-nong-lam-1.jpeg?w=1024); */
     background-repeat: no-repeat;
     background-size: 100%;
     /* background-color: #00bfff; */
-    color: var(--background-color-white);
+    color: var(--background-color-dark-blue);
+    /* height: 300px; */
+    /* position: absolute; */
 }
+
+
+
+iframe {
+    width: 100%;
+    height: 65rem; /* Chiều cao tối đa là 65rem */
+    border: none; /* Xóa viền của iframe */
+    overflow:hidden;
+    /* stroke-linecap:  ; */
+  }
 
 .hero h2 {
     font-size: 2.5em;
@@ -97,6 +111,54 @@ nav ul li a:hover {
 
 .hero p {
     font-size: 1.2em;
+}
+/* update fix lỗi trnag index */
+.member-profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Style for each member card */
+.member {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    width: calc(20% - 20px); /* Show all cards in a row on larger screens */
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+/* Style for images inside each card */
+.member img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* Member name and description */
+.member h4 {
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+}
+
+.member p {
+    color: #666;
+    font-size: 0.9em;
+    margin: 0;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .member {
+        width: 100%; /* Full width for each card on smaller screens */
+    }
 }
 
 /* Group Overview Section */
@@ -148,6 +210,67 @@ nav ul li a:hover {
     color: #666;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  .carousel-container {
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    position: relative;
+  }
+  .carousel {
+    display: flex;
+    height: 90vh;
+    transition: transform 1s ease-in-out;
+  }
+  .slide {
+    /* Ngăn không cho phần tử thu nhỏ */
+    flex-shrink: 0; 
+    width: 100%; /* Đảm bảo mỗi slide chiếm toàn bộ chiều rộng */
+  }
+  .slide img {
+    width: 100%;
+    height: 90vh; /* Đảm bảo hình ảnh chiếm toàn bộ chiều cao và chiều rộng */
+    object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+  }
+  .buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .prev, .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  /* Xóa khoảng trắng thừa cho body */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @media only screen and (max-width: 600px) {
+      .carousel-container {
+          height: 100%;
+      }
+      .slide img {
+          height: 100%;
+      }
+  }
+
 /* --------------------------About page------------------------- */
 .team-title {
     text-align: center;
@@ -186,7 +309,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     object-fit: fill;
-    background-repeat: no-repeat;
+    
     color: white;
     padding: 20px;
     
@@ -195,11 +318,10 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     padding: 5vh;
-    background-image: url("/GroupWeb/public/img/dai-hoc-nong-lam-tp-hcm.jpg");
     background-size: 100%;
 } 
 .projectBigText h1 {
-    color: white;
+    color:  #003366;
 }
 .project-button .btn {
     background-color: var(--background-color-light-blue);
@@ -209,6 +331,7 @@ nav ul li a:hover {
     border-radius: 5px;
     transition: background-color 0.3s ease;
     margin-right: 20px;
+
 }
 
 .project-button .btn:hover {
@@ -223,7 +346,6 @@ nav ul li a:hover {
     width: 300px;
     height: 50px;
     border-radius: 3px;
-    background-color: #8AB17D;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -234,13 +356,13 @@ nav ul li a:hover {
 }
 
 .tab-button:hover {
-    background-color: #6C8B5E;
+    background-color: #003366;
 }
 
 .content-section { 
     padding: 20px;
     background-color: #FFF;
-    margin: 20px;
+    
     border-radius: 8px;
 }
 .content-section h2{
@@ -249,7 +371,7 @@ nav ul li a:hover {
 }
 
 .visited-button {
-    background-color: #3a5335;
+    background-color:  #003366;
     color: white;
     padding: 15px 30px;
     border-radius: 5px;
@@ -266,12 +388,11 @@ nav ul li a:hover {
 }
 
 table {
-    margin-left: 50px;
-    margin-right: 50px;
+    
     /* border-collapse: collapse; */
 }
 th {
-    background-color: #8AB17D;
+    /* background-color:  ; */
     width: 400px;
 }
 td {
@@ -293,15 +414,15 @@ th, td {
     margin: 0 auto;
 }
 #small-table {
-    width: 50px;
+    width: 70px;
 }
 .expand-btn {
     border-radius: 3px;
     width: 100%;
     padding: 15px;
     margin: 5px 0;
-    background-color: #8AB17D;
-    border: 1px solid #6C8B5E;
+    background-color: #3A6D8C;
+    border: 1px solid #3A6D8C;
     color: white;
     font-size: 18px;
     text-align: left;
@@ -310,7 +431,7 @@ th, td {
 }
 
 .expand-btn:hover {
-    background-color: #6C8B5E;
+    background-color:  #5AB9EA;
 }
 
 .content {
@@ -488,6 +609,10 @@ footer {
 }
 
 /* css table group diray */
+.mb-4{
+    display: flex;
+    text-align: center;
+}
 
 .tab-content {
     padding: 20px;
