@@ -5,69 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group 10 - Human-Computer Interaction</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
 </head>
 <style>
     
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-    }
-    .carousel-container {
-      width: 100%;
-      height: 90vh;
-      overflow: hidden;
-      position: relative;
-    }
-    .carousel {
-      display: flex;
-      height: 90vh;
-      transition: transform 1s ease-in-out;
-    }
-    .slide {
-      /* Ngăn không cho phần tử thu nhỏ */
-      flex-shrink: 0; 
-      width: 100%; /* Đảm bảo mỗi slide chiếm toàn bộ chiều rộng */
-    }
-    .slide img {
-      width: 100%;
-      height: 90vh; /* Đảm bảo hình ảnh chiếm toàn bộ chiều cao và chiều rộng */
-      object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
-    }
-    .buttons {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-    }
-    .prev, .next {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      font-size: 18px;
-    }
-    /* Xóa khoảng trắng thừa cho body */
-    body {
-      margin: 0;
-      padding: 0;
-    }
-    
-    @media only screen and (max-width: 600px) {
-        .carousel-container {
-            height: 100%;
-        }
-        .slide img {
-            height: 100%;
-        }
-    }
+   
 </style>
 <body>
     <header>
@@ -76,7 +18,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a class = "text-primary" href="index.html" >Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="group_diary.html">Group Diary</a></li>
                 <li><a href="project.html">Project</a></li>
@@ -131,27 +73,27 @@
                 <div class="member">
                     <img src="img\duy.jpg" alt="Nguyễn Hữu Duy">
                     <h4>Nguyễn Hữu Duy</h4>
-                    <p>Project Leader and Backend Developer</p>
+                    <!-- <p>Project Leader and Backend Developer</p> -->
                 </div>
                 <div class="member">
                     <img src="img\dai.jpg" alt="Nguyễn Xuân Đại">
                     <h4>Nguyễn Xuân Đại</h4>
-                    <p>Frontend Developer and Designer</p>
+                    <!-- <p>Frontend Developer and Designer</p> -->
                 </div>
                 <div class="member">
                     <img src="img\tuan.jpg" alt="Nguyễn Võ Quốc Tuấn">
                     <h4>Nguyễn Võ Quốc Tuấn</h4>
-                    <p>Database Administrator</p>
+                    <!-- <p>Database Administrator</p> -->
                 </div>
                 <div class="member">
                     <img src="img\chau.jpg" alt="Lê Ngọc Châu">
                     <h4>Lê Ngọc Châu</h4>
-                    <p>Quality Assurance and Tester</p>
+                    <!-- <p>Quality Assurance and Tester</p> -->
                 </div>
                 <div class="member">
                     <img src="img\hiu.jpg" alt="Nguyễn Đình Hiếu">
                     <h4>Nguyễn Đình Hiếu</h4>
-                    <p>Quality Assurance and Tester</p>
+                    <!-- <p>Quality Assurance and Tester</p> -->
                 </div>
                 <Style>
                
@@ -185,11 +127,11 @@
             <div class="footer-members">
                 <h4>Our Members</h4>
                 <ul>
-                    <li><a href="#">Nguyễn Hữu Duy</a></li>
-                    <li><a href="#">Nguyễn Xuân Đại</a></li>
-                    <li><a href="#">Nguyễn Võ Quốc Tuấn</a></li>
-                    <li><a href="#">Lê Ngọc Châu</a></li>
-                    <li><a href="#">Nguyễn Đình Hiếu</a></li>
+                    <li><a href="https://duyhuunguyen.github.io/GTNM/">Nguyễn Hữu Duy</a></li>
+                    <li><a href="https://xuni-dizan.github.io/Trang_ca_nhan/index.html">Nguyễn Xuân Đại</a></li>
+                    <li><a href="https://nguyentuan2005.github.io/NguyenVoQuocTuan-23130370-HCI/">Nguyễn Võ Quốc Tuấn</a></li>
+                    <li><a href="https://chaule74.github.io/hci2025/#">Lê Ngọc Châu</a></li>
+                    <li><a href="https://hieuquenbt.github.io/hci2425/">Nguyễn Đình Hiếu</a></li>
                 </ul>
             </div>
 
