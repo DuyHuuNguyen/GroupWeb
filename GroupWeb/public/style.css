@@ -312,7 +312,7 @@ iframe {
     display: flex;
     justify-content: center;
     object-fit: fill;
-    background-repeat: no-repeat;
+    
     color: white;
     padding: 20px;
     
@@ -321,11 +321,10 @@ iframe {
     display: flex;
     justify-content: center;
     padding: 5vh;
-    background-image: url("/GroupWeb/public/img/dai-hoc-nong-lam-tp-hcm.jpg");
     background-size: 100%;
 } 
 .projectBigText h1 {
-    color: white;
+    color:  #003366;
 }
 .project-button .btn {
     background-color: var(--background-color-light-blue);
@@ -350,7 +349,6 @@ iframe {
     width: 300px;
     height: 50px;
     border-radius: 3px;
-    background-color: #8AB17D;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -361,13 +359,13 @@ iframe {
 }
 
 .tab-button:hover {
-    background-color: #6C8B5E;
+    background-color: #003366;
 }
 
 .content-section { 
     padding: 20px;
     background-color: #FFF;
-    margin: 20px;
+    
     border-radius: 8px;
 }
 .content-section h2{
@@ -376,7 +374,7 @@ iframe {
 }
 
 .visited-button {
-    background-color: #3a5335;
+    background-color:  #003366;
     color: white;
     padding: 15px 30px;
     border-radius: 5px;
@@ -393,12 +391,11 @@ iframe {
 }
 
 table {
-    margin-left: 50px;
-    margin-right: 50px;
+    
     /* border-collapse: collapse; */
 }
 th {
-    background-color: #8AB17D;
+    /* background-color:  ; */
     width: 400px;
 }
 td {
@@ -420,15 +417,15 @@ th, td {
     margin: 0 auto;
 }
 #small-table {
-    width: 50px;
+    width: 70px;
 }
 .expand-btn {
     border-radius: 3px;
     width: 100%;
     padding: 15px;
     margin: 5px 0;
-    background-color: #8AB17D;
-    border: 1px solid #6C8B5E;
+    background-color: #3A6D8C;
+    border: 1px solid #3A6D8C;
     color: white;
     font-size: 18px;
     text-align: left;
@@ -437,7 +434,7 @@ th, td {
 }
 
 .expand-btn:hover {
-    background-color: #6C8B5E;
+    background-color:  #5AB9EA;
 }
 
 .content {
