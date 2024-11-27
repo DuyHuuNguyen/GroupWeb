@@ -4,294 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group 10 - Human-Computer Interaction</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            }
-
-        :root {
-            --background-color-dark-blue: #003366;
-            --background-color-light-blue: #5AB9EA;
-            --background-color-pale-blue: #00bfff;
-            --background-color-white: white;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: var(--background-color-dark-blue);
-            color: var(--background-color-white);
-            padding: 20px;
-        }
-
-        header .logo h1 {
-            margin-left: 20px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: var(--background-color-light-blue);
-        }
-
-        .project-button .btn {
-            background-color: var(--background-color-light-blue);
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            margin-right: 20px;
-        }
-
-        .project-button .btn:hover {
-            background-color: var(--background-color-pale-blue);
-        }
-
-        .hero {
-            text-align: center;
-            padding: 10px;
-            background-repeat: no-repeat;
-            background-size: 100%;
-            /* background-color: #00bfff; */
-            color: var(--background-color-dark-blue);
-        }
-
-        .container {
-            width: 100%;
-        }
-
-        .map {
-            width: 100%;
-            height: 400px;
-            background-color: #ddd;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px 30px;
-            flex-wrap: wrap;
-        }
-
-        .left, .right {
-            width: 49%;
-        }
-
-        .left {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-        }
-
-        .left h2 {
-            margin-bottom: 15px;
-            font-size: 24px;
-        }
-
-        .left p {
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-
-        .right form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .contact-item {
-            margin-bottom: 20px;
-        }
-
-        .contact-item i {
-            font-size: 20px;
-            color: #333;
-            margin-right: 10px;
-        }
-
-        .contact-item h3 {
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-        }
-
-        .contact-item p {
-            font-size: 14px;
-            margin-left: 30px;
-        }
-
-        .form-row {
-            display: flex;
-            gap: 10px;
-        }
-
-        .form-row input {
-            width: calc(50% - 5px);
-        }
-
-        input::placeholder, textarea::placeholder {
-            font-family: Arial, sans-serif;
-        }
-        
-        .right input, .right textarea {
-            margin-bottom: 15px;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 100%;
-        }
-
-        .right textarea {
-            resize: none;
-            height: 150px;
-        }
-
-        .right button {
-            padding: 10px;
-            background-color: #003366;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            align-self: center;
-        }
-
-        .right button:hover {
-            background-color: #227ead;
-        }
-
-        @media (max-width: 768px) {
-            .contact-info {
-                flex-direction: column;
-            }
-
-            .left, .right {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-
-            .form-row {
-                flex-direction: column;
-            }
-
-            .form-row input {
-                width: 100%;
-            }
-        }
-        
-        /* Footer Styles */
-        footer {
-            background-color: var(--background-color-dark-blue);
-            color: #fff;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .footer-container {
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-            max-width: 1200px;
-        }
-
-        .footer-group-info,
-        .footer-links,
-        .footer-members,
-        .footer-newsletter {
-            flex: 1;
-            margin: 0 20px;
-        }
-
-        .footer-group-info h3, 
-        .footer-links h4, 
-        .footer-members h4, 
-        .footer-newsletter h4 {
-            margin-bottom: 15px;
-            font-size: 18px;
-        }
-
-        .footer-group-info p {
-            margin-bottom: 10px;
-        }
-
-        .footer-links ul, 
-        .footer-members ul {
-            list-style: none;
-        }
-
-        .footer-links ul li a, 
-        .footer-members ul li a {
-            color: var(--background-color-light-blue);
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .footer-links ul li a:hover, 
-        .footer-members ul li a:hover {
-            color: var(--background-color-white);
-        }
-
-        .footer-newsletter form {
-            display: flex;
-            align-items: center;
-        }
-
-        .footer-newsletter input[type="email"] {
-            padding: 10px;
-            border-radius: 20px 0 0 20px;
-            border: none;
-            width: 200px;
-            outline: none;
-        }
-
-        .footer-newsletter button {
-            padding: 10px 20px;
-            background-color: #00b33c;
-            color: var(--background-color-white);
-            border-radius: 0 20px 20px 0;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .footer-newsletter button:hover {
-            background-color: var(--background-color-light-blue);
-        }
-        @media screen and (max-width: 720px) {
-            footer {
-                display: block;
-                width: 100%;
-            }
-            .footer-container {
-                display: block;
-            }
-        }
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -307,21 +20,21 @@
                 <li><a href="technical.html">Technical</a></li>
                 <li><a href="style_guide.html">Style Guide</a></li>
                 <li><a href="result.html">Result</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" style="color: rgb(13 110 253);">Contact</a></li>
             </ul>
         </nav>
         <div class="project-button">
-            <a href="#" class="btn">Go to project</a>
+            <a href="https://duyhuunguyen.github.io/HotelManagerWeb/login" class="btn">Go to project</a>
         </div>
     </header>
 
     
-        <section class="hero">
+        <section id="hero">
             <h1>CONTACT US</h1>
         </section>
         
         <!-- Group Overview Section -->
-        <div class="container">
+        <div class="container-section">
             <!-- Map Section -->
             <div class="map-section">
                 <div class="map" id="map">
@@ -335,7 +48,7 @@
                 <!-- Contact Information and Form Section -->
                 <div class="contact-info">
                     <!-- Left Section -->
-                    <div class="left">
+                    <div class="contact-left">
                         <h2>Contact Information</h2>
         
                         <!-- Location -->
@@ -358,7 +71,7 @@
                     </div>
         
                     <!-- Right Section (Contact Form) -->
-                    <div class="right">
+                    <div class="contact-right">
                         <form action="#" method="POST">
                             <div class="form-row">
                                 <input type="text" name="name" placeholder="Your Name" required>

@@ -6,188 +6,336 @@
     <title>Style Guide</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* General body style */
-        body {
-            background-color: #f4f4f4;
-            color: #333;
-        }
+/* Hero section for Style Guide */
+.hero {
+background-color: #003366;
+padding: 40px 20px;
+text-align: center;
+color: white;
+border-bottom: 5px solid #00bfff; /* Border for a modern look */
+}
 
-        /* Hero section for Style Guide */
-        .hero {
-            background-color: #003366;
-            padding: 20px;
-            text-align: center;
-            color: white;
-        }
+.hero h2 {
+font-size: 48px;
+font-weight: 700;
+margin: 0;
+letter-spacing: 1px;
+}
 
-        .hero h2 {
-            font-size: 36px;
-            margin: 0;
-        }
+.hero p {
+font-size: 18px;
+margin-top: 10px;
+color: #ccc;
+}
 
-        .hero p {
-            font-size: 16px;
-            margin: 10px 0;
-            color: #ccc;
-        }
+/* Navigation Buttons */
+nav button {
+background-color: #5AB9EA;
+border: none;
+color: white;
+padding: 10px 20px;
+margin: 0 10px;
+cursor: pointer;
+font-size: 18px;
+border-radius: 5px;
+transition: background-color 0.3s ease;
+padding: 12px 20px; /* Tăng khoảng cách bên trong button */
+margin-top: 15px; /* Tạo khoảng cách phía trên */
+margin-bottom: 15px; /* Khoảng cách phía dưới button */ 
+transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-        /* Navigation Buttons */
-        nav button {
-            background-color: #5AB9EA;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            margin: 0 10px;
-            cursor: pointer;
-            font-size: 18px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            padding: 12px 20px; /* Tăng khoảng cách bên trong button */
-            margin-top: 15px; /* Tạo khoảng cách phía trên */
-            margin-bottom: 15px; /* Khoảng cách phía dưới button */ 
-        }
+nav button:hover {
+background-color: #00bfff;
+transform: scale(1.05);
+}
 
-        nav button:hover {
-            background-color: #00bfff;
-        }
+nav button.active {
+background-color: #003366;
+}
 
-        nav button.active {
-            background-color: #003366;
-        }
+/* Content sections */
+.content-section {
+display: none;
+padding: 30px;
+background-color: white;
+border-radius: 15px;
+margin-bottom: 30px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease;
+}
 
-        /* Content sections */
-        .content-section {
-            display: none;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
+h2 {
+font-size: 32px;
+font-weight: 600;
+margin-bottom: 20px;
+}
 
-        .content-section.active {
-            display: block;
-        }
+.content-section.active {
+display: block;
+}
 
-        /* Layout section styling */
-        .layout-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 20px;
-        }
+/* Layout section styling */
+.layout-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 30px;
+margin-top: 30px;
+}
 
-        .layout-item {
-            background-color: #e0e0e0;
-            border-radius: 10px;
-            padding: 10px;
-            text-align: center;
-        }
+.layout-item {
+background-color: #e0e0e0;
+border-radius: 15px;
+padding: 20px;
+text-align: center;
+box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease;
+}
 
-        .layout-item h3 {
-            margin-bottom: 10px;
-            color: #003366;
-        }
+.layout-item:hover {
+transform: translateY(-5px);
+box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
 
-        /* Upload container */
-        .upload-container {
-            border: 2px dashed #ccc;
-            padding: 10px;
-            text-align: center;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
+.layout-item h3 {
+font-size: 24px;
+color: #003366;
+margin-bottom: 15px;
+font-weight: bold;
+}
 
-        .upload-container label {
-            background-color: #5AB9EA;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
+/* Upload container */
+.upload-container {
+border: 2px dashed #ccc;
+padding: 15px;
+text-align: center;
+border-radius: 10px;
+transition: all 0.3s ease;
+}
 
-        .uploaded-images {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 10px;
-        }
+.upload-container input[type="file"] {
+display: none;
+}
 
-        .uploaded-image-container {
-            position: relative;
-            max-width: 150px;
-        }
+.upload-container label {
+background-color: #5AB9EA;
+color: white;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+display: inline-block;
+margin-bottom: 10px;
+}
 
-        .uploaded-image {
-            display: block;
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
+.uploaded-images {
+display: flex;
+flex-wrap: wrap;
+gap: 15px;
+margin-top: 10px;
+}
 
-        .delete-button {
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            background-color: red;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            padding: 5px;
-            cursor: pointer;
-            display: inline-block;
-        }
+.uploaded-image-container {
+position: relative;
+max-width: 150px;
+}
 
-        .error-message {
-            color: red;
-            margin-top: 10px;
-        }
+.uploaded-image {
+display: block;
+width: 100%;
+height: auto;
+border-radius: 5px;
+}
 
-        /* Color section */
-        .color-circle {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: inline-block;
-            margin-right: 10px;
-        }
+.delete-button {
+position: absolute;
+top: 5px;
+right: 5px;
+background-color: red;
+color: white;
+border: none;
+border-radius: 50%;
+padding: 5px;
+cursor: pointer;
+display: inline-block;
+}
 
-        /* Image sizes */
-        .image-sizes {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+.error-message {
+color: red;
+margin-top: 10px;
+}
 
-        .image-size {
-            border: 2px solid #ccc;
-            border-radius: 5px;
-            overflow: hidden;
-            max-width: 150px;
-        }
+/* Color section */
+.color-circle {
+width: 30px;
+height: 30px;
+border-radius: 50%;
+display: inline-block;
+margin-right: 10px;
+}
 
-        .image-size img {
-            width: 100%;
-            height: auto;
-        }
+/* Image sizes */
+.image-sizes {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+}
 
-        /* Typography section */
-        .typography-section p {
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
+.image-size {
+background: none;
+border: 100px;
+border-radius: 10%;
+overflow: hidden;
+max-width: 150px;
+}
 
-        ul {
-            margin-left: 20px;
-            list-style: disc;
-        }
+.image-size img {
+width: 100%;
+height: auto;
+}
+
+/* Typography section */
+.typography-section p {
+line-height: 1.6;
+margin-bottom: 10px;
+}
+
+.content-section .typography-section ul {
+margin-left: 20px;
+list-style: disc;
+}
+/* Responsive Design with Media Queries */
+@media (max-width: 968px) {
+    /* On smaller screens, stack layout items */
+    .layout-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Adjust typography */
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    nav button {
+        margin: 10px 0;
+    }
+
+    .layout-item {
+        padding: 15px;
+    }
+
+    .image-sizes {
+        justify-content: center;
+    }
+
+    .uploaded-image {
+        max-width: 100%; /* Allow images to take up full width */
+    }
+}
+
+/* For mobile-first (smaller devices) */
+@media (max-width: 480px) {
+    /* Adjust for very small screens */
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+
+    .content-section {
+        padding: 15px;
+    }
+
+    nav button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .layout-container {
+        grid-template-columns: 1fr;
+    }
+
+    .layout-item {
+        padding: 12px;
+    }
+
+    .uploaded-image {
+        max-width: 100%;
+    }
+
+    .color-circle {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Large screens (desktop and above) */
+@media (min-width: 1024px) {
+    /* Keep the layout as grid with two columns */
+    .layout-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Increase font size for larger screens */
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .layout-item {
+        padding: 20px;
+    }
+}
+/* Style cho nút Reset Images */
+#resetButtonLay, #resetButtonDir {
+    background-color: #5AB9EA; /* Màu đỏ nhẹ để biểu thị reset */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px; /* Thêm khoảng cách trên nút */
+}
+
+#resetButton:hover {
+    background-color: #5AB9EA; /* Đổi màu khi hover */
+    transform: scale(1.05); /* Phóng to nút khi hover */
+}
+
+#resetButton:focus {
+    outline: none; /* Loại bỏ viền khi nút được chọn */
+}
+/* Style cho thông báo Reset thành công */
+.reset-message {
+    background-color: #4CAF50; /* Màu xanh lá cho thông báo thành công */
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: opacity 0.3s ease;
+}
+
+.reset-message.error {
+    background-color: #FF4D4D; /* Màu đỏ cho thông báo lỗi */
+    color: white;
+}
+
     </style>
 </head>
 <body>
-
-    <!-- Header Section -->
+    
     <header>
         <div class="logo">
             <h1>GROUP 10</h1>
@@ -199,15 +347,15 @@
                 <li><a href="group_diary.html">Group Diary</a></li>
                 <li><a href="project.html">Project</a></li>
                 <li><a href="technical.html">Technical</a></li>
-                <li><a href="style_guide.html" class="active">Style Guide</a></li>
+                <li><a href="style_guide.html" style="color: rgb(13, 110, 253);">Style Guide</a></li>
                 <li><a href="result.html">Result</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-            <div class="project-button">
-                <a href="#" class="btn">Go to project</a>
-            </div>
-    </header>
+        <div class="project-button">
+            <a href="https://duyhuunguyen.github.io/HotelManagerWeb/login" class="btn">Go to project</a>
+        </div>
+    </header>    
 
     <!-- Hero Section -->
     <section class="hero">
@@ -272,6 +420,14 @@
             <input type="file" accept="image/*" id="directoryImgInput" multiple onchange="loadMultipleImages(event)">
             <label for="directoryImgInput">Add Images</label>
         </div>
+        <!-- Nút Reset Images -->
+        <button id="resetButtonDir" onclick="resetImagesDir()">Reset Images</button>
+
+        <!-- Thông báo reset thành công -->
+        <div id="resetMessage1" class="reset-message" style="display: none;">
+            <p>All images have been reset successfully!</p>
+        </div>
+
         <div class="uploaded-images" id="directoryImages"></div>
         <p id="directoryError" class="error-message"></p>
     </section>
@@ -279,7 +435,16 @@
     <!-- Layout Section -->
     <section id="layout" class="content-section">
         <h2>Layout</h2>
+        <!-- Nút Reset Images -->
+        <button id="resetButtonLay" onclick="resetImagesLay()">Reset Images</button>
+
+        <!-- Thông báo reset thành công -->
+        <div id="resetMessage2" class="reset-message" style="display: none;">
+            <p>All images have been reset successfully!</p>
+        </div>
+
         <div class="layout-container">
+
             <div class="layout-item">
                 <h3>Home</h3>
                 <div class="upload-container">
@@ -354,10 +519,10 @@
         <h2>Image Sizes</h2>
         <div class="image-sizes">
             <div class="image-size">
-                <img src="img/sample1.jpg" alt="3x4 Size">
+                <img src="https://placehold.co/600x400" alt="600x400 Size">
             </div>
             <div class="image-size">
-                <img src="img/sample2.jpg" alt="16x9 Size">
+                <img src="https://placehold.co/400" alt="400 Size">
             </div>
         </div>
     </section>
@@ -447,6 +612,216 @@
             document.body.style.lineHeight = this.value;
         });
     </script>
+    <script>
+        // Hàm để lưu ảnh vào localStorage
+        function saveImageToLocalStorage(inputId, imgId) {
+            const file = document.getElementById(inputId).files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function () {
+                    // Lưu ảnh vào localStorage
+                    const imgData = reader.result;
+                    localStorage.setItem(imgId, imgData);
+    
+                    // Cập nhật ảnh hiển thị
+                    document.getElementById(imgId).src = imgData;
+                    document.getElementById(imgId).style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+        function saveImagesToLocalStorage(images) {
+    localStorage.setItem('directoryImages', JSON.stringify(images));
+}
+    
+        // Hàm để kiểm tra và tải lại ảnh từ localStorage
+        function loadImagesFromLocalStorage() {
+            const imgIds = ['homeLayoutImg', 'aboutLayoutImg', 'diaryLayoutImg', 
+                            'projectLayoutImg', 'technicalLayoutImg', 'styleGuideLayoutImg', 'resultLayoutImg'];
+            imgIds.forEach(imgId => {
+                const imgData = localStorage.getItem(imgId);
+                if (imgData) {
+                    document.getElementById(imgId).src = imgData;
+                    document.getElementById(imgId).style.display = 'block';
+                }
+            });
+        }
+    
+        // Hàm để thay thế ảnh trong localStorage khi có ảnh mới
+        function handleImageUpload(event, imgId, inputId) {
+            // Xóa ảnh cũ nếu có trong localStorage
+            localStorage.removeItem(imgId);
+            // Lưu ảnh mới vào localStorage
+            saveImageToLocalStorage(inputId, imgId);
+        }
+    
+        // Hàm để xóa ảnh trong localStorage
+        function removeImageFromLocalStorage(imgId) {
+            localStorage.removeItem(imgId);
+            document.getElementById(imgId).style.display = 'none';
+        }
+
+
+    
+        // Tải ảnh từ localStorage
+function loadImagesFromLocalStorage1() {
+    const images = JSON.parse(localStorage.getItem('directoryImages'));
+    if (images) {
+        const imagesContainer = document.getElementById('directoryImages');
+        images.forEach(imgSrc => {
+            const imageContainer = document.createElement('div');
+            imageContainer.classList.add('uploaded-image-container');
+
+            const img = document.createElement('img');
+            img.src = imgSrc;
+            img.classList.add('uploaded-image');
+
+            const deleteBtn = document.createElement('button');
+            deleteBtn.innerHTML = '&times;';
+            deleteBtn.classList.add('delete-button');
+            deleteBtn.onclick = function () {
+                imagesContainer.removeChild(imageContainer);
+                // Cập nhật lại localStorage khi xóa ảnh
+                const updatedImages = images.filter(src => src !== imgSrc);
+                saveImagesToLocalStorage(updatedImages);
+            };
+
+            imageContainer.appendChild(img);
+            imageContainer.appendChild(deleteBtn);
+            imagesContainer.appendChild(imageContainer);
+        });
+    }
+}
+
+// Hàm xử lý khi tải nhiều ảnh
+function loadMultipleImages(event) {
+    const files = event.target.files;
+    const imagesContainer = document.getElementById('directoryImages');
+    const currentImages = JSON.parse(localStorage.getItem('directoryImages')) || [];
+
+    Array.from(files).forEach((file) => {
+        const reader = new FileReader();
+        reader.onload = function () {
+            const imageSrc = reader.result;
+            currentImages.push(imageSrc);  // Thêm ảnh vào mảng
+            saveImagesToLocalStorage(currentImages);  // Lưu lại vào localStorage
+
+            // Tạo phần tử cho ảnh vừa tải lên
+            const imageContainer = document.createElement('div');
+            imageContainer.classList.add('uploaded-image-container');
+
+            const img = document.createElement('img');
+            img.src = imageSrc;
+            img.classList.add('uploaded-image');
+
+            const deleteBtn = document.createElement('button');
+            deleteBtn.innerHTML = '&times;';
+            deleteBtn.classList.add('delete-button');
+            deleteBtn.onclick = function () {
+                imagesContainer.removeChild(imageContainer);
+                // Cập nhật lại localStorage khi xóa ảnh
+                const updatedImages = currentImages.filter(src => src !== imageSrc);
+                saveImagesToLocalStorage(updatedImages);
+            };
+
+            imageContainer.appendChild(img);
+            imageContainer.appendChild(deleteBtn);
+            imagesContainer.appendChild(imageContainer);
+        };
+        reader.readAsDataURL(file);
+    });
+}
+    
+        // Khi trang được tải lại, kiểm tra và tải lại ảnh từ localStorage
+        window.onload = function() {
+            loadImagesFromLocalStorage();
+            loadImagesFromLocalStorage1();
+        }
+    
+        // Các sự kiện cho các ảnh trong phần layout
+        document.getElementById('homeLayoutImgInput').addEventListener('change', function(event) {
+            handleImageUpload(event, 'homeLayoutImg', 'homeLayoutImgInput');
+        });
+    
+        document.getElementById('aboutLayoutImgInput').addEventListener('change', function(event) {
+            handleImageUpload(event, 'aboutLayoutImg', 'aboutLayoutImgInput');
+        });
+    
+        document.getElementById('diaryLayoutImgInput').addEventListener('change', function(event) {
+            handleImageUpload(event, 'diaryLayoutImg', 'diaryLayoutImgInput');
+        });
+    
+        document.getElementById('projectLayoutImgInput').addEventListener('change', function(event) {
+            handleImageUpload(event, 'projectLayoutImg', 'projectLayoutImgInput');
+        });
+    
+        document.getElementById('technicalLayoutImgInput').addEventListener('change', function(event) {
+            handleImageUpload(event, 'technicalLayoutImg', 'technicalLayoutImgInput');
+        });
+    
+        document.getElementById('styleGuideLayoutImgInput').addEventListener('change', function(event) {
+            handleImageUpload(event, 'styleGuideLayoutImg', 'styleGuideLayoutImgInput');
+        });
+    
+        document.getElementById('resultLayoutImgInput').addEventListener('change', function(event) {
+            handleImageUpload(event, 'resultLayoutImg', 'resultLayoutImgInput');
+        });
+
+        // Hàm Reset để xóa tất cả ảnh trong localStorage và giao diện
+        function resetImagesDir() {
+            // Xóa tất cả ảnh trong localStorage
+            localStorage.removeItem('directoryImages');
+
+            // Xóa ảnh trong giao diện
+            const imagesContainer = document.getElementById('directoryImages');
+            imagesContainer.innerHTML = '';  // Xóa tất cả các ảnh trong container
+
+            // Hiển thị thông báo reset thành công
+            const resetMessage = document.getElementById('resetMessage1');
+            resetMessage.style.display = 'block'; // Hiển thị thông báo
+
+            // Tự động ẩn thông báo sau 3 giây
+            setTimeout(() => {
+                resetMessage.style.display = 'none';
+            }, 3000);
+        }
+        function resetImagesLay() {
+            // Mảng các ID của các hình ảnh trong Layout
+            const imageIds = [
+                'homeLayoutImg', 'aboutLayoutImg', 'diaryLayoutImg', 'projectLayoutImg',
+                'technicalLayoutImg', 'styleGuideLayoutImg', 'resultLayoutImg'
+            ];
+
+            // Reset các hình ảnh
+            imageIds.forEach(imgId => {
+                const imgElement = document.getElementById(imgId);
+                if (imgElement) {
+                    imgElement.style.display = 'none'; // Ẩn ảnh
+                    imgElement.src = ''; // Xóa nguồn ảnh
+
+                    // Xóa ảnh khỏi localStorage
+                     localStorage.removeItem(imgId);
+                }
+            });
+
+            // Reset các input file
+            const inputs = document.querySelectorAll('.layout-container input[type="file"]');
+            inputs.forEach(input => {
+                input.value = ''; // Xóa giá trị trong các input file
+            });
+
+            // Hiển thị thông báo reset thành công
+            const resetMessage = document.getElementById('resetMessage2');
+            resetMessage.style.display = 'block'; // Hiển thị thông báo
+
+            // Tự động ẩn thông báo sau 3 giây
+            setTimeout(() => {
+                resetMessage.style.display = 'none';
+            }, 3000);
+        }
+
+    </script>
+    
 
 </body>
 </html>
