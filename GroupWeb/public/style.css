@@ -482,12 +482,21 @@ th, td {
     margin-left: 10vw;
     margin-right: 10vw;
 }
+.img-tech {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .div-tech p {
     text-align: left;
     font-size: 16px;
 }
 .div-tech h1 {
     text-align: center;
+}
+.div-tech img {
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -822,6 +831,10 @@ input::placeholder, textarea::placeholder {
 
     .form-row input {
         width: 100%;
+    }
+    .div-tech {
+        margin-right: 3vw;
+        margin-left: 3vw;
     }
 }
 
