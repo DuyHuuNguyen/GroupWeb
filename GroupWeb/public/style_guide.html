@@ -6,6 +6,12 @@
     <title>Style Guide</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Hiệu ứng Hero Section với Navbar */
+header {
+    opacity: 0;
+    transform: translateY(-20px); /* Thanh nav di chuyển từ trên xuống */
+    animation: slideDown 1.5s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+}
 /* Hero section for Style Guide */
 .hero {
 background-color: #003366;
@@ -13,19 +19,70 @@ padding: 40px 20px;
 text-align: center;
 color: white;
 border-bottom: 5px solid #00bfff; /* Border for a modern look */
+opacity: 0;
+    transform: translateY(30px) scale(0.95); /* Di chuyển từ dưới lên, thu nhỏ nhẹ */
+    animation: smoothFadeIn 1.8s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+    animation-delay: 0.5s; /* Bắt đầu sau hiệu ứng của navbar */
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Không bóng đổ ban đầu */
+}
+/* Định nghĩa animation */
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Hoàn toàn cố định */
+    }
 }
 
-.hero h2 {
+@keyframes smoothFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95); /* Bắt đầu nhỏ và mờ */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.0); /* Bóng mờ nhẹ */
+    }
+    60% {
+        transform: translateY(15px) scale(1.02); /* Phóng to nhẹ */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1); /* Ổn định kích thước */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.0); /* Bóng mờ tinh tế */
+    }
+}
+
+.hero h2, .hero p {
 font-size: 48px;
 font-weight: 700;
 margin: 0;
 letter-spacing: 1px;
+opacity: 0;
+    transform: translateY(20px); /* Văn bản xuất hiện từ dưới lên */
+    animation: fadeInText 2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
 }
-
+.hero h2 {
+    animation-delay: 0.8s; /* Xuất hiện sau navbar và Hero Section */
+}
 .hero p {
 font-size: 18px;
 margin-top: 10px;
 color: #ccc;
+}
+.hero p {
+    animation-delay: 1.2s; /* Xuất hiện sau tiêu đề */
+}
+/* Định nghĩa animation cho văn bản */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Navigation Buttons */
@@ -378,7 +435,7 @@ list-style: disc;
         <p><strong>Font Family:</strong></p>
         <p>Use Arial, sans-serif for body text and headers. This ensures readability across various screen sizes.</p>
 
-        <p><strong>Kích thước chữ:</strong></p>
+        <p><strong>Font size:</strong></p>
         <ul>
             <li>H1: 48px</li>
             <li>H2: 36px</li>
@@ -436,7 +493,7 @@ list-style: disc;
     <section id="layout" class="content-section">
         <h2>Layout</h2>
         <!-- Nút Reset Images -->
-        <button id="resetButtonLay" onclick="resetImagesLay()">Reset Images</button>
+        <button id="resetButtonLay" onclick="resetImagesLay()">Reset All Images</button>
 
         <!-- Thông báo reset thành công -->
         <div id="resetMessage2" class="reset-message" style="display: none;">
@@ -548,6 +605,25 @@ list-style: disc;
                     <li><a href="result.html">Result</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+            </div>
+
+            <div class="footer-members">
+                <h4>Our Members</h4>
+                <ul>
+                    <li><a href="#">Nguyễn Hữu Duy</a></li>
+                    <li><a href="#">Nguyễn Xuân Đại</a></li>
+                    <li><a href="#">Nguyễn Võ Quốc Tuấn</a></li>
+                    <li><a href="#">Lê Ngọc Châu</a></li>
+                    <li><a href="#">Nguyễn Đình Hiếu</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <form>
+                    <input type="email" placeholder="Email is here" required>
+                    <button type="submit">Submit</button>
+                </form>
             </div>
         </div>
     </footer>
@@ -819,6 +895,19 @@ function loadMultipleImages(event) {
                 resetMessage.style.display = 'none';
             }, 3000);
         }
+
+//         document.addEventListener('DOMContentLoaded', () => {
+//     const hero = document.querySelector('.hero');
+//     const observer = new IntersectionObserver(
+//         ([entry]) => {
+//             if (entry.isIntersecting) {
+//                 hero.classList.add('animate');
+//             }
+//         },
+//         { threshold: 0.5 }
+//     );
+//     observer.observe(hero);
+// });
 
     </script>
     
