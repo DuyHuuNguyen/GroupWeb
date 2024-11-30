@@ -56,11 +56,17 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
-    transition: color 0.3s ease;
+    font-weight: 300;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
 }
 
 nav ul li a:hover {
     color: var(--background-color-light-blue);
+}
+
+nav ul li a.active {
+    color: var(--background-color-white);
+    border-bottom: 2px solid var(--background-color-white);
 }
 
 .project-button .btn {
