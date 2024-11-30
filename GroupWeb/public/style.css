@@ -80,7 +80,6 @@ nav ul li a:hover {
 .hero {
     text-align: center;
     padding: 50px;
-    /* background-image:url(https://jobtestvnn.wordpress.com/wp-content/uploads/2022/09/hoc-phi-dai-hoc-nong-lam-1.jpeg?w=1024); */
     background-repeat: no-repeat;
     background-size: 100%;
     /* background-color: #00bfff; */
@@ -100,7 +99,7 @@ iframe {
   }
 
 .hero h2 {
-    font-size: 2.5em;
+    font-size: 2.5em !important;
     margin-bottom: 10px;
 }
 
@@ -170,6 +169,7 @@ iframe {
 
 .group-overview h2, 
 .group-overview h3 {
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
@@ -387,10 +387,6 @@ iframe {
     top: 5px;
 }
 
-table {
-    
-    /* border-collapse: collapse; */
-}
 th {
     /* background-color:  ; */
     width: 400px;
@@ -482,12 +478,21 @@ th, td {
     margin-left: 10vw;
     margin-right: 10vw;
 }
+.img-tech {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .div-tech p {
     text-align: left;
     font-size: 16px;
 }
 .div-tech h1 {
     text-align: center;
+}
+.div-tech img {
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -697,7 +702,6 @@ li {
     padding: 10px;
     background-repeat: no-repeat;
     background-size: 100%;
-    /* background-color: #00bfff; */
     color: var(--background-color-dark-blue);
 }
 .container-section {
@@ -822,6 +826,10 @@ input::placeholder, textarea::placeholder {
 
     .form-row input {
         width: 100%;
+    }
+    .div-tech {
+        margin-right: 3vw;
+        margin-left: 3vw;
     }
 }
 
