@@ -10,12 +10,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.22.20/babel.min.js"></script>
     <title>Startup-Cong-Nghe-VN</title>
-    <style>
-        .sticky-sidebar {
-            position: sticky;
-            top: 20px;
-        }
-    </style>
 </head>
 
 <body>
@@ -26,12 +20,13 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="fw-bold active">About</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="group_diary.html">Group Diary</a></li>
                 <li><a href="project.html">Project</a></li>
                 <li><a href="technical.html">Technical</a></li>
                 <li><a href="style_guide.html">Style Guide</a></li>
                 <li><a href="result.html">Result</a></li>
+                <li><a href="blog.html" class="fw-bold active">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -376,7 +371,7 @@
                             <PostContent post={selectedPost} />
                         </div>
                         <div className="col-lg-4">
-                            <div className="sticky-sidebar">
+                            <div className="sticky-top">
                                 <div className="card mb-4">
                                     <div className="card-body">
                                         <h2 className="card-title fs-4 fw-bold mb-3">Recent Posts</h2>

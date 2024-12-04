@@ -614,11 +614,6 @@ footer {
 }
 
 /* css table group diray */
-.mb-4{
-    display: flex;
-    text-align: center;
-}
-
 .tab-content {
     padding: 20px;
 }
