@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group 10 - Human-Computer Interaction</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -18,7 +17,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="text-primary">About</a></li>
+                <li><a href="about.html" class="fw-bold active">About</a></li>
                 <li><a href="group_diary.html">Group Diary</a></li>
                 <li><a href="project.html">Project</a></li>
                 <li><a href="technical.html">Technical</a></li>
@@ -28,18 +27,17 @@
             </ul>
         </nav>
         <div class="project-button">
-            <a href="#" class="btn">Go to project</a>
+            <a href="https://duyhuunguyen.github.io/HotelManagerWeb/login" class="btn">Go to project</a>
         </div>
     </header>
 
     <!-- <main> -->
     <section class="hero">
-        <h1>ABOUT US</h1>
+        <h2 class="fw-bold">Meet Our Team</h2>
     </section>
 
     <!-- Group Overview Section -->
     <section class="group-overview">
-        <h1 class="team-title">Our Team</h1>
         <div id="root"></div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.js"></script>
@@ -56,7 +54,7 @@
                                 <img
                                     src={member.imageUrl}
                                     alt={member.name}
-                                    className="rounded-circle mx-auto mb-3 object-fit-cover border-theme" 
+                                    className="rounded-circle mx-auto mb-3 object-fit-cover border-theme"
                                     style={{
                                         width: '120px',
                                         height: '120px'
@@ -111,7 +109,7 @@
                         role: "Leader",
                         studentId: "23130075",
                         class: "DH23DTC",
-                        hobbies: "Play batminton, watching movies,...",
+                        hobbies: "Play badminton, watching movies,...",
                         profileUrl: "https://duyhuunguyen.github.io/GTNM/",
                         imageUrl: "img/duy.jpg",
                         email: "23130075@hcmuaf.edu.vn",
@@ -124,7 +122,7 @@
                         role: "Member",
                         studentId: "23130039",
                         class: "DH23DTB",
-                        hobbies: "Play voleybal, footbal, babminton, League of Legends,...",
+                        hobbies: "Play volleyball, badminton, League of Legends,...",
                         profileUrl: "https://xuni-dizan.github.io/Trang_ca_nhan/index.html",
                         imageUrl: "img/dai.jpg",
                         email: "23130039@st.hcmuaf.edu.vn",
@@ -163,7 +161,7 @@
                         role: "Member",
                         studentId: "23130107",
                         class: "DH23DTC",
-                        hobbies: "Listening to music, play guitar,...",
+                        hobbies: "Listening to music, social slubs,...",
                         profileUrl: "https://hieuquenbt.github.io/hci2425/",
                         imageUrl: "img/hiu.jpg",
                         email: "23130107@.hcmuaf.edu.vn",
