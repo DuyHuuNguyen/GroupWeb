@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technical</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
     <header>
@@ -18,21 +18,25 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="group_diary.html">Group Diary</a></li>
                 <li><a href="project.html">Project</a></li>
-                <li><a href="technical.html">Technical</a></li>
+                <li ><a class="text-primary" href="technical.html">Technical</a></li>
                 <li><a href="style_guide.html">Style Guide</a></li>
                 <li><a href="result.html">Result</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <div class="project-button">
-            <a type="butt" href="#" class="btn">Go to project</a>
+            <a type="butt" href="https://duyhuunguyen.github.io/HotelManagerWeb/login" class="btn">Go to project</a>
         </div>
     </header>
 
     <section id="requirement" class="content-section">
         <div class="div-tech">
-            <h1>Hướng dẫn sử dụng Github</h1>
-            <h2>Tại sao nên dùng Git/GitHub?</h2> 
+            <ul>
+             <div class="img-tech">
+                <img  src="https://s3-sgn09.fptcloud.com/codelearnstorage/Upload/Blog/su-dung-git-tu-co-ban-den-nang-cao-63724899240.0443.jpeg" alt="" class="img-fluid">
+            </div>
+             <h1>Hướng dẫn sử dụng Github</h1>
+             <h2>Tại sao nên dùng Git/GitHub?</h2> 
             <p>Hầu hết khi hỏi các bạn sinh viên làm bài tập lớn theo nhóm, mỗi bạn code 1 
              phần vậy khi ghép lại thành 1 project hoàn chỉnh thì sẽ làm như thế nào?</p>
             
@@ -55,6 +59,7 @@
                    (đã từng tìm hiểu và đã từng làm) về Git trong bài viết này với hy vọng sẽ giúp ích được những bạn tự tin khi làm việc với Git cũng như nâng cao kỹ năng của bản thân 
                  trên con đường trở thành lập trình viên chuyên nghiệp.
              </p>
+            </ul>
 
             <ul >                
                     <h1>Git là gì?</h1>
@@ -85,6 +90,9 @@
                          nơi mọi người thực hiện công việc trên đó, được gọi là <strong>working tree</strong>. 
                          Giữa repository và <strong>working tree</strong> tồn tại một nơi gọi là index hay staging area . staging 
                         area là nơi để chuẩn bị cho việc commit vào repository.</p>
+                    
+                        <img src="https://s3-sgn09.fptcloud.com/codelearnstorage/Media/Default/Users/Shanghaik/Pictures/git%201.png" alt="" class="img-fluid">
+                  
                     <br>
                     <p>Bắt tay vào cài đặt nào!!!</p>
                     <br>
@@ -104,6 +112,14 @@
                     <br>
                     <p><strong>2.1</strong> Lệnh: <strong>git iniit</strong></p>
                     <br>
+                    <div class="img-tech">
+                        <img src="https://s3-sgn09.fptcloud.com/codelearnstorage/Media/Default/Users/Shanghaik/Pictures/git%202.png" alt="" class="img-fluid">
+                    </div>
+                    <br>
+                    <p>Cửa sổ console git bash hiện lên => các bạn gõ lệnh git init </p>
+                    <div class="img-tech">
+                        <img src="https://s3-sgn09.fptcloud.com/codelearnstorage/Media/Default/Users/Shanghaik/Pictures/git%203.png" alt="" class="img-fluid">
+                    </div>
                     <p>Tác dụng : Khởi tạo 1 git repository 1 project mới hoặc đã có.</p>
                     <br>
                     <p>Cách dùng: Tạo 1 folder mới =>
@@ -117,6 +133,9 @@
                           Vậy nên nếu muốn xóa file này hãy cân nhắc trước khi xóa nhé :D</p>
                     <br>
                      <p><strong>2.2</strong> Lệnh: <strong>git add</strong></p>
+                     <div class="img-tech">
+                        <img src="https://s3-sgn09.fptcloud.com/codelearnstorage/Media/Default/Users/Shanghaik/Pictures/git%204.png" alt="" class="img-fluid">
+                     </div>
                      <p>Tác dụng : Thêm thay đổi vào stage/index trong thư mục làm việc.
 
                         Cách dùng: Tại thư mục làm việc =><strong> git add</strong> .
@@ -125,13 +144,15 @@
                     <br>
                      
                      <p><strong>2.3</strong> Lệnh: <strong>git commit</strong></p>
+                     <div class="img-tech">
+                        <img src="https://s3-sgn09.fptcloud.com/codelearnstorage/Media/Default/Users/Shanghaik/Pictures/git%205.png" alt="" class="img-fluid">
+                     </div>
+                     <br>
                      Tác dụng: commit là một action để Git lưu lại các sự thay đổi trong thư mục làm việc vào repository
 
-Cách dùng: git commit -m <strong>" add source nhaaaaaa"</strong>
+                        Cách dùng: git commit -m <strong>" add source"</strong>
 
-Khi commit thành công
-
-                
+                        Khi commit thành công
             </ul>
      </div>
     </section>

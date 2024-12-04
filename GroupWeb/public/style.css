@@ -80,7 +80,6 @@ nav ul li a:hover {
 .hero {
     text-align: center;
     padding: 50px;
-    /* background-image:url(https://jobtestvnn.wordpress.com/wp-content/uploads/2022/09/hoc-phi-dai-hoc-nong-lam-1.jpeg?w=1024); */
     background-repeat: no-repeat;
     background-size: 100%;
     /* background-color: #00bfff; */
@@ -100,7 +99,7 @@ iframe {
   }
 
 .hero h2 {
-    font-size: 2.5em;
+    font-size: 2.5em !important;
     margin-bottom: 10px;
 }
 
@@ -170,6 +169,7 @@ iframe {
 
 .group-overview h2, 
 .group-overview h3 {
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
@@ -284,89 +284,25 @@ iframe {
     gap: 2rem;
 }
 
-.member-card {
-    background: var(--background-color-white);
-    border-radius: 15px;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
- .profile {
-    text-decoration: none;
-}
-
-
-.profile {
-    text-decoration: none;
-}
-
-
 .member-card:hover {
+    transition: transform 0.3s ease;
     transform: translateY(-5px);
 }
 
-.member-image {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin: 0 auto 1rem;
-    object-fit: cover;
-    border: 3px solid var(--background-color-dark-blue);
-}
-
-.member-name {
-    font-size: 1.2rem;
-    color: var(--background-color-dark-blue);
-    margin-bottom: 0.3rem;
-}
-
-.member-role {
-    color: var(--background-color-dark-blue);
-    font-weight: 500;
-    margin-bottom: 0.3rem;
-}
-
-.member-details {
-    margin: 0.5rem 0;
-    text-align: left;
-    font-size: 0.9rem;
-    color: var(--background-color-dark-blue);
-}
-
-.member-details p {
-    margin: 0.2rem 0;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.2rem;
-    margin-top: 1.5rem;
+.border-theme {
+    border: 3px solid var(--background-color-dark-blue) !important;
 }
 
 .social-links a {
     color: #00b33c;
     text-decoration: none;
     transition: color 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .social-links a:hover {
     color: var(--background-color-pale-blue);
     transform: translateY(-2px);
 }
-
-.social-icon svg {
-    width: 22px;
-    height: 22px;
-}
-
-
-
 
 /* --------------------------project page------------------------- */
 .header-prjMenu {
@@ -451,10 +387,6 @@ iframe {
     top: 5px;
 }
 
-table {
-    
-    /* border-collapse: collapse; */
-}
 th {
     /* background-color:  ; */
     width: 400px;
@@ -546,12 +478,21 @@ th, td {
     margin-left: 10vw;
     margin-right: 10vw;
 }
+.img-tech {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .div-tech p {
     text-align: left;
     font-size: 16px;
 }
 .div-tech h1 {
     text-align: center;
+}
+.div-tech img {
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -754,5 +695,142 @@ li {
     
 }
 
+
+/*css contact */
+#hero h1 {
+    text-align: center;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: var(--background-color-dark-blue);
+}
+.container-section {
+    width: 100%;
+}
+
+#map iframe {
+    width: 100%;
+    height: 400px;
+    background-color: #ddd;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    flex-wrap: wrap;
+}
+
+.contact-left, .contact-right {
+    width: 49%;
+}
+
+.contact-left {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.contact-left h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.contact-left p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-item {
+    margin-bottom: 20px;
+}
+
+.contact-item i {
+    font-size: 20px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.contact-item h3 {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-item p {
+    font-size: 14px;
+    margin-left: 30px;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-row input {
+    width: calc(50% - 5px);
+}
+
+input::placeholder, textarea::placeholder {
+    font-family: Arial, sans-serif;
+}
+
+.contact-right input, .contact-right textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.contact-right textarea {
+    resize: none;
+    height: 150px;
+}
+
+.contact-right button {
+    padding: 10px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.contact-right button:hover {
+    background-color: #227ead;
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+    }
+
+    .contact-left, .contact-right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-row input {
+        width: 100%;
+    }
+    .div-tech {
+        margin-right: 3vw;
+        margin-left: 3vw;
+    }
+}
 
 
