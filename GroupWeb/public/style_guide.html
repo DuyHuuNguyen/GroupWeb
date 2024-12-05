@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Style Guide</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"> -->
     <style>
         /* Hiệu ứng Hero Section với Navbar */
 header {
@@ -391,7 +391,7 @@ list-style: disc;
 }
 
     </style>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"> -->
 </head>
 <body>
     
@@ -402,6 +402,7 @@ list-style: disc;
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="group_diary.html">Group Diary</a></li>
                 <li><a href="project.html">Project</a></li>
@@ -599,6 +600,7 @@ list-style: disc;
                 <h4>Useful Links</h4>
                 <ul>
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="group_diary.html">Group Diary</a></li>
                     <li><a href="project.html">Project</a></li>
@@ -678,17 +680,17 @@ list-style: disc;
         }
 
         // Function to update typography dynamically
-        document.getElementById('fontSizeInput').addEventListener('input', function () {
-            document.body.style.fontSize = this.value + 'px';
-        });
+        // document.getElementById('fontSizeInput').addEventListener('input', function () {
+        //     document.body.style.fontSize = this.value + 'px';
+        // });
 
-        document.getElementById('textColorInput').addEventListener('input', function () {
-            document.body.style.color = this.value;
-        });
+        // document.getElementById('textColorInput').addEventListener('input', function () {
+        //     document.body.style.color = this.value;
+        // });
 
-        document.getElementById('lineHeightInput').addEventListener('input', function () {
-            document.body.style.lineHeight = this.value;
-        });
+        // document.getElementById('lineHeightInput').addEventListener('input', function () {
+        //     document.body.style.lineHeight = this.value;
+        // });
     </script>
     <script>
         // Hàm để lưu ảnh vào localStorage
@@ -910,10 +912,8 @@ function loadMultipleImages(event) {
 //     );
 //     observer.observe(hero);
 // });
-
     </script>
-    
-
+    <script src="script.js"></script>
 </body>
 </html>
 
