@@ -1,0 +1,81 @@
+.c{
+    width: 100%;
+    /* align-items: center; */
+    display: flex;
+justify-content: center; /* Căn ngang */
+align-items: center; /
+}
+
+
+   .blog-container {
+   
+       width: 800px; /* Tăng chiều rộng */
+       display: flex;
+       flex-direction: column;
+       /* align-items: center; */
+       /* margin: 0 100px 0 100px; */
+       /* padding-left: 100px; */
+
+
+   }
+
+   .blog-card {
+       background-color: white;
+       border-radius: 8px;
+       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+       margin-bottom: 15px;
+       padding: 20px;
+       transition: transform 0.3s ease;
+       display: flex;
+       /* width: 100%; */
+   }
+
+   .blog-card:hover {
+       /* transform: scale(1.02); */
+       background-color: #817f8538;
+   }
+
+   .blog-title {
+       color: #2c3e50;
+       margin-bottom: 10px;
+       font-size: 1.2em;
+   }
+
+   .blog-description {
+       color: #7f8c8d;
+   }
+
+   .post {
+   background: #fff;
+   padding: 15px;
+   border-radius: 10px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   margin-bottom: 20px;
+   text-align: left;
+   }
+
+.post-interactions {
+   margin-top: 10px;
+   display: flex;
+   gap: 20px; /* Khoảng cách giữa các mục */
+   font-size: 14px;
+   color: #555;
+}
+
+.post-interactions span {
+   display: flex;
+   align-items: center;
+   gap: 5px;
+   cursor: pointer;
+}
+
+.post-interactions span:hover {
+   color: #007bff; /* Đổi màu khi hover */
+}
+.blog-image {
+width: 120px; /* Đặt kích thước cố định cho ảnh */
+height: 120px;
+border-radius: 10px; /* Bo góc cho ảnh */
+object-fit: cover; /* Cắt ảnh vừa khung */
+
+}
