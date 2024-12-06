@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khám phá ẩm thực Việt Nam</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></script>
+  <script src="script.js"></script>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+    <!-- Liên kết tới Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Liên kết tới Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+     /* Đảm bảo các phần tử header, nav, và logo không bị ảnh hưởng bởi Bootstrap */
+.custom-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    background-color: var(--background-color-dark-blue) !important;
+    color: var(--background-color-white) !important;
+    padding: 20px !important;
+    margin: 0 !important;
+}
+
+.custom-header .logo h1 {
+   font-family: Arial, sans-serif !important; /* Sử dụng font tùy chỉnh */
+   font-weight: 600 !important;
+    margin-left: 100px !important;
+    font-size: 32px !important; /* Đặt kích thước font */
+    margin: 0 !important; /* Loại bỏ margin mặc định */
+    color: #fff !important; /* Đảm bảo màu sắc chữ */
+}
+
+
+.custom-nav ul {
+    list-style: none !important;
+    display: flex !important;
+    gap: 20px !important;
+    margin: 0 !important; /* Loại bỏ margin mặc định của ul */
+    padding: 0 !important; /* Loại bỏ padding mặc định */
+}
+
+.custom-nav ul li a {
+    color: #fff !important;
+    text-decoration: none !important;
+    font-size: 16px !important;
+    font-weight: 300 !important;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease !important;
+}
+
+.custom-nav ul li a:hover {
+    color: var(--background-color-light-blue) !important;
+}
+
+.custom-nav ul li a.active {
+    color: var(--background-color-white) !important;
+    border-bottom: 2px solid var(--background-color-white) !important;
+}
+
+/* Thêm các kiểu cho nút project */
+.project-button .btn {
+    background-color: var(--background-color-light-blue) !important;
+    color: #fff !important;
+    padding: 10px 20px !important;
+    text-decoration: none !important;
+    border-radius: 5px !important;
+    margin-right: 20px !important;
+}
+
+.project-button .btn:hover {
+    background-color: var(--background-color-pale-blue) !important;
+}
+
+         body {
+    /* display: flex;
+  flex-wrap: wrap; */
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s ease;
+  }
+  main{
+    width: 75%;  /* Chiếm 3/4 màn hình */
+    padding-right: 20px;
+  }
+  
+  /* Header */
+  #header-01 {
+    background: url('https://cdn.pixabay.com/photo/2017/10/12/03/03/view-2843338_1280.jpg') center/cover no-repeat;
+    color: #fff;
+    padding: 80px 20px;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    height: 400px; /* Giảm chiều cao */
+  padding-top: 50px; /* Tạo khoảng cách nhẹ ở phía trên */
+  padding-bottom: 30px; /* Giảm khoảng cách phía dưới */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    border-bottom: 4px solid #fff;
+  }
+  .btn-success:hover {
+    background-color: #218838;
+  }
+  
+  /* Hiệu ứng cho menu dropdown */
+  @keyframes slideIn {
+    from {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes gradient {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+  
+#header-01 h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    color: #fff;
+  /* text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); */
+  text-shadow: 0px 0px 10px #4f4e34,
+               0px 0px 20px #4f4e34,
+               0px 0px 40px #4f4e34,
+               0px 0px 60px #4f4e34;
+  }
+  
+  #header-01 p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+  }
+
+  #header-01 .btn {
+    background-color: #2e7d32;
+    color: white;
+    font-weight: bold;
+  }
+  #header-01 .btn:hover {
+    background-color: #1b5e20;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+ /* Cards - Món Ăn Nổi Bật */
+ .card {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  }
+  .card-img-top {
+    border-radius: 10px;
+  }
+  
+  .card-title {
+    font-weight: 700;
+    color: #333;
+  }
+  /* Các đường viền cho tiêu đề và vùng miền */
+.text-success {
+    border-bottom: 2px solid #2e7d32;
+    padding-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .text-success:hover {
+    border-bottom: 2px solid #1b5e20;
+  }
+  
+  .cta-btn {
+    background-color: #2e7d32;
+    color: #fff;
+    padding: 12px 35px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .cta-btn:hover {
+    background-color: #1b5e20;
+  }
+  
+  /* Phần Món Ăn Nổi Bật */
+  .featured-dishes {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: -50px;
+    z-index: 1;
+  }
+  
+  .featured-dishes h2 {
+    font-size: 2.5rem;
+    color: #2e7d32;
+    margin-bottom: 40px;
+  }
+  
+  .dishes {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .dish {
+    width: 30%;
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .dish:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .dish img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .dish:hover img {
+    transform: scale(1.05);
+  }
+  
+  .dish h3 {
+    font-size: 1.4rem;
+    margin-top: 15px;
+    color: #333;
+  }
+  
+  .dish p {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  /* Phần Các Vùng Miền */
+  .regional-flavors {
+    padding: 50px 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+  }
+  
+  .regional-flavors h2 {
+    font-size: 2.5rem;
+    color: #2e7d32;
+    margin-bottom: 20px;
+  }
+  
+  .regional-flavors p {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 20px;
+  }
+  
+  .regional-flavors ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .regional-flavors ul li {
+    display: inline-block;
+  }
+  
+  .regional-flavors ul li a {
+    font-size: 1.2rem;
+    color: #2e7d32;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .regional-flavors ul li a:hover {
+    border-bottom: 2px solid #2e7d32;
+    color: #1b5e20;
+  }
+  
+  /* Đảm bảo tính khả dụng trên thiết bị di động */
+  @media (max-width: 768px) {
+    .dishes {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .dish {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+    .card {
+        margin-bottom: 15px;
+      }
+  
+    header h1 {
+      font-size: 2.5rem;
+    }
+    .navbar-nav .nav-item {
+        text-align: center;
+      }
+    
+      .navbar-nav .nav-item .nav-link {
+        padding: 10px;
+      }
+    
+  }
+  
+  #time {
+    position: absolute;
+    top: 1550px;
+    right: 0;
+    width: 25%;  /* Chiếm 1/4 màn hình */
+    padding: 20px;
+    background-color: #f8f9fa;
+    z-index: 1000;
+    box-shadow: -4px 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  #time .card {
+    box-shadow: none; /* Loại bỏ shadow của card trong thời gian */
+  }
+  
+  #time .card-body {
+    text-align: center;
+  }
+  
+  /* Điều chỉnh khoảng cách giữa các phần khi ở trên mobile */
+  @media (max-width: 768px) {
+    body {
+      flex-direction: column;
+      padding-top: 80px; /* Điều chỉnh cho mobile */
+    }
+  
+    main, footer {
+      width: 100%;  /* Full width trên màn hình di động */
+    }
+  
+    #time {
+      width: 100%;
+      position: relative;
+      top: 0;
+      margin-top: 20px;
+    }
+  }
+
+  .sidebar {
+    position: absolute;
+    top: 550px;
+    right: 0;
+    width: 25%;
+    height: 1000px;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    box-shadow: -4px 4px 12px rgba(0, 0, 0, 0.2);
+    /* transition: all 0.3s ease-in-out;  */
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar h2 {
+    width: 100%;
+    height: max-content;
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 10px;
+    position: sticky;
+    top: -20px;
+    background-color: #f8f9fa; /* Thêm background để tránh bị lộ phần sau khi sticky */
+    z-index: 1; /* Đảm bảo rằng h2 luôn hiển thị trên các phần tử khác */
+}
+
+.sidebar h2 p {
+    text-align: center;
+}
+
+/* Hiệu ứng cho danh sách món ăn */
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar li:hover {
+    color: #d9534f;
+    transform: translateX(5px);
+}
+
+.sidebar li span {
+    font-weight: bold;
+    color: #333;
+    font-size: 20px;
+}
+
+/* Liên kết giữa danh mục món ăn và mô tả */
+.sidebar li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebar li a:hover {
+    text-decoration: underline;
+}
+
+.sidebar ul ul {
+    display: block !important; /* Luôn hiển thị các danh sách con */
+    transform: none !important; /* Loại bỏ mọi hiệu ứng dịch chuyển */
+    transition: none; /* Loại bỏ hiệu ứng chuyển động */
+}
+
+/* Media query cho độ phân giải nhỏ hơn (1272x560) */
+@media screen and (max-width: 1272px) {
+}
+
+/* Media query cho các màn hình nhỏ hơn nữa, ví dụ 560px */
+@media screen and (max-width: 560px) {
+ 
+}
+
+/* Hiệu ứng cho phần mô tả */
+.dish-card p {
+    line-height: 1.5;
+}
+/* Styling for Cooking Techniques Section */
+#cooking-techniques .bi {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#cooking-techniques .bi:hover {
+    transform: scale(1.2);
+    color: #28a745;
+}
+
+/* Cultural Significance Section */
+#cultural-significance img {
+    border: 5px solid #f8f9fa;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#cultural-significance img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#cultural-significance p.lead {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+    </style>
+    <!-- Thanh Điều Hướng (Navbar) -->
+    <!-- <header class="bg-dark text-white text-center py-5">
+        <div class="container mt-5 pt-5">
+            <h1>Khám Phá Ẩm Thực Việt Nam</h1>
+            <p style="text-shadow: 2px 2px 8px rgba(0, 0, 0.8, 0.8);">Chào mừng bạn đến với hành trình khám phá những món ăn truyền thống đặc sắc của ẩm thực Việt Nam!</p>
+            <p class="lead animated fadeInUp" style="text-shadow: 2px 2px 8px rgba(0, 0, 0.8, 0.8);">Khám phá những món ăn đặc trưng từ Bắc vào Nam, với hương vị khó quên.</p>
+        </div>
+    </header> -->
+
+  <!-- Header với F-pattern -->
+  <!-- <header class="bg-dark text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4 fw-bold animated fadeIn">Hành Trình Khám Phá Những Hương Vị Truyền Thống Đặc Sắc Của Ẩm Thực Việt Nam</h1>
+      <p class="lead animated fadeInUp" style="text-shadow: 2px 2px 8px rgba(0, 0, 0.8, 0.8);">Khám phá những món ăn đặc trưng từ Bắc vào Nam, với hương vị khó quên.</p>
+      <a href="#" class="btn btn-success btn-lg mt-3 animated fadeInUp">Khám Phá Ngay</a>
+    </div>
+  </header> -->
+  <header class="custom-header">
+    <div class="logo">
+        <h1>GROUP 10</h1>
+    </div>
+    <nav class="custom-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="group_diary.html">Group Diary</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="technical.html">Technical</a></li>
+            <li><a href="style_guide.html">Style Guide</a></li>
+            <li><a href="result.html">Result</a></li>
+            <li><a href="blog.html" class="fw-bold active">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="project-button">
+        <a href="https://duyhuunguyen.github.io/HotelManagerWeb/login" class="btn">Go to project</a>
+    </div>
+</header>
+
+<div class="bg-dark text-white text-center py-5" id="header-01">
+    <div class="container">
+        <h2 class="display-4 fw-bold animated fadeIn">Hành Trình Khám Phá Những Hương Vị Truyền Thống Đặc Sắc Của Ẩm Thực Việt Nam</h2>
+        <p class="lead animated fadeInUp" style="text-shadow: 2px 2px 8px rgba(0, 0, 0.8, 0.8);">Khám phá những món ăn đặc trưng từ Bắc vào Nam, với hương vị khó quên.</p>
+        <a href="#" class="btn btn-success btn-lg mt-3 animated fadeInUp">Khám Phá Ngay</a>
+      </div>
+</div>
+
+  <!-- Món Ăn Nổi Bật -->
+  <main id="featured-dishes" class="py-5">
+    <div class="container">
+      <h2 class="text-center text-success mb-4 animated fadeIn">Món Ăn Nổi Bật</h2>
+      <div class="row">
+        <!-- Món ăn 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-lg border-light rounded">
+            <img src="https://images.pexels.com/photos/6646030/pexels-photo-6646030.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Phở">
+            <div class="card-body">
+              <h5 class="card-title">Phở - Món Ăn Quốc Dân</h5>
+              <p class="card-text">Phở Việt Nam với nước dùng thanh nhẹ, thịt bò mềm mịn, ăn kèm với rau thơm và gia vị đặc trưng.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Món ăn 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-lg border-light rounded">
+            <img src="https://images.pexels.com/photos/2591594/pexels-photo-2591594.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Bún bò Huế">
+            <div class="card-body">
+              <h5 class="card-title">Bún Bò Huế - Hương Vị Đậm Đà</h5>
+              <p class="card-text">Bún bò Huế với nước lèo đậm đà, thịt bò, giò heo và bún tươi, mang đậm nét đặc trưng của miền Trung.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Món ăn 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-lg border-light rounded">
+            <img src="https://images.pexels.com/photos/1483769/pexels-photo-1483769.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Bánh Mì">
+            <div class="card-body">
+              <h5 class="card-title">Bánh Mì - Món Ăn Đường Phố</h5>
+              <p class="card-text">Bánh mì Việt Nam với lớp vỏ giòn, nhân thịt, rau sống và nước sốt thơm ngon, là món ăn không thể thiếu.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Khám Phá Các Vùng Miền -->
+  <section id="regional-flavors" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center text-success mb-4 animated fadeIn">Khám Phá Các Vùng Miền</h2>
+      <p class="text-center mb-4">Ẩm thực Việt Nam mang trong mình những hương vị độc đáo từ ba miền Bắc, Trung, Nam.</p>
+      <div class="row">
+        <!-- Miền Bắc -->
+        <div class="col-md-4 mb-4">
+          <div class="card border-success">
+            <img src="https://th.bing.com/th?id=OIP.i7EbLlFvU2bJCBh0IdtMqgHaGU&w=270&h=230&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" class="card-img-top" alt="Miền Bắc">
+            <div class="card-body">
+              <h5 class="card-title">Ẩm Thực Miền Bắc</h5>
+              <p class="card-text">Với các món ăn nổi bật như Phở, Bánh Chưng, và nhiều món ăn truyền thống khác.</p>
+              <a href="#explore" class="btn btn-success">Khám Phá</a>
+            </div>
+          </div>
+        </div>
+        <!-- Miền Trung -->
+        <div class="col-md-4 mb-4">
+          <div class="card border-success">
+            <img src="https://viettourist.com/resources/images/Blog-TayBac/huongvimientrung(1).jpg" class="card-img-top" alt="Miền Trung">
+            <div class="card-body">
+              <h5 class="card-title">Ẩm Thực Miền Trung</h5>
+              <p class="card-text">Khám phá các món ăn đặc sản như Bún Bò Huế, Cơm Hến, và nhiều món ngon khác từ miền Trung.</p>
+              <a href="#explore" class="btn btn-success">Khám Phá</a>
+            </div>
+          </div>
+        </div>
+        <!-- Miền Nam -->
+        <div class="col-md-4 mb-4">
+          <div class="card border-success">
+            <img src="https://th.bing.com/th?id=OIP.AYKj5Z1LKzHbEcmpcMdyDgHaF7&w=279&h=223&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" class="card-img-top" alt="Miền Nam">
+            <div class="card-body">
+              <h5 class="card-title">Ẩm Thực Miền Nam</h5>
+              <p class="card-text">Thưởng thức các món ăn nổi bật như Bánh Xèo, Cơm Tấm, và nhiều món ăn đặc trưng của miền Nam.</p>
+              <a href="#explore" class="btn btn-success">Khám Phá</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="vegetarian-dishes" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-success text-center mb-4 animate__animated animate__fadeIn">Món Ăn Chay Đặc Sắc</h2>
+        <p class="text-center mb-4 animate__animated animate__fadeIn animate__delay-1s">Khám phá những món ăn chay phong phú và đầy hương vị trong ẩm thực Việt Nam.</p>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card border-success shadow-sm rounded overflow-hidden">
+                    <img src="https://monngonmoingay.com/wp-content/uploads/2021/08/rau-cu-xao-dau-hu-xot-me-880.webp" class="card-img-top" alt="Đậu hũ xào" class="img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title text-center text-success">Đậu Hũ Xào Rau Củ</h5>
+                        <p class="card-text">Món ăn đơn giản nhưng đầy dinh dưỡng, với đậu hũ mềm và rau củ tươi ngon.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-success shadow-sm rounded overflow-hidden">
+                    <img src="https://asianinspirations.com.au/wp-content/uploads/2019/06/R00499_Banh-Xeo-Nuoc-Cham-Sauce-3.jpg" class="card-img-top" alt="Bánh xèo chay">
+                    <div class="card-body">
+                        <h5 class="card-title text-center text-success">Bánh Xèo Chay</h5>
+                        <p class="card-text">Bánh xèo giòn rụm, nhân rau củ và nấm, ăn kèm với nước chấm chua ngọt.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-success shadow-sm rounded overflow-hidden">
+                    <img src="https://th.bing.com/th/id/R.e336a69c29de9340a08563095b7196ae?rik=mmAnf1AJw16aIg&pid=ImgRaw&r=0" class="card-img-top" alt="Gỏi cuốn chay">
+                    <div class="card-body">
+                        <h5 class="card-title text-center text-success">Gỏi Cuốn Chay</h5>
+                        <p class="card-text">Món cuốn tươi ngon với rau sống, bún và đậu hũ, ăn kèm với nước chấm đặc biệt.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="special-ingredients" class="py-5 bg-white">
+  <div class="container">
+      <h2 class="text-success text-center mb-4 animate__animated animate__fadeIn">Nguyên Liệu Đặc Trưng Của Ẩm Thực Việt</h2>
+      <p class="text-center mb-4 animate__animated animate__fadeIn animate__delay-1s">Tìm hiểu về những nguyên liệu đặc trưng tạo nên hương vị độc đáo của món ăn Việt Nam.</p>
+      <div class="row">
+          <div class="col-md-4 mb-4">
+              <div class="card border-success shadow-sm rounded overflow-hidden">
+                  <img src="https://th.bing.com/th/id/OIP.CpPycn5OgVENerqQZAyNygHaE8?rs=1&pid=ImgDetMain" class="card-img-top" alt="Gạo">
+                  <div class="card-body">
+                      <h5 class="card-title text-center text-success">Gạo</h5>
+                      <p class="card-text">Gạo là nguyên liệu chính trong bữa ăn hàng ngày của người Việt, với nhiều loại gạo khác nhau.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="card border-success shadow-sm rounded overflow-hidden">
+                  <img src="https://th.bing.com/th/id/OIP.bNgcrRIOe7e-Dj1zbHoQYwHaFT?rs=1&pid=ImgDetMain" class="card-img-top" alt="Rau thơm">
+                  <div class="card-body">
+                      <h5 class="card-title text-center text-success">Rau Thơm</h5>
+                      <p class="card-text">Rau thơm như húng quế, ngò gai, và rau răm là những gia vị không thể thiếu trong món ăn Việt.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="card border-success shadow-sm rounded overflow-hidden">
+                  <img src="https://i.ytimg.com/vi/nCCc7zB5vp8/maxresdefault.jpg" class="card-img-top" alt="Nước mắm">
+                  <div class="card-body">
+                      <h5 class="card-title text-center text-success">Nước Mắm</h5>
+                      <p class="card-text">Nước mắm là gia vị đặc trưng của ẩm thực Việt, được sử dụng rộng rãi trong nhiều món ăn.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section id="street-food" class="py-5 bg-light">
+  <div class="container">
+      <h2 class="text-success text-center mb-4 animate__animated animate__fadeIn">Món Ăn Đường Phố Đặc Sắc</h2>
+      <p class="text-center mb-4 animate__animated animate__fadeIn animate__delay-1s">Khám phá những món ăn đường phố phổ biến và được yêu thích tại Việt Nam.</p>
+      <div class="row">
+          <div class="col-md-4 mb-4">
+              <div class="card border-success shadow-sm rounded overflow-hidden">
+                  <img src="https://static.vinwonders.com/2022/10/banh-mi-phu-quoc-1.jpg" class="card-img-top" alt="Bánh mì">
+                  <div class="card-body">
+                      <h5 class="card-title text-center text-success">Bánh Mì</h5>
+                      <p class="card-text">Bánh mì là món ăn đường phố phổ biến tại Việt Nam, với nhiều loại nhân khác nhau.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="card border-success shadow-sm rounded overflow-hidden">
+                  <img src="https://th.bing.com/th/id/OIP.iLjrCpI2AdZshBbqwRCUbwHaHH?rs=1&pid=ImgDetMain" class="card-img-top" alt="Xôi">
+                  <div class="card-body">
+                      <h5 class="card-title text-center text-success">Xôi</h5>
+                      <p class="card-text">Xôi là món ăn đường phố đơn giản nhưng đầy dinh dưỡng, với nhiều loại nhân khác nhau.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="card border-success shadow-sm rounded overflow-hidden">
+                  <img src="https://nof.vn/wp-content/uploads/2021/01/banh-cuon-nong-mon-ngon-dung-chuan-moi-sang-cho-gia-dinh-maxresdefault-1024x576.jpg" class="card-img-top" alt="Bánh cuốn">
+                  <div class="card-body">
+                      <h5 class="card-title text-center text-success">Bánh Cuốn</h5>
+                      <p class="card-text">Bánh cuốn là món ăn đường phố đặc trưng của miền Bắc, với nhân thịt và rau.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Thêm hiệu ứng khi di chuột qua các món ăn -->
+<style>
+    .card:hover {
+        transform: translateY(-10px);
+        transition: 0.3s ease-in-out;
+    }
+</style>
+
+<section id="regional-dishes" class="py-5 bg-white">
+  <div class="container">
+      <h2 class="text-success text-center mb-4">Món Ăn Miền Đặc Sắc</h2>
+      <p class="text-center mb-4">Khám phá những món ăn đặc trưng của các miền tại Việt Nam.</p>
+      <div class="row">
+          <div class="col-md-4 mb-4">
+              <div class="card border-success">
+                  <img src="https://th.bing.com/th/id/OIP.-UGFdcScnvkBcYeqKgx0OwHaEK?rs=1&pid=ImgDetMain" class="card-img-top" alt="Bún riêu miền Bắc">
+                  <div class="card-body">
+                      <h5 class="card-title">Bún Riêu Miền Bắc</h5>
+                      <p class="card-text">Bún riêu là món ăn đặc trưng của miền Bắc, với nước dùng đậm đà và thịt riêu.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="card border-success">
+                  <img src="https://th.bing.com/th/id/R.b58b2124c6ff6060d86423ada29e7e19?rik=lyUDw5fxL5UMHA&riu=http%3a%2f%2fthegioinhuongquyen.vn%2fwp-content%2fuploads%2f2022%2f06%2fbun-bo-hue-4-1600951552-11281.jpeg&ehk=Kcit5f85NIRwwUIo4Ab4l6eKL%2b%2fLvk76qcUVcY8S0oU%3d&risl=&pid=ImgRaw&r=0" class="card-img-top" alt="Bún bò miền Trung">
+                  <div class="card-body">
+                      <h5 class="card-title">Bún Bò Miền Trung</h5>
+                      <p class="card-text">Bún bò là món ăn đặc trưng của miền Trung, với nước dùng đậm đà và thịt bò.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="card border-success">
+                  <img src="https://th.bing.com/th/id/OIP.R3H5Llgz67GjQzshVwSE8gHaD4?rs=1&pid=ImgDetMain" class="card-img-top" alt="Cơm tấm miền Nam">
+                  <div class="card-body">
+                      <h5 class="card-title">Cơm Tấm Miền Nam</h5>
+                      <p class="card-text">Cơm tấm là món ăn đặc trưng của miền Nam, với cơm tấm và nước mắm.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<section id="seasonal-dishes" class="py-5 bg-white">
+  <div class="container">
+      <h2 class="text-success text-center mb-4">Những Món Ăn Theo Mùa</h2>
+      <p class="text-center mb-4">Khám phá những món ăn đặc trưng theo mùa tại Việt Nam.</p>
+      <div class="row">
+          <div class="col-md-4 mb-4">
+              <div class="card border-success">
+                  <img src="https://th.bing.com/th/id/OIP.32gJrXMCe8SpQtj7DKPtOAHaE8?rs=1&pid=ImgDetMain" class="card-img-top" alt="Món ăn mùa hè">
+                  <div class="card-body">
+                      <h5 class="card-title">Món Ăn Mùa Hè</h5>
+                      <p class="card-text">Những món ăn mát lạnh, tươi ngon cho mùa hè oi ả.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="card border-success">
+                  <img src="https://i.ytimg.com/vi/dQVLCGthD1k/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLA3FMYCs6ZJL10au8iH6EjMKfQbew" class="card-img-top" alt="Món ăn mùa đông">
+                  <div class="card-body">
+                      <h5 class="card-title">Món Ăn Mùa Đông</h5>
+                      <p class="card-text">Các món ăn nóng hổi, ấm áp cho những ngày đông lạnh giá.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="card border-success">
+                  <img src="https://th.bing.com/th/id/R.117e55dbbd3dddcfb6078e03e6af5c41?rik=KxTSTlyGFyXePQ&pid=ImgRaw&r=0" class="card-img-top" alt="Món ăn mùa xuân">
+                  <div class="card-body">
+                      <h5 class="card-title">Món Ăn Mùa Xuân</h5>
+                      <p class="card-text">Những món ăn tươi ngon, đầy màu sắc cho mùa xuân mới.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<section id="snacks" class="py-5 bg-light">
+  <div class="container">
+      <h2 class="text-success text-center mb-4">Những Món Ăn Vặt Yêu Thích</h2>
+      <p class="text-center mb-4">Khám phá những món ăn vặt phổ biến và được yêu thích tại Việt Nam.</p>
+      <div class="row">
+          <div class="col-md-4 mb-4">
+              <div class="card border-success">
+                  <img src="https://th.bing.com/th/id/OIP.3-qjlNqSfycoy7CxiPk0EQHaEK?rs=1&pid=ImgDetMain" class="card-img-top" alt="Bánh quy">
+                  <div class="card-body">
+                      <h5 class="card-title">Bánh Quy</h5>
+                      <p class="card-text">Bánh quy giòn rụm, thơm ngon, là món ăn vặt yêu thích của nhiều người.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="card border-success">
+                  <img src="https://th.bing.com/th/id/R.f4ede4de398fd34b97e32fb5cbd48bbc?rik=07Q7zEEHKQV1Ow&pid=ImgRaw&r=0" class="card-img-top" alt="Khoai tây chiên">
+                  <div class="card-body">
+                      <h5 class="card-title">Khoai Tây Chiên</h5>
+                      <p class="card-text">Khoai tây chiên vừa giòn tan vừa thơm thoang thoảng mùi khoai tây là món ăn vặt phổ biến.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="card border-success">
+                  <img src="https://i.ytimg.com/vi/xdR4Neo7Ly4/maxresdefault.jpg" class="card-img-top" alt="Bánh lá dứa cốt dừa">
+                  <div class="card-body">
+                      <h5 class="card-title">Bánh lá dứa cốt dừa</h5>
+                      <p class="card-text">Bánh lá dứa cốt dừa là món ăn thơm ngon, kết hợp giữa vị ngọt thanh của lá dứa và béo ngậy của nước cốt dừa.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<section id="recipes" class="py-5 bg-light">
+  <div class="container">
+      <h2 class="text-success text-center mb-4">Công Thức Nấu Ăn Đơn Giản</h2>
+      <p class="text-center mb-4">Khám phá các công thức nấu ăn dễ làm tại nhà với nguyên liệu dễ tìm.</p>
+      <div class="row">
+          <div class="col-md-4 mb-4">
+              <div class="card border-success">
+                  <img src="https://tkn.vn/wp-content/uploads/2023/09/cac-loai-gia-vi-nau-pho-bo-chuan-vi.jpg" class="card-img-top" alt="Phở">
+                  <div class="card-body">
+                      <h5 class="card-title">Công Thức Nấu Phở</h5>
+                      <p class="card-text">Hướng dẫn chi tiết cách nấu phở bò thơm ngon tại nhà.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="card border-success">
+                  <img src="https://file.hstatic.net/1000394081/article/ca-kho-to_f8bc6e82ba1f4ab7a8109065eaf8b4eb.jpg" class="card-img-top" alt="Cá kho tộ">
+                  <div class="card-body">
+                      <h5 class="card-title">Công Thức Nấu Cá Kho Tộ</h5>
+                      <p class="card-text">Cách làm cá kho tộ đậm đà hương vị miền Nam.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="card border-success">
+                  <img src="https://bepmina.vn/wp-content/uploads/2022/02/thit-ga-xao-sa-ot-2048x1365.jpeg" class="card-img-top" alt="Gà xào sả ớt">
+                  <div class="card-body">
+                      <h5 class="card-title">Công Thức Nấu Gà Xào Sả Ớt</h5>
+                      <p class="card-text">Hướng dẫn cách làm gà xào sả ớt thơm ngon, cay nồng.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+  <section id="cooking-techniques" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-success text-center mb-4">Kỹ Thuật Nấu Ăn Truyền Thống</h2>
+        <p class="text-center mb-4">
+            Các kỹ thuật nấu ăn truyền thống như hấp, nướng, và xào không chỉ giữ nguyên hương vị tự nhiên của nguyên liệu mà còn thể hiện sự khéo léo và tinh tế của ẩm thực Việt.
+        </p>
+        <div class="row text-center">
+            <div class="col-md-4">
+              <i class="bi bi-droplet-half text-primary fs-1"></i>
+                <h4 class="mt-3">Hấp</h4>
+                <p>Phương pháp giữ được độ tươi ngon và dinh dưỡng của nguyên liệu, phổ biến với món như bánh bèo, bánh bao.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-fire text-danger fs-1"></i>
+                <h4 class="mt-3">Nướng</h4>
+                <p>Kỹ thuật tạo hương thơm đặc trưng từ lửa, nổi bật với chả cá, bánh tráng nướng, thịt nướng.</p>
+            </div>
+            <div class="col-md-4">
+              <!-- Dùng Font Awesome icon để biểu thị món xào -->
+              <i class="bi bi-steam text-success fs-1"></i>
+              <h4 class="mt-3">Xào</h4>
+              <p>Giữ được độ giòn và màu sắc của rau củ, là điểm nhấn trong nhiều món ăn như rau muống xào tỏi.</p>
+          </div>          
+        </div>
+    </div>
+</section>
+
+<section id="cultural-significance" class="py-5 bg-white">
+  <div class="container">
+      <h2 class="text-center text-success mb-4">Ý Nghĩa Văn Hóa Của Ẩm Thực</h2>
+      <p class="text-center mb-4">
+          Ẩm thực không chỉ là việc ăn uống mà còn là cầu nối gắn kết con người và truyền tải nét đẹp văn hóa của dân tộc Việt Nam.
+      </p>
+      <div class="row">
+          <div class="col-md-6">
+              <img src="https://th.bing.com/th?id=OIP.BvHrUVA1OK08JPbr8m1a-gHaE8&w=306&h=204&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" class="img-fluid rounded shadow-sm" alt="Bữa ăn gia đình">
+          </div>
+          <div class="col-md-6 d-flex align-items-center">
+              <p class="lead">
+                  Bữa cơm gia đình Việt là biểu tượng của sự sum họp, nơi chia sẻ niềm vui và gắn bó tình thân. Mỗi món ăn là một câu chuyện, một nét văn hóa riêng, phản ánh sự phong phú của từng vùng miền.
+              </p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<div class="sidebar">
+    <h2 id="sidebar-title"><p>Địa điểm ẩm thực nổi tiếng</p></h2>
+        <ul>
+            <!-- Bắc -->
+            <li><span>Miền Bắc:</span>
+                <ul>
+                    <li><strong>Phở Hà Nội</strong>: Món ăn quốc hồn quốc túy của Hà Nội, với nước dùng trong, ngọt thanh từ xương hầm và gia vị đặc trưng. Ăn kèm với thịt bò hoặc gà, rau thơm và chanh ớt.</li>
+                    <li><strong>Bánh cuốn Thanh Trì</strong>: Bánh cuốn mỏng, mềm, được làm từ bột gạo và nhân thịt băm, mộc nhĩ, ăn kèm với chả lụa và nước mắm chua ngọt.</li>
+                    <li><strong>Bánh mì Kẹp Hà Nội</strong>: Bánh mì đặc trưng Hà Nội với nhân thịt, pate, rau sống, và một chút gia vị đặc biệt.</li>
+                    <li><strong>Chả cá Lã Vọng</strong>: Chả cá lăng nướng trên lửa, ăn kèm với bún, thì là, đậu phộng và mắm tôm. Đây là món ăn nổi tiếng của Hà Nội.</li>
+                    <li><strong>Bún thang</strong>: Một món bún có nước dùng thanh, trong, được nấu từ gà, giò, tôm, trứng. Đây là món ăn sáng nổi tiếng của Hà Nội.</li>
+                    <li><strong>Cốm Làng Vòng</strong>: Món ăn truyền thống làm từ lúa nếp non, có thể ăn kèm với chuối hoặc dùng làm quà biếu đặc sản Hà Nội.</li>
+                    <li><strong>Xôi xéo</strong>: Món xôi truyền thống với đậu xanh, hành phi, ăn kèm với thịt gà, thường dùng vào các dịp lễ tết.</li>
+                </ul>
+            </li>
+
+            <!-- Miền Trung -->
+            <li><span>Miền Trung:</span>
+                <ul>
+                    <li><strong>Bún bò Huế</strong>: Món bún đặc trưng với nước dùng đậm đà, được nấu từ xương bò, thịt bò, ăn kèm với chân giò, huyết và rau sống.</li>
+                    <li><strong>Cơm hến Huế</strong>: Món cơm đơn giản nhưng đậm đà, với hến xào, mắm ruốc, ăn kèm với rau sống và bánh tráng nướng.</li>
+                    <li><strong>Mì Quảng</strong>: Món mì đặc trưng của Quảng Nam, nước dùng thơm ngọt, ăn kèm với thịt gà, tôm, rau sống và bánh tráng.</li>
+                    <li><strong>Bánh bèo</strong>: Bánh làm từ bột gạo, hấp trong khuôn nhỏ, ăn kèm tôm, mỡ hành, thịt nướng, và mắm nêm đặc trưng của Huế.</li>
+                    <li><strong>Bánh nậm</strong>: Bánh gói trong lá chuối, với nhân tôm, thịt hoặc đậu xanh, là món ăn phổ biến trong ẩm thực Huế.</li>
+                    <li><strong>Bánh cuốn thịt nướng</strong>: Bánh cuốn mềm, ăn kèm với thịt nướng, rau sống, và nước mắm chua ngọt.</li>
+                </ul>
+            </li>
+
+            <!-- Nam -->
+            <li><span>Miền Nam:</span>
+                <ul>
+                    <li><strong>Hủ tiếu Nam Vang</strong>: Món hủ tiếu đặc trưng miền Nam với nước dùng ngọt thanh, ăn kèm với thịt heo, tôm, trứng và các loại rau sống.</li>
+                    <li><strong>Bánh xèo</strong>: Bánh xèo giòn rụm, nhân tôm, thịt và giá đỗ, ăn kèm với rau sống và nước mắm pha chua ngọt.</li>
+                    <li><strong>Cơm tấm Sài Gòn</strong>: Món cơm đặc trưng của Sài Gòn, với cơm tấm được ăn kèm với sườn nướng, bì, chả, và nước mắm pha.</li>
+                    <li><strong>Bánh mì Sài Gòn</strong>: Bánh mì với nhân đa dạng như thịt, pate, chả lụa, và các loại rau sống, là món ăn nhanh phổ biến ở Sài Gòn.</li>
+                    <li><strong>Gỏi cuốn</strong>: Món cuốn từ tôm, thịt, bún, và rau sống, ăn kèm với nước mắm chua ngọt, là một món ăn nhẹ, dễ làm, và rất phổ biến ở miền Nam.</li>
+                    <li><strong>Chả giò</strong>: Món cuốn chiên giòn với nhân thịt, tôm, và rau, thường được ăn kèm với bún và rau sống.</li>
+                    <li><strong>Cơm gà Hội An</strong>: Cơm gà nổi tiếng của Hội An, được nấu từ nước luộc gà, ăn kèm với thịt gà xé nhỏ và rau sống.</li>
+                    <li><strong>Lẩu mắm</strong>: Món lẩu đặc trưng của miền Tây, với nước lẩu đậm đà từ mắm cá, ăn kèm với rau và các loại hải sản.</li>
+                </ul>
+            </li>
+        </ul>
+</div>
+<!-- Thời Gian Hiện Tại -->
+<div class="col-md-4" id="time">
+    <div class="card shadow-sm border-light">
+      <div class="card-body text-center">
+        <h3 class="card-title text-primary">Thời Gian Hiện Tại</h3>
+        <p id="time-info" class="lead text-muted">Đang tải...</p>
+      </div>
+    </div>
+  </div>
+</div>
+  </main>
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+        <div class="footer-group-info">
+            <h3>GROUP 10</h3>
+            <p>Hồ Chí Minh Nông Lâm University<br>Thủ Đức City, Hồ Chí Minh City, Việt Nam</p>
+            <p>Phone: +89 039 816 722<br>Email: hci2024group10@gmail.com</p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="group_diary.html">Group Diary</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="technical.html">Technical</a></li>
+                <li><a href="style_guide.html">Style Guide</a></li>
+                <li><a href="result.html">Result</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-members">
+            <h4>Our Members</h4>
+            <ul>
+                <li><a href="#">Nguyễn Hữu Duy</a></li>
+                <li><a href="#">Nguyễn Xuân Đại</a></li>
+                <li><a href="#">Nguyễn Võ Quốc Tuấn</a></li>
+                <li><a href="#">Lê Ngọc Châu</a></li>
+                <li><a href="#">Nguyễn Đình Hiếu</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-newsletter">
+            <h4>Newsletter</h4>
+            <form>
+                <input type="email" placeholder="Email is here" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</footer>
+<script>
+  // scripts.js
+document.addEventListener('DOMContentLoaded', () => {
+    // Hiệu ứng xuất hiện khi cuộn trang
+    const elements = document.querySelectorAll('.animated');
+    
+    window.addEventListener('scroll', () => {
+      elements.forEach(element => {
+        const position = element.getBoundingClientRect().top;
+        if (position < window.innerHeight - 100) {
+          element.classList.add('fadeIn');
+        }
+      });
+    });
+  });
+
+  
+  async function fetchTime() {
+  const url = 'http://worldtimeapi.org/api/timezone/Asia/Ho_Chi_Minh';
+
+  try {
+    const response = await fetch(url);
+
+    // Kiểm tra xem phản hồi có thành công (HTTP status code 200) hay không
+    if (!response.ok) {
+      throw new Error('Không thể truy cập API, mã lỗi: ' + response.status);
+    }
+
+    const data = await response.json();
+
+    // Kiểm tra nếu dữ liệu hợp lệ
+    if (data && data.datetime) {
+      const time = new Date(data.datetime).toLocaleString();
+      document.getElementById('time-info').innerHTML = `Thời gian hiện tại: ${time}`;
+    } else {
+      document.getElementById('time-info').innerHTML = "Không thể lấy dữ liệu thời gian.";
+    }
+  } catch (error) {
+    // Xử lý lỗi nếu fetch thất bại
+    document.getElementById('time-info').innerHTML = `Lỗi: ${error.message}`;
+  }
+}
+
+fetchTime();
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.querySelector('.sidebar');
+    const timeCard = document.getElementById('time');
+    const footer = document.querySelector('footer');
+
+    // Lấy vị trí ban đầu của sidebar và timeCard
+    const sidebarOriginalOffset = sidebar.offsetTop;
+    const timeOriginalOffset = timeCard.offsetTop;
+
+    // Lấy chiều cao của các phần tử
+    const sidebarHeight = sidebar.offsetHeight;
+    const timeHeight = timeCard.offsetHeight;
+
+    // Khoảng cách cách footer khi dừng
+    const marginOffset = 50; // Khoảng cách cách footer (px)
+
+    // Đảm bảo rằng tất cả các mục li trong sidebar luôn được hiển thị
+    const lists = sidebar.querySelectorAll('ul ul');
+    lists.forEach((ul) => {
+        ul.style.display = 'block'; // Đảm bảo rằng tất cả các ul con luôn được hiển thị
+    });
+
+    // Lắng nghe sự kiện cuộn trang
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;  // Vị trí hiện tại của trang khi cuộn
+        const footerTop = footer.getBoundingClientRect().top + scrollY; // Vị trí của footer so với trang
+
+        // 1. Sticky cho sidebar và timeCard khi cuộn xuống
+        if (scrollY >= sidebarOriginalOffset && scrollY + sidebarHeight + timeHeight + marginOffset < footerTop) {
+            sidebar.style.position = 'fixed';
+            sidebar.style.top = '10px'; // Sidebar cách đỉnh viewport một khoảng
+
+            timeCard.style.position = 'fixed';
+            timeCard.style.top = `${sidebarHeight}px`; // TimeCard nằm ngay dưới sidebar
+        }
+        // 2. Khi chạm footer, sidebar và timeCard dừng lại
+        else if (scrollY + sidebarHeight + timeHeight + marginOffset >= footerTop) {
+            const distanceToFooter = footerTop - (sidebarHeight + timeHeight + marginOffset);
+            sidebar.style.position = 'absolute';
+            sidebar.style.top = `${distanceToFooter}px`;
+
+            timeCard.style.position = 'absolute';
+            timeCard.style.top = `${distanceToFooter + sidebarHeight + 10}px`; // Đảm bảo timeCard không bị che khuất
+        }
+        // 3. Khi cuộn lên và chưa tới vị trí ban đầu
+        else if (scrollY < sidebarOriginalOffset) {
+            sidebar.style.position = 'absolute';
+            sidebar.style.top = `${sidebarOriginalOffset}px`;
+
+            timeCard.style.position = 'absolute';
+            timeCard.style.top = `${timeOriginalOffset}px`;
+        }
+    });
+});
+
+</script>
+<script>
+  // Giới hạn tần suất gọi hàm xử lý scroll
+  let debounceTimer;
+
+window.addEventListener('scroll', function() {
+  if (debounceTimer) {
+      clearTimeout(debounceTimer);
+  }
+
+  debounceTimer = setTimeout(function() {
+      const sidebar = document.querySelector('.sidebar');
+      const h2 = document.querySelector('#sidebar-title');
+      const lists = sidebar.querySelectorAll('ul ul');
+      const h2Bottom = h2.getBoundingClientRect().bottom; // Lấy vị trí dưới cùng của h2
+
+      // Lặp qua các ul con và xử lý
+      lists.forEach((ul) => {
+          const ulTop = ul.getBoundingClientRect().top;
+
+          // Kiểm tra nếu các ul con vượt qua border-bottom của h2
+          if (ulTop < h2Bottom) {
+              if (ul.style.display !== 'none') {
+                  ul.style.transition = 'transform 0.3s ease-out';
+                  ul.style.transform = 'translateY(-20px)';
+                  setTimeout(() => {
+                      ul.style.display = 'none'; // Ẩn ul khi qua border-bottom của h2
+                  }, 300); // Thời gian trễ tương ứng với transition
+              }
+          } else {
+              if (ul.style.display === 'none') {
+                  ul.style.display = 'block'; // Hiển thị lại ul khi chưa qua border-bottom
+                  ul.style.transform = 'translateY(0)';
+              }
+          }
+      });
+  }, 100); // Thời gian debounce (ví dụ 100ms)
+});
+document.addEventListener("DOMContentLoaded", function() {
+    const sidebar = document.querySelector('.sidebar');
+    const lists = sidebar.querySelectorAll('ul ul'); // Chọn tất cả các ul con
+
+    // Tạo một observer để theo dõi các ul con
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Khi ul vào vùng nhìn thấy
+                entry.target.style.display = 'block'; // Hiển thị ul
+                entry.target.style.transition = 'transform 0.3s ease-out'; // Thêm hiệu ứng mượt mà
+                entry.target.style.transform = 'translateY(0)'; // Di chuyển về vị trí ban đầu
+
+                observer.unobserve(entry.target); // Dừng quan sát sau khi ul đã vào vùng nhìn thấy
+            } else {
+                // Khi ul ra khỏi vùng nhìn thấy
+                entry.target.style.transition = 'transform 0.3s ease-out'; // Thêm hiệu ứng mượt mà
+                entry.target.style.transform = 'translateY(20px)'; // Di chuyển lên một chút
+                entry.target.style.display = 'none'; // Ẩn ul
+            }
+        });
+    }, {
+        root: null, // Quan sát vùng nhìn thấy của viewport
+        rootMargin: '0px',
+        threshold: 0.1 // Quan sát khi ít nhất 10% phần tử vào vùng nhìn thấy
+    });
+
+    // Quan sát từng ul con
+    lists.forEach((ul) => {
+        ul.style.display = 'none'; // Ban đầu ẩn tất cả các ul con
+        observer.observe(ul); // Bắt đầu quan sát
+    });
+});
+
+
+</script>
+</body>
+</html>
