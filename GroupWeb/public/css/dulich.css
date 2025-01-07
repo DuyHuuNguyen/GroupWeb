@@ -1,0 +1,178 @@
+.containers {
+    background-color: white;
+    max-width: 100%;
+}
+
+.header {
+    text-align: center;
+    padding: 10px 0 0;
+    color: #003366;
+}
+
+.header h2 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.header .tagline {
+    font-size: 18px;
+    margin-top: 5px;
+    color: #003366;
+}
+
+.main-content {
+    display: flex;
+    margin-top: 20px;
+}
+
+.left-column {
+    flex: 0 0 30%;
+    min-width: 200px;
+    max-width: 300px;
+    padding: 0;
+    background-color: #f7f7f7;
+    position: sticky;
+    top: 0;
+    height: 100%;
+}
+
+.header-image {
+    text-align: center;
+    margin: 10px;
+}
+
+.header-image img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    height: 150px;
+}
+
+.categories {
+    padding: 10px;
+}
+
+.categories h3 {
+    font-size: 20px;
+    color: #003366;
+    margin: 0 0 10px;
+    text-align: center;
+}
+
+.categories ul {
+    padding: 0;
+}
+
+.categories ul li {
+    list-style-type: none;
+    margin: 5px 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    outline: 2px solid #003366;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.categories ul li:hover {
+    background-color: #003366;
+    color: white;
+}
+
+.categories ul li.active {
+    background-color: #003366;
+    color: white;
+    font-weight: bold;
+}
+
+.welcome,
+.category-content {
+    flex: 1;
+    background-color: #fff;
+    padding-left: 20px;
+}
+
+.welcome {
+    display: block;
+}
+
+.welcome h2 {
+    font-size: 24px;
+    color: #003366;
+    margin: 0;
+}
+
+.welcome p {
+    margin: 10px 0;
+}
+
+.tour-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 10px 10px;
+}
+
+.tour {
+    text-align: center;
+    max-width: 300px;
+}
+
+.tour img {
+    width: 210px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+.tour h3 {
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.category-content {
+    display: none;
+}
+
+.category-content h2 {
+    font-size: 28px;
+    color: #003366;
+    margin: 10px 0;
+}
+
+.category-content img {
+    max-width: 100%;
+    display: block;
+    margin: 10px auto;
+    width: 655px;
+    height: 436px;
+
+}
+
+.centered-image {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.centered-image img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 655px;
+    height: 436px;
+}
+
+.centered-image figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+    text-align: center;
+}
+
+.hyphen {
+    width: 50%; /* Chiều dài của dấu gạch ngang */
+    height: 2px; /* Độ dày của dấu gạch */
+    background-color: black; /* Màu sắc của dấu gạch */
+    margin: 0 auto; /* Căn giữa dấu gạch ngang */
+}
