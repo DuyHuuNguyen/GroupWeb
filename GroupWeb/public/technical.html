@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technical</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
 </head>
 <body>
@@ -22,7 +23,7 @@
                 <li><a href="technical.html" class="fw-bold active">Technical</a></li>
                 <li><a href="style_guide.html">Style Guide</a></li>
                 <li><a href="result.html">Result</a></li>
-                <li><a href="blog.html" >Blog</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -34,129 +35,138 @@
     <section id="requirement" class="content-section">
         <div class="div-tech">
             <ul>
-             <div class="img-tech">
-                <img  src="https://s3-sgn09.fptcloud.com/codelearnstorage/Upload/Blog/su-dung-git-tu-co-ban-den-nang-cao-63724899240.0443.jpeg" alt="" class="img-fluid">
-            </div>
-             <h1>Hướng dẫn sử dụng Github</h1>
-             <h2>Tại sao nên dùng Git/GitHub?</h2> 
-            <p>Hầu hết khi hỏi các bạn sinh viên làm bài tập lớn theo nhóm, mỗi bạn code 1 
-             phần vậy khi ghép lại thành 1 project hoàn chỉnh thì sẽ làm như thế nào?</p>
-            
-             <p>
-                 Phần lớn các bạn đều trả lời rằng: "Bọn em sẽ lên thư viện hoặc hẹn nhau ở chỗ nào
-                  đó cùng nhau ghép hoặc copy gửi cho nhau" cũng có trường hợp
-                  "Có thằng nó gánh team rồi, em chỉ cần làm tài liệu thôi :D"
-             </p>
-            
-             <p>
-                 Thực trạng trên cho thấy rằng đa số các bạn sinh viên mới ra trường,
-                  chưa có kinh nghiệm làm việc nhiều nên hầu hết các bạn này rất lúng túng khi làm việc với Git hoặc thậm chí có bạn còn chưa biết Git là gì, chưa biết làm việc với nó như thế nào.
-                   Trên quan điểm của mình, việc này không phải lỗi của bạn ấy, chẳng qua các bạn ấy chưa có cơ hội để sử dụng Git, nên chưa tìm hiểu. Nhưng, sẽ là lỗi của các bạn ấy,
-                  nếu trong dự án sử dụng Git mà lại không tìm hiểu.
-             </p>
-          
-             <p>
-                 Vừa qua mình cũng có nhận training cho 1 vài bạn thực tập sinh
-                  và cũng xảy ra tình trạng tương tự như trên. Vì vậy qua đây mình xin chia sẻ một số hiểu biết của mình
-                   (đã từng tìm hiểu và đã từng làm) về Git trong bài viết này với hy vọng sẽ giúp ích được những bạn tự tin khi làm việc với Git cũng như nâng cao kỹ năng của bản thân 
-                 trên con đường trở thành lập trình viên chuyên nghiệp.
-             </p>
+                <div class="img-tech">
+                    <img src="https://s3-sgn09.fptcloud.com/codelearnstorage/Upload/Blog/su-dung-git-tu-co-ban-den-nang-cao-63724899240.0443.jpeg"
+                        alt="" class="img-fluid">
+                </div>
+                <h1>Instructions for using GitHub</h1>
+                <h2>Why should use Git/GitHub?</h2>
+                <p>Most of the time, when asking students about working on group assignments,
+                    where each member codes a specific part, how do they combine everything into a complete project?</p>
+
+                <p>
+                    Most students usually respond: 'We'll meet at the library or some other place to piece it together
+                    or copy and share with each other.' There are also cases where they say, 'There's always someone
+                    carrying the team, so I just need to work on the documentation. :D
+                </p>
+
+                <p>
+                    This situation shows that most fresh graduates, who lack work experience, are often very confused
+                    about using Git. Some may not even know what Git is or how to work with it. From my perspective,
+                    this isn’t entirely their fault—it’s simply because they haven’t had the opportunity to use Git and
+                    therefore haven’t explored it. However, it will be their fault if they fail to learn about Git when
+                    working on a project that requires it.
+                </p>
+
+                <p>
+                    Recently, I had the opportunity to train a few interns and encountered similar situations as
+                    mentioned earlier. Therefore, I’d like to share some of my knowledge and experiences (from what I’ve
+                    learned and practiced) about Git in this article. I hope it will help others feel more confident
+                    working with Git and enhance their skills on the journey to becoming professional developers."
+                </p>
             </ul>
 
-            <ul >                
-                    <h1>Git là gì?</h1>
-                    <p>Git là một hệ thống quản lý phiên bản phân tán (Distributed Version Control System).
-                         Hiểu nôm na rằng Git là 1 hệ thống giúp cho việc quản lý tài liệu,
-                          source code... của 1 nhóm các developer cùng làm chung dự án.
-                           Git sẽ ghi nhớ lại toàn bộ lịch sử thay đổi của source code trong dự án. Bạn sửa file nào,
-                            thêm dòng code nào, xóa dòng code nào, bỏ thừa dấu ở đâu... tất cả các hành động đều được Git ghi lại.
-                             Qua đó giúp dự án có thể điều tra nguyên nhân gây lỗi hệ thống, tổng hợp code trở nên dễ dàng hơn.</p>
-                
-                
-                    <h1>Hướng dẫn sử dụng Git</h1>
-                    <p>Trước khi đi vào sử dụng git ta cần hiểu một số khái niệm liên quan đến Git như sau:</p>
-                    <br>
-                    <p>
-                        <strong>Repository</strong>: <strong>Repository</strong> hiểu đơn giản nó chính là cái kho
-                         lưu trữ tất cả những thông tin cần thiết để quản lý các sửa đổi 
-                         và lịch sử của toàn bộ project. <strong>Repository</strong> của Git được phân thành
-                          2 loại là <strong>remote repository</strong> và <strong>local repository</strong>.
-                    </p>
-                    <br>
-                    <p>=> <strong>GitHub</strong>
-                         chính là 1 Remote Repository lưu trữ tất cả những thông tin cần thiết để quản 
-                        lý các sửa đổi và lịch sử của toàn bộ project.</p>
-                    <br>
-                    <p><strong>Working tree và Index (hoặc staging area): </strong>
-                        Là những thư mục được đặt trong sự quản lý của Git,
-                         nơi mọi người thực hiện công việc trên đó, được gọi là <strong>working tree</strong>. 
-                         Giữa repository và <strong>working tree</strong> tồn tại một nơi gọi là index hay staging area . staging 
-                        area là nơi để chuẩn bị cho việc commit vào repository.</p>
+            <ul>
+                <h1>What is Git?</h1>
+                <p>Git is a distributed version control system (Distributed Version Control System). Simply put, Git is
+                    a system that helps manage documents, source code, and more for a group of developers working on the
+                    same project. Git keeps a complete history of all changes made to the project's source code. Whether
+                    you edit a file, add a line of code, delete a line, or even leave an extra character somewhere—Git
+                    records all these actions. This makes it easier to investigate the root causes of system errors and
+                    to integrate code efficiently.
+                </p>
+
+
+                <h1>Instructions for Git</h1>
+                <p>Before diving into using Git, it’s important to understand some concepts related to Git as follows:
+                </p>
+                <br>
+                <p>
+                    <strong>Repository</strong>: <strong>Repository</strong> Simply put, it is a repository that stores
+                    all the necessary information to manage changes
+                    and history of entry project <strong>Repository</strong> of Git are divided into two types:
+                    <strong>remote repository</strong> and <strong>local repository</strong>.
+                </p>
+                <br>
+                <p>=> <strong>GitHub</strong>
+                    is a Remote Repository that stores all the necessary information to manage changes and the complete
+                    history of the entire project.</p>
+                <br>
+                <p><strong>Working tree và Index (or staging area): </strong>
+                    Are directories managed by Git, where everyone performs their work, commonly referred to
+                    as<strong>working tree</strong>.
+                    Repository and <strong>working tree</strong> exist in a place called the index or staging area.
+                    staging area is where changes are prepared before committing them to the repository.</p>
+
+                <img src="https://s3-sgn09.fptcloud.com/codelearnstorage/Media/Default/Users/Shanghaik/Pictures/git%201.png"
+                    alt="" class="img-fluid">
+
+                <br>
+                <p>Let go now!!!</p>
+                <br>
+                <p>
+                    "To install Git, you just need to download Git and click Next => Next => ... => Finish (for Windows
+                    machines). For detailed instructions, you can refer to the following link.
+                    <a href=" : https://git-scm.com/book/en/v2/Getting-Started-Installing-Git"> :
+                        https://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a>
+                </p>
+                <br>
+                <p>
+                    After installation, we can get started. In this part, I will introduce some basic commands and
+                    operations with the local repository first (without needing to create a GitHub account yet). This
+                    way, we can understand the theory and practice it right away to help remember it better :D.
+                </p>
+                <br>
+                <p><strong>2.1</strong>
+                    <Command></Command>: <strong>git iniit</strong>
+                </p>
+                <br>
+                <div class="img-tech">
+                    <img src="https://s3-sgn09.fptcloud.com/codelearnstorage/Media/Default/Users/Shanghaik/Pictures/git%202.png"
+                        alt="" class="img-fluid">
+                </div>
+                <br>
+                <p>The Git Bash console window will appear => then you type the command git init. </p>
+                <div class="img-tech">
+                    <img src="https://s3-sgn09.fptcloud.com/codelearnstorage/Media/Default/Users/Shanghaik/Pictures/git%203.png"
+                        alt="" class="img-fluid">
+                </div>
+                <p>Function: Initializes a Git repository for a new or existing project.</p>
+                <br>
+                <p>How to use: Create a new folder => go into that folder => right-click and select 'Git Bash Here' as
+                    shown below.</p>
+                <br>
+                <p>The Git Bash console window will appear => then you type the command <strong>git init</strong> </p>
+                <br>
+                <p>After successful creation, a .git folder will appear in the directory. This folder will contain all
+                    the necessary information to manage changes and the history of the entire project. So, if you want
+                    to delete this file, make sure to consider it carefully before doing so :D.</p>
+                <br>
+                <p><strong>2.2</strong> <Command></Command>: <strong>git add</strong></p>
+                <div class="img-tech">
+                    <img src="https://s3-sgn09.fptcloud.com/codelearnstorage/Media/Default/Users/Shanghaik/Pictures/git%204.png"
+                        alt="" class="img-fluid">
+                </div>
+                <p>TFunction: Adds changes to the stage/index in the working directory.
+
+                    How to use: In the working directory => git add .
                     
-                        <img src="https://s3-sgn09.fptcloud.com/codelearnstorage/Media/Default/Users/Shanghaik/Pictures/git%201.png" alt="" class="img-fluid">
-                  
-                    <br>
-                    <p>Bắt tay vào cài đặt nào!!!</p>
-                    <br>
-                    <p>
-                        Để cài đặt Git, các bạn chỉ cần download Git về và Next 
-                    => Next =>... => Finish là xong (Đối với máy windows).
-                     Chi tiết các bạn có thể tham khảo thêm ở link sau
-                    <a href=" : https://git-scm.com/book/en/v2/Getting-Started-Installing-Git"> : https://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a>
-                    </p>
-                    <br>
-                    <p>
-                        Sau khi cài đặt xong chúng ta bắt tay vào làm thôi. 
-                        Trong phần 1 này mình sẽ trình bày một số câu lệnh cơ bản, 
-                        thao tác với local repository trước (chưa cần tạo tài khoản github vội) 
-                        để chúng ta vừa hiểu lý thuyết lại làm thực hành luôn cho nhớ nha :D
-                    </p>
-                    <br>
-                    <p><strong>2.1</strong> Lệnh: <strong>git iniit</strong></p>
-                    <br>
-                    <div class="img-tech">
-                        <img src="https://s3-sgn09.fptcloud.com/codelearnstorage/Media/Default/Users/Shanghaik/Pictures/git%202.png" alt="" class="img-fluid">
-                    </div>
-                    <br>
-                    <p>Cửa sổ console git bash hiện lên => các bạn gõ lệnh git init </p>
-                    <div class="img-tech">
-                        <img src="https://s3-sgn09.fptcloud.com/codelearnstorage/Media/Default/Users/Shanghaik/Pictures/git%203.png" alt="" class="img-fluid">
-                    </div>
-                    <p>Tác dụng : Khởi tạo 1 git repository 1 project mới hoặc đã có.</p>
-                    <br>
-                    <p>Cách dùng: Tạo 1 folder mới =>
-                         vào trong folder đó =>
-                          click chuột phải chọn Git Bash Here như hình dưới</p>
-                    <br>
-                    <p>Cửa sổ console git bash hiện lên => các bạn gõ lệnh <strong>git init</strong> </p>
-                    <br>
-                    <p>Sau khi tạo thành công thì trong folder sẽ xuất hiện folder .git => folder này sẽ chứa tất cả những thông tin cần thiết để quản
-                         lý các sửa đổi và lịch sử của toàn bộ project.
-                          Vậy nên nếu muốn xóa file này hãy cân nhắc trước khi xóa nhé :D</p>
-                    <br>
-                     <p><strong>2.2</strong> Lệnh: <strong>git add</strong></p>
-                     <div class="img-tech">
-                        <img src="https://s3-sgn09.fptcloud.com/codelearnstorage/Media/Default/Users/Shanghaik/Pictures/git%204.png" alt="" class="img-fluid">
-                     </div>
-                     <p>Tác dụng : Thêm thay đổi vào stage/index trong thư mục làm việc.
+                    After successfully adding...</p>
+                <br>
 
-                        Cách dùng: Tại thư mục làm việc =><strong> git add</strong> .
-                        
-                        Khi add thành công</p>
-                    <br>
-                     
-                     <p><strong>2.3</strong> Lệnh: <strong>git commit</strong></p>
-                     <div class="img-tech">
-                        <img src="https://s3-sgn09.fptcloud.com/codelearnstorage/Media/Default/Users/Shanghaik/Pictures/git%205.png" alt="" class="img-fluid">
-                     </div>
-                     <br>
-                     Tác dụng: commit là một action để Git lưu lại các sự thay đổi trong thư mục làm việc vào repository
+                <p><strong>2.3</strong> <Command></Command>: <strong>git commit</strong></p>
+                <div class="img-tech">
+                    <img src="https://s3-sgn09.fptcloud.com/codelearnstorage/Media/Default/Users/Shanghaik/Pictures/git%205.png"
+                        alt="" class="img-fluid">
+                </div>
+                <br>
+                Function: commit is an action that allows Git to save changes from the working directory into the repository.
 
-                        Cách dùng: git commit -m <strong>" add source"</strong>
+                How to use: git commit -m <strong>" add source"</strong>
 
-                        Khi commit thành công
+                When commit is successfully
             </ul>
-     </div>
+        </div>
     </section>
     <footer>
         <div class="footer-container">
