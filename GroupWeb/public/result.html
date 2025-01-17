@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 10 - Human-Computer Interaction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --background-color-dark-blue: #003366;
+            --background-color-light-blue: #5AB9EA;
+            --background-color-pale-blue: #00bfff;
+            --background-color-white: white;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--background-color-dark-blue);
+            color: var(--background-color-white);
+            padding: 20px;
+        }
+
+        header .logo h1 {
+            margin-left: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 300;
+            transition: color 0.3s ease, border-bottom-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--background-color-light-blue);
+        }
+
+        nav ul li a.active {
+            color: var(--background-color-white);
+            border-bottom: 2px solid var(--background-color-white);
+        }
+
+        .project-button .btn {
+            background-color: var(--background-color-light-blue);
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-right: 20px;
+        }
+
+        .project-button .btn:hover {
+            background-color: var(--background-color-pale-blue);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 10px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            /* background-color: #00bfff; */
+            color: var(--background-color-dark-blue);
+        }
+
+        .container-card {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            width: 250px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background-color: #cccccc;
+        }
+
+        .profile-pic {
+            border-radius: 10px;
+            text-align: center;
+            width: 200px;
+        }
+
+        .profile-pic img {
+            width: 80%;
+            height: 175px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #000;
+            margin: 15px 20px 80px 20px;
+        }
+
+        .divider-ul {
+            padding-left: 35px;
+        }
+
+        .divider-ul li {
+            text-align: left;
+        }
+
+        section h4 {
+            margin-top: -80px;
+            font-size: 16px;
+        }
+
+        section p {
+            font-size: 14px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--background-color-dark-blue);
+            color: #fff;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .footer-group-info,
+        .footer-links,
+        .footer-members,
+        .footer-newsletter {
+            flex: 1;
+            margin: 0 20px;
+        }
+
+        .footer-group-info h3,
+        .footer-links h4,
+        .footer-members h4,
+        .footer-newsletter h4 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .footer-group-info p {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul,
+        .footer-members ul {
+            list-style: none;
+        }
+
+        .footer-links ul li a,
+        .footer-members ul li a {
+            color: var(--background-color-light-blue);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-links ul li a:hover,
+        .footer-members ul li a:hover {
+            color: var(--background-color-white);
+        }
+
+        .footer-newsletter form {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-newsletter input[type="email"] {
+            padding: 10px;
+            border-radius: 20px 0 0 20px;
+            border: none;
+            width: 200px;
+            outline: none;
+        }
+
+        .footer-newsletter button {
+            padding: 10px 20px;
+            background-color: #00b33c;
+            color: var(--background-color-white);
+            border-radius: 0 20px 20px 0;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .footer-newsletter button:hover {
+            background-color: var(--background-color-light-blue);
+        }
+
+        @media screen and (max-width: 720px) {
+            body {
+                display: block;
+            }
+
+            header {
+                margin-top: 2px;
+                white-space: 4px;
+                display: block;
+                width: 100%;
+            }
+
+            .content-section {
+                width: 100%;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+
+            .project-button {
+                margin-top: 8px;
+            }
+
+            nav {
+                list-style: none;
+                display: block;
+            }
+
+            nav ul {
+                display: block;
+                align-items: center;
+                margin-top: 2px;
+            }
+
+            footer {
+                display: block;
+                width: 100%;
+            }
+
+            .footer-container {
+                display: block;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>GROUP 10</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="group_diary.html">Group Diary</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="technical.html">Technical</a></li>
+                <li><a href="style_guide.html">Style Guide</a></li>
+                <li><a href="result.html" class="fw-bold active">Result</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="project-button">
+            <a href="https://duyhuunguyen.github.io/HotelManagerWeb/login" class="btn">Go to project</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>RESULT</h1>
+    </section>
+
+    <section class="container-card">
+        <div class="cards">
+            <div class="card">
+                <div class="profile-pic">
+                    <img src="img\duy.jpg" alt="Nguyễn Hữu Duy">
+                    <h3>Nguyễn Hữu Duy</h3>
+                    <p>Leader</p>
+                    <p>MSSV - 23130075</p>
+
+                    <!-- Phần Trang web nhóm -->
+                    <div class="divider"></div>
+                    <section>
+                        <h4>Trang web nhóm</h4>
+                        <ul class="divider-ul">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </section>
+
+                    <!-- Phần Trang web project -->
+                    <div class="divider"></div>
+                    <section>
+                        <h4>Trang web project</h4>
+                        <ul class="divider-ul">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </section>
+
+                    <!-- Phần Đánh giá -->
+                    <div class="divider"></div>
+                    <section>
+                        <h4>Đánh giá</h4>
+                        <ul class="divider-ul">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="profile-pic">
+                    <img src="img\tuan.jpg" alt="Nguyễn Võ Quốc Tuấn">
+                    <h3>Nguyễn Võ Quốc Tuấn</h3>
+                    <p>Member</p>
+                    <p>MSSV - 23130370</p>
+
+                    <!-- Phần Trang web nhóm -->
+                    <div class="divider"></div>
+                    <section>
+                        <h4>Trang web nhóm</h4>
+                        <ul class="divider-ul">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </section>
+
+                    <!-- Phần Trang web project -->
+                    <div class="divider"></div>
+                    <section>
+                        <h4>Trang web project</h4>
+                        <ul class="divider-ul">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </section>
+
+                    <!-- Phần Đánh giá -->
+                    <div class="divider"></div>
+                    <section>
+                        <h4>Đánh giá</h4>
+                        <ul class="divider-ul">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="profile-pic">
+                    <img src="img\dai.jpg" alt="Nguyễn Xuân Đại">
+                    <h3>Nguyễn Xuân Đại</h3>
+                    <p>Member</p>
+                    <p>MSSV - 23130039</p>
+
+                    <!-- Phần Trang web nhóm -->
+                    <div class="divider"></div>
+                    <section>
+                        <h4>Trang web nhóm</h4>
+                        <ul class="divider-ul">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </section>
+
+                    <!-- Phần Trang web project -->
+                    <div class="divider"></div>
+                    <section>
+                        <h4>Trang web project</h4>
+                        <ul class="divider-ul">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </section>
+
+                    <!-- Phần Đánh giá -->
+                    <div class="divider"></div>
+                    <section>
+                        <h4>Đánh giá</h4>
+                        <ul class="divider-ul">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="profile-pic">
+                    <img src="img/hiu.jpg" alt="Nguyễn Đình Hiếu">
+                    <h3>Nguyễn Đình Hiếu</h3>
+                    <p>Member</p>
+                    <p>MSSV - 23130107</p>
+
+                    <!-- Phần Trang web nhóm -->
+                    <div class="divider"></div>
+                    <section>
+                        <h4>Trang web nhóm</h4>
+                        <ul class="divider-ul">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </section>
+
+                    <!-- Phần Trang web project -->
+                    <div class="divider"></div>
+                    <section>
+                        <h4>Trang web project</h4>
+                        <ul class="divider-ul">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </section>
+
+                    <!-- Phần Đánh giá -->
+                    <div class="divider"></div>
+                    <section>
+                        <h4>Đánh giá</h4>
+                        <ul class="divider-ul">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="profile-pic">
+                    <img src="img\chau.jpg" alt="Lê Ngọc Châu">
+                    <h3>Lê Ngọc Châu</h3>
+                    <p>Member</p>
+                    <p>MSSV - 23130028</p>
+
+                    <!-- Phần Trang web nhóm -->
+                    <div class="divider"></div>
+                    <section>
+                        <h4>Trang web nhóm</h4>
+                        <ul class="divider-ul">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </section>
+
+                    <!-- Phần Trang web project -->
+                    <div class="divider"></div>
+                    <section>
+                        <h4>Trang web project</h4>
+                        <ul class="divider-ul">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </section>
+
+                    <!-- Phần Đánh giá -->
+                    <div class="divider"></div>
+                    <section>
+                        <h4>Đánh giá</h4>
+                        <ul class="divider-ul">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-group-info">
+                <h3>GROUP 10</h3>
+                <p>Hồ Chí Minh Nông Lâm University<br>Thủ Đức City, Hồ Chí Minh City, Việt Nam</p>
+                <p>Phone: +89 039 816 722<br>Email: hci2024group10@gmail.com</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="group_diary.html">Group Diary</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="technical.html">Technical</a></li>
+                    <li><a href="style_guide.html">Style Guide</a></li>
+                    <li><a href="result.html">Result</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-members">
+                <h4>Our Members</h4>
+                <ul>
+                    <li><a href="#">Nguyễn Hữu Duy</a></li>
+                    <li><a href="#">Nguyễn Xuân Đại</a></li>
+                    <li><a href="#">Nguyễn Võ Quốc Tuấn</a></li>
+                    <li><a href="#">Lê Ngọc Châu</a></li>
+                    <li><a href="#">Nguyễn Đình Hiếu</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <form>
+                    <input type="email" placeholder="Email is here" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
