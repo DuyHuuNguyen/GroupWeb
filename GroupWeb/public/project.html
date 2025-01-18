@@ -82,10 +82,11 @@
             margin: auto;
             z-index: 3;
             display: flex;
-            width: 500px;
+            max-height: 500px;
             max-width: 1000px;
             margin-top: 10vh;
-            object-fit: cover;
+            object-fit: contain;
+            overflow: scrolls;
         }
 
         .close {
@@ -166,10 +167,7 @@
                     <button class="nav-link" data-bs-toggle="tab" data-week="2"
                         onclick="showSection('design')">Design</button>
                 </li>
-                <li class="nav-item " role="presentation">
-                    <button class="nav-link" data-bs-toggle="tab" data-week="3"
-                        onclick="showSection('implement')">Implement</button>
-                </li>
+                
             </ul>
         </div>
     </div>
@@ -191,51 +189,51 @@
                 <tbody>
                     <tr>
                         <td id>1</td>
-                        <td>Home stay menu, vai trò</td>
+                        <td>Home stay menu, vai trò, trang chủ Group Web, blog,<br> trang chủ giao diện người dùng</td>
                         <td>Nguyễn Hữu Duy</td>
                         <td>Nguyễn Hữu Duy</td>
                         <td>
                             <div>Nguyễn Hữu
                                 Duy</div>
                         </td>
-                        <td>2 TUẦN</td>
-                        <td>Đang thực hiện</td>
+                        <td>9 TUẦN</td>
+                        <td>Đã hoàn thành</td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Bản điều khiển, danh sách phòng</td>
+                        <td>Bản điều khiển, danh sách phòng, about, <br> Dải ngọc HomeStay, VietNam tech startup</td>
                         <td>Nguyễn Võ Quốc Tuấn</td>
                         <td>Nguyễn Võ Quốc Tuấn</td>
                         <td>Nguyễn Võ Quốc Tuấn</td>
-                        <td>2 TUẦN</td>
-                        <td>Đang thực hiện</td>
+                        <td>9 TUẦN</td>
+                        <td>Đã hoàn thành</td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>Danh mục, quản lý bình luận</td>
+                        <td>Danh mục, quản lý bình luận, danh sách phòng nhà nghỉ, <br> blogDetails, contact, result</td>
                         <td>Lê Ngọc Châu</td>
                         <td>Lê Ngọc Châu</td>
                         <td>Lê Ngọc Châu</td>
-                        <td>2 TUẦN</td>
-                        <td>Đang thực hiện</td>
+                        <td>9 TUẦN</td>
+                        <td>Đã hoàn thành</td>
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td>Bài viết địa điểm</td>
+                        <td>Bài viết, địa điểm, deluxe room, <br> bài viết về ẩm thực Việt Nam, danh sách blog</td>
                         <td>Nguyễn Xuân Đại</td>
                         <td>Nguyễn Xuân Đại</td>
                         <td>Nguyễn Xuân Đại</td>
-                        <td>2 TUẦN</td>
-                        <td>Đang thực hiện</td>
+                        <td>9 TUẦN</td>
+                        <td>Đã hoàn thành</td>
                     </tr>
                     <tr>
                         <td>5</td>
-                        <td>Danh sách đặt phòng, người dùng</td>
+                        <td>Danh sách đặt phòng, người dùng, project, technical,<br> blog về văn hóa cà phê ở Sài Gòn, danh sách nhà nghỉ</td>
                         <td>Nguyễn Đình Hiếu</td>
                         <td>Nguyễn Đình Hiếu</td>
                         <td>Nguyễn Đình Hiếu</td>
-                        <td>2 TUẦN</td>
-                        <td>Đang thực hiện</td>
+                        <td>9 TUẦN</td>
+                        <td>Đã hoàn thành</td>
                     </tr>
                 </tbody>
             </table>
@@ -253,13 +251,15 @@
                         <div>
                             <p class="left-p">Hand Paint</p>
                             <div style="display: block;">
-                                <img id="myImg" style="width: 30%; max-width: 500px;" src="./handpaint/index1.jpg"
+                                <img id="myImg" style="width: 30%; max-width: 500px;" src="./handpaint/index1.jpg" 
                                 alt="Placeholder Image 1">
                                 <img id="myImg" style="width: 30%; max-width: 500px;" src="./handpaint/blog.jpg"
                                 alt="Placeholder Image 1">
                                 <img id="myImg" style="width: 30%; max-width: 500px;" src="./handpaint/danhmuc.jpg"
                                 alt="Placeholder Image 1">
                                 <img id="myImg" style="width: 30%; max-width: 500px;" src="./handpaint/danhmuc.jpg"
+                                alt="Placeholder Image 1">
+                                <img id="myImg" style="width: 30%; max-width: 500px;" src="./handpaint/index2.jpg"
                                 alt="Placeholder Image 1">
 
                             </div>
@@ -276,6 +276,8 @@
                                 <img id="myImg" style="width: 30%; max-width: 500px;" src="./result/nhanghi.png"
                                 alt="Placeholder Image 1">
                                 <img id="myImg" style="width: 30%; max-width: 500px;" src="./result/vaitro.png"
+                                alt="Placeholder Image 1">
+                                <img id="myImg" style="width: 30%; max-width: 500px;" src="./result/indexgdnd1.png"
                                 alt="Placeholder Image 1">
                             </div>
                         </div>
@@ -318,6 +320,8 @@
                                 <img id="myImg" style="width: 30%; max-width: 500px;" src="./result/contactgdnd.png"
                                 alt="Placeholder Image 1">
                                 <img id="myImg" style="width: 30%; max-width: 500px;" src="./result/homstaydetails.png"
+                                alt="Placeholder Image 1">
+                                <img id="myImg" style="width: 30%; max-width: 500px;" src="./result/startup.png"
                                 alt="Placeholder Image 1">
                             </div>
                         </div>
@@ -363,6 +367,8 @@
                                 alt="Placeholder Image 1">
                                 <img id="myImg" style="width: 30%; max-width: 500px;" src="./result/danhsachdatphong.png"
                                 alt="Placeholder Image 1">
+                                <img id="myImg" style="width: 30%; max-width: 500px;" src="./result/cafe.png"
+                                alt="Placeholder Image 1">
                             </div>
                         </div>
                     </div>
@@ -403,7 +409,8 @@
                                 alt="Placeholder Image 1">
                                 <img id="myImg" style="width: 30%; max-width: 500px;" src="./result/bloggdnd.png"
                                 alt="Placeholder Image 1">
-                                
+                                <img id="myImg" style="width: 30%; max-width: 500px;" src="./result/amthuc.png"
+                                alt="Placeholder Image 1">
                             </div>
                         </div>
                     </div>
@@ -442,9 +449,8 @@
                                 alt="Placeholder Image 1">
                                 <img id="myImg" style="width: 30%; max-width: 500px;" src="./result/roomlist.png"
                                 alt="Placeholder Image 1">
-                                <img id="myImg" style="width: 30%; max-width: 500px;" src="./result/blogDetails.png"
-                                alt="Placeholder Image 1">
-                                
+                                <img id="myImg img-fluid"  src="result/blogDetails.png" alt="Placeholder Image 1">
+                                <img id="myImg img-fluid" src="result/dulich.png" alt="van hoa cafe Sai Gon">
                             </div>
                         </div>
                     </div>
@@ -457,23 +463,10 @@
     <!-- modal show big image -->
     <div id="modal" class="Modal">
         <span class="close" id="close">&times;</span>
-        <img id="modal-img" class="modal-content" id="img01">
+        <img id="modal-img" class="modal-content">
         <div id="caption" class="caption"></div>
     </div>
-    <section id="implement" class="content-section" style="display:none;">
-        <div class="button-list">
-            <button class="expand-btn" onclick="toggleContent(4)">1.Chức
-                năng ABC</button>
-            <div class="content" id="content-4">
-                <p>hello world</p>
-            </div>
-            <button class="expand-btn" onclick="toggleContent(5)">2.Chức
-                năng XYZ</button>
-            <div class="content" id="content-5">
-                <p>hello world</p>
-            </div>
-        </div>
-    </section>
+   
     <footer>
         <div class="footer-container">
             <div class="footer-group-info">
@@ -524,44 +517,34 @@
             tab.addEventListener('click', (e) => {
                 document.querySelectorAll('.nav-link').forEach(t => t.classList.remove('active'));
                 e.target.classList.add('active');
-                updateTable(e.target.getAttribute('data-week'));
+                // updateTable(e.target.getAttribute('data-week'));
             });
         });
 
-        // function matchColumnWidths() {
-        //     const firstTable = document.getElementById('firstTable');
-        //     const secondTable = document.getElementById('secondTable');
-        //     const table = document.getElementsByClassName('table');
+        
+        // Get the modal
+        var modal = document.getElementById("modal");
 
-        //     if (firstTable && secondTable) {
-        //         const firstTableCols = firstTable.querySelectorAll('th');
-        //         const secondTableCols = secondTable.querySelectorAll('th');
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var images = document.getElementsByTagName("img");
+        console.log(images)
+        var modalImg = document.getElementById("modal-img");
+        var captionText = document.getElementById("caption");
 
-        //         if (firstTableCols.length === secondTableCols.length) {
-        //             secondTableCols.forEach((col, index) => {
-        //                 const width = col.offsetWidth;
-        //                 firstTableCols[index].style.width = `${width}px`;
-
-        //             });
-        //         }
-        //     }
-        // }
-
-        // // Call the function on window load and resize
-        // window.onload = matchColumnWidths;
-        // window.onresize = matchColumnWidths;
-        let img = document.getElementById("myImg");
-        let modal = document.getElementById("modal");
-        let modalImg = document.getElementById("modal-img")
-        let captionText = document.getElementById("caption")
-        let close = document.getElementById("close")
-        img.onclick = function () {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
+        for (var i = 0; i < images.length; i++) {
+            images[i].onclick = function(){
+                modal.style.display = "block";
+                console.log(this.src)
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
         }
 
-        close.onclick = function () {
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
             modal.style.display = "none";
         }
 
