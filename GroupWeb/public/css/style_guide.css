@@ -252,6 +252,7 @@
         margin-left: 20px;
         list-style: disc;
         }
+        
         /* Responsive Design with Media Queries */
         @media (max-width: 968px) {
             /* On smaller screens, stack layout items */
@@ -379,5 +380,243 @@
         .reset-message.error {
             background-color: #FF4D4D; /* Màu đỏ cho thông báo lỗi */
             color: white;
+        }
+        
+        /* ------------------------ Phần Typography ------------------------ */
+
+        /* Container của Typography Section */
+        .typography-section {
+            background-color: var(--background-color-white);
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        /* Tiêu đề chính */
+        .content-section h2 {
+            font-family: 'Arial', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            color: #003366;
+            text-align: center;
+        }
+
+        /* Các tiêu đề phụ */
+        .typography-section h3 {
+            font-family: 'Arial', sans-serif;
+            font-size: 28px;
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #003366;
+        }
+
+        /* Đoạn văn bản */
+        .typography-section p {
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333333;
+            margin-bottom: 15px;
+        }
+
+        /* Định nghĩa danh sách */
+        .typography-section ul {
+            list-style: disc inside;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .typography-section ol {
+            list-style: decimal inside;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .typography-section li {
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333333;
+            margin-bottom: 10px;
+        }
+
+        /* In đậm */
+        .typography-section strong {
+            font-weight: 700;
+            color: #003366;
+        }
+
+        /* Các liên kết */
+        .typography-section a {
+            color: var(--background-color-light-blue);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .typography-section a:hover {
+            color: var(--background-color-pale-blue);
+            text-decoration: underline;
+        }
+
+        /* Kiểu chữ cho các đoạn văn bản nhấn mạnh */
+        .typography-section .highlight {
+            background-color: #ffeb3b;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        /* Responsive Typography */
+        @media (max-width: 1024px) {
+            .typography-section h2 {
+                font-size: 40px;
+            }
+
+            .typography-section h3 {
+                font-size: 24px;
+            }
+
+            .typography-section p, 
+            .typography-section li {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .typography-section {
+                padding: 30px 20px;
+            }
+
+            .typography-section h2 {
+                font-size: 32px;
+            }
+
+            .typography-section h3 {
+                font-size: 20px;
+            }
+
+            .typography-section p, 
+            .typography-section li {
+                font-size: 14px;
+            }
+        }
+
+        /* Các thành phần đặc biệt */
+
+        /* Các đoạn văn bản có kích thước lớn hơn */
+        .typography-section .large-text {
+            font-size: 24px;
+            line-height: 1.8;
+            color: #003366;
+        }
+
+        /* Các đoạn văn bản có kích thước nhỏ hơn */
+        .typography-section .small-text {
+            font-size: 14px;
+            line-height: 1.4;
+            color: #666666;
+        }
+
+        /* Các kiểu chữ khác nhau */
+        .typography-section .italic-text {
+            font-style: italic;
+            color: #555555;
+        }
+
+        .typography-section .underline-text {
+            text-decoration: underline;
+            color: #003366;
+        }
+
+        /* Định nghĩa kiểu chữ cho đoạn mã */
+        .typography-section code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+            color: #e74c3c;
+        }
+
+        /* Các trích dẫn */
+        .typography-section blockquote {
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            font-style: italic;
+            color: #555555;
+            border-left: 4px solid var(--background-color-light-blue);
+            padding-left: 16px;
+            margin: 20px 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Các bảng trong Typography Section */
+        .typography-section table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .typography-section table th, 
+        .typography-section table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .typography-section table th {
+            background-color: #f2f2f2;
+            color: #003366;
+            font-weight: 600;
+        }
+
+        .typography-section table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .typography-section table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Các thành phần hình ảnh trong Typography Section */
+        .typography-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        /* Các đoạn mã CSS trong Typography Section */
+        .typography-section pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .typography-section pre code {
+            font-family: 'Courier New', Courier, monospace;
+            color: #d35400;
+        }
+
+        /* Các nút trong Typography Section */
+        .typography-section .btn {
+            background-color: var(--background-color-light-blue);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .typography-section .btn:hover {
+            background-color: var(--background-color-pale-blue);
+            transform: scale(1.05);
         }
         
